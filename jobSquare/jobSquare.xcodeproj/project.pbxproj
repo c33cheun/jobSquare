@@ -7,51 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F1C5FA8319CD536A00D37972 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1C5FA8219CD536A00D37972 /* main.m */; };
-		F1C5FA8619CD536A00D37972 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1C5FA8519CD536A00D37972 /* AppDelegate.m */; };
-		F1C5FA8919CD536A00D37972 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1C5FA8819CD536A00D37972 /* FirstViewController.m */; };
-		F1C5FA8C19CD536A00D37972 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1C5FA8B19CD536A00D37972 /* SecondViewController.m */; };
-		F1C5FA8F19CD536A00D37972 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1C5FA8D19CD536A00D37972 /* Main.storyboard */; };
-		F1C5FA9119CD536A00D37972 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1C5FA9019CD536A00D37972 /* Images.xcassets */; };
-		F1C5FA9D19CD536A00D37972 /* jobSquareTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1C5FA9C19CD536A00D37972 /* jobSquareTests.m */; };
+		F11C931719CD598600AAFA9D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F11C931619CD598600AAFA9D /* main.m */; };
+		F11C931A19CD598600AAFA9D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F11C931919CD598600AAFA9D /* AppDelegate.m */; };
+		F11C931D19CD598600AAFA9D /* JSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F11C931C19CD598600AAFA9D /* JSLoginViewController.m */; };
+		F11C932219CD598600AAFA9D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F11C932119CD598600AAFA9D /* Images.xcassets */; };
+		F11C932519CD598600AAFA9D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F11C932319CD598600AAFA9D /* LaunchScreen.xib */; };
+		F11C933119CD598600AAFA9D /* jobSquareTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F11C933019CD598600AAFA9D /* jobSquareTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F1C5FA9719CD536A00D37972 /* PBXContainerItemProxy */ = {
+		F11C932B19CD598600AAFA9D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F1C5FA7519CD536A00D37972 /* Project object */;
+			containerPortal = F11C930919CD598600AAFA9D /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F1C5FA7C19CD536A00D37972;
+			remoteGlobalIDString = F11C931019CD598600AAFA9D;
 			remoteInfo = jobSquare;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F1C5FA7D19CD536A00D37972 /* jobSquare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jobSquare.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F1C5FA8119CD536A00D37972 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F1C5FA8219CD536A00D37972 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F1C5FA8419CD536A00D37972 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		F1C5FA8519CD536A00D37972 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F1C5FA8719CD536A00D37972 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		F1C5FA8819CD536A00D37972 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		F1C5FA8A19CD536A00D37972 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		F1C5FA8B19CD536A00D37972 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		F1C5FA8E19CD536A00D37972 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F1C5FA9019CD536A00D37972 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		F1C5FA9619CD536A00D37972 /* jobSquareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jobSquareTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F1C5FA9B19CD536A00D37972 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F1C5FA9C19CD536A00D37972 /* jobSquareTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = jobSquareTests.m; sourceTree = "<group>"; };
+		F11C931119CD598600AAFA9D /* jobSquare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jobSquare.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F11C931519CD598600AAFA9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F11C931619CD598600AAFA9D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F11C931819CD598600AAFA9D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F11C931919CD598600AAFA9D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F11C931B19CD598600AAFA9D /* JSLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSLoginViewController.h; sourceTree = "<group>"; };
+		F11C931C19CD598600AAFA9D /* JSLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSLoginViewController.m; sourceTree = "<group>"; };
+		F11C932119CD598600AAFA9D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F11C932419CD598600AAFA9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F11C932A19CD598600AAFA9D /* jobSquareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jobSquareTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F11C932F19CD598600AAFA9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F11C933019CD598600AAFA9D /* jobSquareTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = jobSquareTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F1C5FA7A19CD536A00D37972 /* Frameworks */ = {
+		F11C930E19CD598600AAFA9D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F1C5FA9319CD536A00D37972 /* Frameworks */ = {
+		F11C932719CD598600AAFA9D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -61,62 +58,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F1C5FA7419CD536A00D37972 = {
+		F11C930819CD598600AAFA9D = {
 			isa = PBXGroup;
 			children = (
-				F1C5FA7F19CD536A00D37972 /* jobSquare */,
-				F1C5FA9919CD536A00D37972 /* jobSquareTests */,
-				F1C5FA7E19CD536A00D37972 /* Products */,
+				F11C931319CD598600AAFA9D /* jobSquare */,
+				F11C932D19CD598600AAFA9D /* jobSquareTests */,
+				F11C931219CD598600AAFA9D /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		F1C5FA7E19CD536A00D37972 /* Products */ = {
+		F11C931219CD598600AAFA9D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F1C5FA7D19CD536A00D37972 /* jobSquare.app */,
-				F1C5FA9619CD536A00D37972 /* jobSquareTests.xctest */,
+				F11C931119CD598600AAFA9D /* jobSquare.app */,
+				F11C932A19CD598600AAFA9D /* jobSquareTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F1C5FA7F19CD536A00D37972 /* jobSquare */ = {
+		F11C931319CD598600AAFA9D /* jobSquare */ = {
 			isa = PBXGroup;
 			children = (
-				F1C5FA8419CD536A00D37972 /* AppDelegate.h */,
-				F1C5FA8519CD536A00D37972 /* AppDelegate.m */,
-				F1C5FA8719CD536A00D37972 /* FirstViewController.h */,
-				F1C5FA8819CD536A00D37972 /* FirstViewController.m */,
-				F1C5FA8A19CD536A00D37972 /* SecondViewController.h */,
-				F1C5FA8B19CD536A00D37972 /* SecondViewController.m */,
-				F1C5FA8D19CD536A00D37972 /* Main.storyboard */,
-				F1C5FA9019CD536A00D37972 /* Images.xcassets */,
-				F1C5FA8019CD536A00D37972 /* Supporting Files */,
+				F11C931819CD598600AAFA9D /* AppDelegate.h */,
+				F11C931919CD598600AAFA9D /* AppDelegate.m */,
+				F11C931B19CD598600AAFA9D /* JSLoginViewController.h */,
+				F11C931C19CD598600AAFA9D /* JSLoginViewController.m */,
+				F11C932119CD598600AAFA9D /* Images.xcassets */,
+				F11C932319CD598600AAFA9D /* LaunchScreen.xib */,
+				F11C931419CD598600AAFA9D /* Supporting Files */,
 			);
 			path = jobSquare;
 			sourceTree = "<group>";
 		};
-		F1C5FA8019CD536A00D37972 /* Supporting Files */ = {
+		F11C931419CD598600AAFA9D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F1C5FA8119CD536A00D37972 /* Info.plist */,
-				F1C5FA8219CD536A00D37972 /* main.m */,
+				F11C931519CD598600AAFA9D /* Info.plist */,
+				F11C931619CD598600AAFA9D /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F1C5FA9919CD536A00D37972 /* jobSquareTests */ = {
+		F11C932D19CD598600AAFA9D /* jobSquareTests */ = {
 			isa = PBXGroup;
 			children = (
-				F1C5FA9C19CD536A00D37972 /* jobSquareTests.m */,
-				F1C5FA9A19CD536A00D37972 /* Supporting Files */,
+				F11C933019CD598600AAFA9D /* jobSquareTests.m */,
+				F11C932E19CD598600AAFA9D /* Supporting Files */,
 			);
 			path = jobSquareTests;
 			sourceTree = "<group>";
 		};
-		F1C5FA9A19CD536A00D37972 /* Supporting Files */ = {
+		F11C932E19CD598600AAFA9D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F1C5FA9B19CD536A00D37972 /* Info.plist */,
+				F11C932F19CD598600AAFA9D /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -124,13 +119,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F1C5FA7C19CD536A00D37972 /* jobSquare */ = {
+		F11C931019CD598600AAFA9D /* jobSquare */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F1C5FAA019CD536A00D37972 /* Build configuration list for PBXNativeTarget "jobSquare" */;
+			buildConfigurationList = F11C933419CD598600AAFA9D /* Build configuration list for PBXNativeTarget "jobSquare" */;
 			buildPhases = (
-				F1C5FA7919CD536A00D37972 /* Sources */,
-				F1C5FA7A19CD536A00D37972 /* Frameworks */,
-				F1C5FA7B19CD536A00D37972 /* Resources */,
+				F11C930D19CD598600AAFA9D /* Sources */,
+				F11C930E19CD598600AAFA9D /* Frameworks */,
+				F11C930F19CD598600AAFA9D /* Resources */,
 			);
 			buildRules = (
 			);
@@ -138,46 +133,46 @@
 			);
 			name = jobSquare;
 			productName = jobSquare;
-			productReference = F1C5FA7D19CD536A00D37972 /* jobSquare.app */;
+			productReference = F11C931119CD598600AAFA9D /* jobSquare.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F1C5FA9519CD536A00D37972 /* jobSquareTests */ = {
+		F11C932919CD598600AAFA9D /* jobSquareTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F1C5FAA319CD536A00D37972 /* Build configuration list for PBXNativeTarget "jobSquareTests" */;
+			buildConfigurationList = F11C933719CD598600AAFA9D /* Build configuration list for PBXNativeTarget "jobSquareTests" */;
 			buildPhases = (
-				F1C5FA9219CD536A00D37972 /* Sources */,
-				F1C5FA9319CD536A00D37972 /* Frameworks */,
-				F1C5FA9419CD536A00D37972 /* Resources */,
+				F11C932619CD598600AAFA9D /* Sources */,
+				F11C932719CD598600AAFA9D /* Frameworks */,
+				F11C932819CD598600AAFA9D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F1C5FA9819CD536A00D37972 /* PBXTargetDependency */,
+				F11C932C19CD598600AAFA9D /* PBXTargetDependency */,
 			);
 			name = jobSquareTests;
 			productName = jobSquareTests;
-			productReference = F1C5FA9619CD536A00D37972 /* jobSquareTests.xctest */;
+			productReference = F11C932A19CD598600AAFA9D /* jobSquareTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F1C5FA7519CD536A00D37972 /* Project object */ = {
+		F11C930919CD598600AAFA9D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = Givery;
 				TargetAttributes = {
-					F1C5FA7C19CD536A00D37972 = {
-						CreatedOnToolsVersion = 6.0;
+					F11C931019CD598600AAFA9D = {
+						CreatedOnToolsVersion = 6.0.1;
 					};
-					F1C5FA9519CD536A00D37972 = {
-						CreatedOnToolsVersion = 6.0;
-						TestTargetID = F1C5FA7C19CD536A00D37972;
+					F11C932919CD598600AAFA9D = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = F11C931019CD598600AAFA9D;
 					};
 				};
 			};
-			buildConfigurationList = F1C5FA7819CD536A00D37972 /* Build configuration list for PBXProject "jobSquare" */;
+			buildConfigurationList = F11C930C19CD598600AAFA9D /* Build configuration list for PBXProject "jobSquare" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -185,28 +180,28 @@
 				en,
 				Base,
 			);
-			mainGroup = F1C5FA7419CD536A00D37972;
-			productRefGroup = F1C5FA7E19CD536A00D37972 /* Products */;
+			mainGroup = F11C930819CD598600AAFA9D;
+			productRefGroup = F11C931219CD598600AAFA9D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F1C5FA7C19CD536A00D37972 /* jobSquare */,
-				F1C5FA9519CD536A00D37972 /* jobSquareTests */,
+				F11C931019CD598600AAFA9D /* jobSquare */,
+				F11C932919CD598600AAFA9D /* jobSquareTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F1C5FA7B19CD536A00D37972 /* Resources */ = {
+		F11C930F19CD598600AAFA9D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1C5FA8F19CD536A00D37972 /* Main.storyboard in Resources */,
-				F1C5FA9119CD536A00D37972 /* Images.xcassets in Resources */,
+				F11C932519CD598600AAFA9D /* LaunchScreen.xib in Resources */,
+				F11C932219CD598600AAFA9D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F1C5FA9419CD536A00D37972 /* Resources */ = {
+		F11C932819CD598600AAFA9D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -216,48 +211,47 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F1C5FA7919CD536A00D37972 /* Sources */ = {
+		F11C930D19CD598600AAFA9D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1C5FA8C19CD536A00D37972 /* SecondViewController.m in Sources */,
-				F1C5FA8619CD536A00D37972 /* AppDelegate.m in Sources */,
-				F1C5FA8919CD536A00D37972 /* FirstViewController.m in Sources */,
-				F1C5FA8319CD536A00D37972 /* main.m in Sources */,
+				F11C931D19CD598600AAFA9D /* JSLoginViewController.m in Sources */,
+				F11C931A19CD598600AAFA9D /* AppDelegate.m in Sources */,
+				F11C931719CD598600AAFA9D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F1C5FA9219CD536A00D37972 /* Sources */ = {
+		F11C932619CD598600AAFA9D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1C5FA9D19CD536A00D37972 /* jobSquareTests.m in Sources */,
+				F11C933119CD598600AAFA9D /* jobSquareTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F1C5FA9819CD536A00D37972 /* PBXTargetDependency */ = {
+		F11C932C19CD598600AAFA9D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F1C5FA7C19CD536A00D37972 /* jobSquare */;
-			targetProxy = F1C5FA9719CD536A00D37972 /* PBXContainerItemProxy */;
+			target = F11C931019CD598600AAFA9D /* jobSquare */;
+			targetProxy = F11C932B19CD598600AAFA9D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F1C5FA8D19CD536A00D37972 /* Main.storyboard */ = {
+		F11C932319CD598600AAFA9D /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F1C5FA8E19CD536A00D37972 /* Base */,
+				F11C932419CD598600AAFA9D /* Base */,
 			);
-			name = Main.storyboard;
+			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		F1C5FA9E19CD536A00D37972 /* Debug */ = {
+		F11C933219CD598600AAFA9D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -298,7 +292,7 @@
 			};
 			name = Debug;
 		};
-		F1C5FA9F19CD536A00D37972 /* Release */ = {
+		F11C933319CD598600AAFA9D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -333,29 +327,27 @@
 			};
 			name = Release;
 		};
-		F1C5FAA119CD536A00D37972 /* Debug */ = {
+		F11C933519CD598600AAFA9D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = jobSquare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		F1C5FAA219CD536A00D37972 /* Release */ = {
+		F11C933619CD598600AAFA9D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = jobSquare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
-		F1C5FAA419CD536A00D37972 /* Debug */ = {
+		F11C933819CD598600AAFA9D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -374,7 +366,7 @@
 			};
 			name = Debug;
 		};
-		F1C5FAA519CD536A00D37972 /* Release */ = {
+		F11C933919CD598600AAFA9D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -392,32 +384,32 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F1C5FA7819CD536A00D37972 /* Build configuration list for PBXProject "jobSquare" */ = {
+		F11C930C19CD598600AAFA9D /* Build configuration list for PBXProject "jobSquare" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F1C5FA9E19CD536A00D37972 /* Debug */,
-				F1C5FA9F19CD536A00D37972 /* Release */,
+				F11C933219CD598600AAFA9D /* Debug */,
+				F11C933319CD598600AAFA9D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F1C5FAA019CD536A00D37972 /* Build configuration list for PBXNativeTarget "jobSquare" */ = {
+		F11C933419CD598600AAFA9D /* Build configuration list for PBXNativeTarget "jobSquare" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F1C5FAA119CD536A00D37972 /* Debug */,
-				F1C5FAA219CD536A00D37972 /* Release */,
+				F11C933519CD598600AAFA9D /* Debug */,
+				F11C933619CD598600AAFA9D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		F1C5FAA319CD536A00D37972 /* Build configuration list for PBXNativeTarget "jobSquareTests" */ = {
+		F11C933719CD598600AAFA9D /* Build configuration list for PBXNativeTarget "jobSquareTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F1C5FAA419CD536A00D37972 /* Debug */,
-				F1C5FAA519CD536A00D37972 /* Release */,
+				F11C933819CD598600AAFA9D /* Debug */,
+				F11C933919CD598600AAFA9D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = F1C5FA7519CD536A00D37972 /* Project object */;
+	rootObject = F11C930919CD598600AAFA9D /* Project object */;
 }
