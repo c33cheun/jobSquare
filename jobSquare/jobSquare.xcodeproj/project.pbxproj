@@ -21,6 +21,7 @@
 		360F3FDB19CD9B48006A8709 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360F3FDA19CD9B48006A8709 /* Social.framework */; };
 		360F3FDD19CD9B50006A8709 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360F3FDC19CD9B50006A8709 /* Accounts.framework */; };
 		DFD1057519CE473A00634995 /* JSMyLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD1057419CE473A00634995 /* JSMyLogInViewController.m */; };
+		DFD1057819CE4AE600634995 /* JSMySignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD1057719CE4AE600634995 /* JSMySignUpViewController.m */; };
 		F11C931A19CD598600AAFA9D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F11C931919CD598600AAFA9D /* AppDelegate.m */; };
 		F11C931D19CD598600AAFA9D /* JSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F11C931C19CD598600AAFA9D /* JSLoginViewController.m */; };
 		F11C932219CD598600AAFA9D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F11C932119CD598600AAFA9D /* Images.xcassets */; };
@@ -73,6 +74,8 @@
 		A50C4034AC0848C383AC4B0D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		DFD1057319CE473A00634995 /* JSMyLogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSMyLogInViewController.h; sourceTree = "<group>"; };
 		DFD1057419CE473A00634995 /* JSMyLogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSMyLogInViewController.m; sourceTree = "<group>"; };
+		DFD1057619CE4AA400634995 /* JSMySignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSMySignUpViewController.h; sourceTree = "<group>"; };
+		DFD1057719CE4AE600634995 /* JSMySignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSMySignUpViewController.m; sourceTree = "<group>"; };
 		F11C931119CD598600AAFA9D /* jobSquare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jobSquare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F11C931519CD598600AAFA9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F11C931619CD598600AAFA9D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -179,6 +182,8 @@
 				F11C934219CD5F2300AAFA9D /* JSMapViewController.m */,
 				F11C936619CD663A00AAFA9D /* JSBaseViewController.h */,
 				F11C936719CD663A00AAFA9D /* JSBaseViewController.m */,
+				DFD1057619CE4AA400634995 /* JSMySignUpViewController.h */,
+				DFD1057719CE4AE600634995 /* JSMySignUpViewController.m */,
 				360F3FC419CD9A1A006A8709 /* JobDetailViewController.m */,
 				DFD1057319CE473A00634995 /* JSMyLogInViewController.h */,
 				DFD1057419CE473A00634995 /* JSMyLogInViewController.m */,
@@ -390,6 +395,7 @@
 				360F3FC919CD9A1A006A8709 /* JobDetailTableView.m in Sources */,
 				F11C931D19CD598600AAFA9D /* JSLoginViewController.m in Sources */,
 				F11C936819CD663A00AAFA9D /* JSBaseViewController.m in Sources */,
+				DFD1057819CE4AE600634995 /* JSMySignUpViewController.m in Sources */,
 				360F3FC819CD9A1A006A8709 /* JobDetailViewController.m in Sources */,
 				F11C931A19CD598600AAFA9D /* AppDelegate.m in Sources */,
 				F11C934319CD5F2300AAFA9D /* JSMapViewController.m in Sources */,
