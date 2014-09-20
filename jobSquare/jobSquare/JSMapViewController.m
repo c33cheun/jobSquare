@@ -8,8 +8,9 @@
 
 #import "JSMapViewController.h"
 #import <GoogleMaps/GoogleMaps.h>
+#import "BFTask.h"
 
-@interface JSMapViewController () <GMSMapViewDelegate>
+@interface JSMapViewController () <GMSMapViewDelegate, CLLocationManagerDelegate>
 
 @end
 
@@ -20,24 +21,42 @@
     CLPlacemark *placemark;
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+- (void) loadView {
+    [super loadView];    
     
     locationManager = [[CLLocationManager alloc]init];
+    
+    locationManager.delegate = self;
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    
+    
+    [locationManager startUpdatingLocation];
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
     geocoder = [[CLGeocoder alloc] init];
     // Do any additional setup after loading the view.
     // Create a GMSCameraPosition that tells the map to display the
     // coordinate -33.86,151.20 at zoom level 6.
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:-33.86
-                                                            longitude:151.20
-                                                                 zoom:6];
+    
+    CLLocation *presentlocation = [locationManager location];
+    
+//    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:-33.86
+//                                                            longitude:151.20
+//                                                                 zoom:6];
+    
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithTarget:[presentlocation coordinate] zoom:6];
+    
     mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
     mapView.myLocationEnabled = YES;
     self.view = mapView;
     
     // Creates a marker in the center of the map.
     GMSMarker *marker = [[GMSMarker alloc] init];
-    marker.position = CLLocationCoordinate2DMake(-33.86, 151.20);
+    //marker.position = CLLocationCoordinate2DMake(-33.86, 151.20);
+    marker.position = [presentlocation coordinate];
     marker.title = @"Sydney";
     marker.snippet = @"Australia";
     marker.map = mapView;
@@ -48,18 +67,12 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
-{
-    NSLog(@"didFailWithError: %@", error);
-    UIAlertView *errorAlert = [[UIAlertView alloc]
-                               initWithTitle:@"Error" message:@"Failed to Get Your Location" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    [errorAlert show];
-}
-
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
     NSLog(@"didUpdateToLocation: %@", newLocation);
     CLLocation *currentLocation = newLocation;
+    
+    [locationManager stopUpdatingLocation];
     
     // Reverse Geocoding
     NSLog(@"Resolving the Address");
@@ -76,15 +89,14 @@
             NSLog(@"%@", error.debugDescription);
         }
     } ];
-    
 }
 
-- (IBAction)getCurrentLocation:(id)sender {
-    locationManager.delegate = self;
-    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    
-    [locationManager startUpdatingLocation];
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+    NSLog(@"didFailWithError: %@", error);
+    UIAlertView *errorAlert = [[UIAlertView alloc]
+                               initWithTitle:@"Error" message:@"Failed to Get Your Location" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [errorAlert show];
 }
-
 
 @end

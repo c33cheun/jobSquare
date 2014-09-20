@@ -13,8 +13,6 @@
 		F11C932219CD598600AAFA9D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F11C932119CD598600AAFA9D /* Images.xcassets */; };
 		F11C933119CD598600AAFA9D /* jobSquareTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F11C933019CD598600AAFA9D /* jobSquareTests.m */; };
 		F11C934319CD5F2300AAFA9D /* JSMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F11C934219CD5F2300AAFA9D /* JSMapViewController.m */; };
-		F11C934719CD5F7400AAFA9D /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F11C934619CD5F7400AAFA9D /* GoogleMaps.framework */; };
-		F11C934919CD603100AAFA9D /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F11C934819CD603100AAFA9D /* GoogleMaps.bundle */; };
 		F11C934B19CD609700AAFA9D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F11C934A19CD609700AAFA9D /* AVFoundation.framework */; };
 		F11C934D19CD60A600AAFA9D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F11C934C19CD60A600AAFA9D /* CoreData.framework */; };
 		F11C934F19CD60C800AAFA9D /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F11C934E19CD60C800AAFA9D /* ImageIO.framework */; };
@@ -29,6 +27,8 @@
 		F11C936119CD613600AAFA9D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F11C936019CD613600AAFA9D /* SystemConfiguration.framework */; };
 		F11C936819CD663A00AAFA9D /* JSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F11C936719CD663A00AAFA9D /* JSBaseViewController.m */; };
 		F141AF6319CD7006007B6B92 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F11C931619CD598600AAFA9D /* main.m */; };
+		F141AFCF19CD8F28007B6B92 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F141AF9F19CD8F28007B6B92 /* GoogleMaps.bundle */; };
+		F141AFD619CD8F4B007B6B92 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F141AFD519CD8F4B007B6B92 /* GoogleMaps.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +57,6 @@
 		F11C933019CD598600AAFA9D /* jobSquareTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = jobSquareTests.m; sourceTree = "<group>"; };
 		F11C934119CD5F2300AAFA9D /* JSMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSMapViewController.h; sourceTree = "<group>"; };
 		F11C934219CD5F2300AAFA9D /* JSMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSMapViewController.m; sourceTree = "<group>"; };
-		F11C934619CD5F7400AAFA9D /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = "../../../../Downloads/GoogleMaps-iOS-1.8.1/GoogleMaps.framework"; sourceTree = "<group>"; };
-		F11C934819CD603100AAFA9D /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = "../../../../Downloads/GoogleMaps-iOS-1.8.1/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle"; sourceTree = "<group>"; };
 		F11C934A19CD609700AAFA9D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F11C934C19CD60A600AAFA9D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		F11C934E19CD60C800AAFA9D /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
@@ -73,6 +71,8 @@
 		F11C936019CD613600AAFA9D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F11C936619CD663A00AAFA9D /* JSBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBaseViewController.h; sourceTree = "<group>"; };
 		F11C936719CD663A00AAFA9D /* JSBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBaseViewController.m; sourceTree = "<group>"; };
+		F141AF9F19CD8F28007B6B92 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = "<group>"; };
+		F141AFD519CD8F4B007B6B92 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F141AFD619CD8F4B007B6B92 /* GoogleMaps.framework in Frameworks */,
 				F11C936119CD613600AAFA9D /* SystemConfiguration.framework in Frameworks */,
 				F11C935F19CD612C00AAFA9D /* QuartzCore.framework in Frameworks */,
 				F11C935D19CD612300AAFA9D /* OpenGLES.framework in Frameworks */,
@@ -92,7 +93,6 @@
 				F11C934F19CD60C800AAFA9D /* ImageIO.framework in Frameworks */,
 				F11C934D19CD60A600AAFA9D /* CoreData.framework in Frameworks */,
 				F11C934B19CD609700AAFA9D /* AVFoundation.framework in Frameworks */,
-				F11C934719CD5F7400AAFA9D /* GoogleMaps.framework in Frameworks */,
 				2896E645BD5E4968A8E4BD17 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,6 +173,8 @@
 		F11C936219CD616000AAFA9D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F141AFD519CD8F4B007B6B92 /* GoogleMaps.framework */,
+				F141AF9F19CD8F28007B6B92 /* GoogleMaps.bundle */,
 				F11C936019CD613600AAFA9D /* SystemConfiguration.framework */,
 				F11C935E19CD612C00AAFA9D /* QuartzCore.framework */,
 				F11C935C19CD612300AAFA9D /* OpenGLES.framework */,
@@ -185,8 +187,6 @@
 				F11C934E19CD60C800AAFA9D /* ImageIO.framework */,
 				F11C934C19CD60A600AAFA9D /* CoreData.framework */,
 				F11C934A19CD609700AAFA9D /* AVFoundation.framework */,
-				F11C934819CD603100AAFA9D /* GoogleMaps.bundle */,
-				F11C934619CD5F7400AAFA9D /* GoogleMaps.framework */,
 				07D0996596214AB3972854EB /* libPods.a */,
 			);
 			path = Frameworks;
@@ -279,8 +279,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F11C934919CD603100AAFA9D /* GoogleMaps.bundle in Resources */,
 				F11C932219CD598600AAFA9D /* Images.xcassets in Resources */,
+				F141AFCF19CD8F28007B6B92 /* GoogleMaps.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,11 +441,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/geoffreyheath/Downloads/GoogleMaps-iOS-1.8.1",
+					/Users/geoffreyheath/TechA/jobSquare/jobSquare/,
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = jobSquare/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks/GoogleMaps.framework",
+					"$(PROJECT_DIR)/Frameworks/GoogleMaps.framework/Versions/A",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -458,11 +464,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/geoffreyheath/Downloads/GoogleMaps-iOS-1.8.1",
+					/Users/geoffreyheath/TechA/jobSquare/jobSquare/,
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = jobSquare/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks/GoogleMaps.framework",
+					"$(PROJECT_DIR)/Frameworks/GoogleMaps.framework/Versions/A",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
