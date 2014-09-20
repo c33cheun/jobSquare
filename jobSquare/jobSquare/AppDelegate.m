@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
 
 @interface AppDelegate ()
 
@@ -17,6 +18,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [Parse setApplicationId:@"jHjzkupQVXyNitOUWRRgXmzmmEjZYmrShGgsAvJe"
+                  clientKey:@"71pEQr6snuieQxrMjzsxnPZIHmeVVDjtrlUxQVoR"];
+    
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
     self.window = [[UIWindow alloc]initWithFrame:UIScreen.mainScreen.bounds];
     
     JSLoginViewController *first = [[JSLoginViewController alloc]init];
