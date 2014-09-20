@@ -1,6 +1,6 @@
 //
 //  AppDelegate.m
-//  jobSquare
+//  jobsqaure2
 //
 //  Created by Geoffrey Heath on 2014-09-20.
 //  Copyright (c) 2014 Givery. All rights reserved.
@@ -17,12 +17,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    self.window = [[UIWindow alloc]initWithFrame:UIScreen.mainScreen.bounds];
-    
-    JSLoginViewController *first = [[JSLoginViewController alloc]init];
-    self.window.rootViewController = first;
-    [self.window makeKeyAndVisible];
-    [GMSServices provideAPIKey:@"AIzaSyDvyRzWBy8trwLIuIWc3OI5fwIfJNI-UP8"];
     return YES;
 }
 
@@ -47,6 +41,5 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
-
 
 @end

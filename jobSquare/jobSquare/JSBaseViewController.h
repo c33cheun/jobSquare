@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  JSBaseViewController.h
 //  jobSquare
 //
 //  Created by Geoffrey Heath on 2014-09-20.
@@ -7,11 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JSBaseViewController.h"
-#import "AppDelegate.h"
+#import "JSMapViewController.h"
 
-@interface JSLoginViewController : UIViewController
-
+@interface JSBaseViewController : UITabBarController
 
 @end
-
