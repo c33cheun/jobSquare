@@ -22,6 +22,21 @@
 		360F3FDD19CD9B50006A8709 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360F3FDC19CD9B50006A8709 /* Accounts.framework */; };
 		DFD1057519CE473A00634995 /* JSMyLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD1057419CE473A00634995 /* JSMyLogInViewController.m */; };
 		DFD1057819CE4AE600634995 /* JSMySignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD1057719CE4AE600634995 /* JSMySignUpViewController.m */; };
+		DFD1058919CE4F0E00634995 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DFD1057A19CE4F0E00634995 /* Default-568h@2x.png */; };
+		DFD1058A19CE4F0E00634995 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DFD1057B19CE4F0E00634995 /* Default.png */; };
+		DFD1058B19CE4F0E00634995 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DFD1057C19CE4F0E00634995 /* Default@2x.png */; };
+		DFD1058C19CE4F0E00634995 /* Exit.png in Resources */ = {isa = PBXBuildFile; fileRef = DFD1057D19CE4F0E00634995 /* Exit.png */; };
+		DFD1058D19CE4F0E00634995 /* ExitDown.png in Resources */ = {isa = PBXBuildFile; fileRef = DFD1057E19CE4F0E00634995 /* ExitDown.png */; };
+		DFD1058E19CE4F0E00634995 /* Facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = DFD1057F19CE4F0E00634995 /* Facebook.png */; };
+		DFD1058F19CE4F0E00634995 /* FacebookDown.png in Resources */ = {isa = PBXBuildFile; fileRef = DFD1058019CE4F0E00634995 /* FacebookDown.png */; };
+		DFD1059019CE4F0E00634995 /* LoginFieldBG.png in Resources */ = {isa = PBXBuildFile; fileRef = DFD1058119CE4F0E00634995 /* LoginFieldBG.png */; };
+		DFD1059119CE4F0E00634995 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DFD1058219CE4F0E00634995 /* Logo.png */; };
+		DFD1059219CE4F0E00634995 /* MainBG.png in Resources */ = {isa = PBXBuildFile; fileRef = DFD1058319CE4F0E00634995 /* MainBG.png */; };
+		DFD1059319CE4F0E00634995 /* SignUp.png in Resources */ = {isa = PBXBuildFile; fileRef = DFD1058419CE4F0E00634995 /* SignUp.png */; };
+		DFD1059419CE4F0E00634995 /* SignUpDown.png in Resources */ = {isa = PBXBuildFile; fileRef = DFD1058519CE4F0E00634995 /* SignUpDown.png */; };
+		DFD1059519CE4F0E00634995 /* SignUpFieldBG.png in Resources */ = {isa = PBXBuildFile; fileRef = DFD1058619CE4F0E00634995 /* SignUpFieldBG.png */; };
+		DFD1059619CE4F0E00634995 /* Twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = DFD1058719CE4F0E00634995 /* Twitter.png */; };
+		DFD1059719CE4F0E00634995 /* TwitterDown.png in Resources */ = {isa = PBXBuildFile; fileRef = DFD1058819CE4F0E00634995 /* TwitterDown.png */; };
 		F11C931A19CD598600AAFA9D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F11C931919CD598600AAFA9D /* AppDelegate.m */; };
 		F11C931D19CD598600AAFA9D /* JSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F11C931C19CD598600AAFA9D /* JSLoginViewController.m */; };
 		F11C932219CD598600AAFA9D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F11C932119CD598600AAFA9D /* Images.xcassets */; };
@@ -76,6 +91,21 @@
 		DFD1057419CE473A00634995 /* JSMyLogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSMyLogInViewController.m; sourceTree = "<group>"; };
 		DFD1057619CE4AA400634995 /* JSMySignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSMySignUpViewController.h; sourceTree = "<group>"; };
 		DFD1057719CE4AE600634995 /* JSMySignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSMySignUpViewController.m; sourceTree = "<group>"; };
+		DFD1057A19CE4F0E00634995 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "jobSquare/Assets/Default-568h@2x.png"; sourceTree = "<group>"; };
+		DFD1057B19CE4F0E00634995 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = jobSquare/Assets/Default.png; sourceTree = "<group>"; };
+		DFD1057C19CE4F0E00634995 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "jobSquare/Assets/Default@2x.png"; sourceTree = "<group>"; };
+		DFD1057D19CE4F0E00634995 /* Exit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Exit.png; path = jobSquare/Assets/Exit.png; sourceTree = "<group>"; };
+		DFD1057E19CE4F0E00634995 /* ExitDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ExitDown.png; path = jobSquare/Assets/ExitDown.png; sourceTree = "<group>"; };
+		DFD1057F19CE4F0E00634995 /* Facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Facebook.png; path = jobSquare/Assets/Facebook.png; sourceTree = "<group>"; };
+		DFD1058019CE4F0E00634995 /* FacebookDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FacebookDown.png; path = jobSquare/Assets/FacebookDown.png; sourceTree = "<group>"; };
+		DFD1058119CE4F0E00634995 /* LoginFieldBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LoginFieldBG.png; path = jobSquare/Assets/LoginFieldBG.png; sourceTree = "<group>"; };
+		DFD1058219CE4F0E00634995 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logo.png; path = jobSquare/Assets/Logo.png; sourceTree = "<group>"; };
+		DFD1058319CE4F0E00634995 /* MainBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MainBG.png; path = jobSquare/Assets/MainBG.png; sourceTree = "<group>"; };
+		DFD1058419CE4F0E00634995 /* SignUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SignUp.png; path = jobSquare/Assets/SignUp.png; sourceTree = "<group>"; };
+		DFD1058519CE4F0E00634995 /* SignUpDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SignUpDown.png; path = jobSquare/Assets/SignUpDown.png; sourceTree = "<group>"; };
+		DFD1058619CE4F0E00634995 /* SignUpFieldBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SignUpFieldBG.png; path = jobSquare/Assets/SignUpFieldBG.png; sourceTree = "<group>"; };
+		DFD1058719CE4F0E00634995 /* Twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Twitter.png; path = jobSquare/Assets/Twitter.png; sourceTree = "<group>"; };
+		DFD1058819CE4F0E00634995 /* TwitterDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TwitterDown.png; path = jobSquare/Assets/TwitterDown.png; sourceTree = "<group>"; };
 		F11C931119CD598600AAFA9D /* jobSquare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jobSquare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F11C931519CD598600AAFA9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F11C931619CD598600AAFA9D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -149,9 +179,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DFD1057919CE4E6000634995 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				DFD1057A19CE4F0E00634995 /* Default-568h@2x.png */,
+				DFD1057B19CE4F0E00634995 /* Default.png */,
+				DFD1057C19CE4F0E00634995 /* Default@2x.png */,
+				DFD1057D19CE4F0E00634995 /* Exit.png */,
+				DFD1057E19CE4F0E00634995 /* ExitDown.png */,
+				DFD1057F19CE4F0E00634995 /* Facebook.png */,
+				DFD1058019CE4F0E00634995 /* FacebookDown.png */,
+				DFD1058119CE4F0E00634995 /* LoginFieldBG.png */,
+				DFD1058219CE4F0E00634995 /* Logo.png */,
+				DFD1058319CE4F0E00634995 /* MainBG.png */,
+				DFD1058419CE4F0E00634995 /* SignUp.png */,
+				DFD1058519CE4F0E00634995 /* SignUpDown.png */,
+				DFD1058619CE4F0E00634995 /* SignUpFieldBG.png */,
+				DFD1058719CE4F0E00634995 /* Twitter.png */,
+				DFD1058819CE4F0E00634995 /* TwitterDown.png */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
 		F11C930819CD598600AAFA9D = {
 			isa = PBXGroup;
 			children = (
+				DFD1057919CE4E6000634995 /* Assets */,
 				F11C931319CD598600AAFA9D /* jobSquare */,
 				F11C932D19CD598600AAFA9D /* jobSquareTests */,
 				F11C931219CD598600AAFA9D /* Products */,
@@ -339,8 +392,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFD1058F19CE4F0E00634995 /* FacebookDown.png in Resources */,
+				DFD1059619CE4F0E00634995 /* Twitter.png in Resources */,
+				DFD1058D19CE4F0E00634995 /* ExitDown.png in Resources */,
+				DFD1058E19CE4F0E00634995 /* Facebook.png in Resources */,
 				F11C932219CD598600AAFA9D /* Images.xcassets in Resources */,
+				DFD1059119CE4F0E00634995 /* Logo.png in Resources */,
+				DFD1059419CE4F0E00634995 /* SignUpDown.png in Resources */,
 				F141AFCF19CD8F28007B6B92 /* GoogleMaps.bundle in Resources */,
+				DFD1059019CE4F0E00634995 /* LoginFieldBG.png in Resources */,
+				DFD1058B19CE4F0E00634995 /* Default@2x.png in Resources */,
+				DFD1059519CE4F0E00634995 /* SignUpFieldBG.png in Resources */,
+				DFD1059319CE4F0E00634995 /* SignUp.png in Resources */,
+				DFD1059719CE4F0E00634995 /* TwitterDown.png in Resources */,
+				DFD1058C19CE4F0E00634995 /* Exit.png in Resources */,
+				DFD1058919CE4F0E00634995 /* Default-568h@2x.png in Resources */,
+				DFD1058A19CE4F0E00634995 /* Default.png in Resources */,
+				DFD1059219CE4F0E00634995 /* MainBG.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
