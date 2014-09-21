@@ -7,6 +7,8 @@
 //
 
 #import "JSMyLogInViewController.h"
+#import "JSAssetsConstants.h"
+
 #import <QuartzCore/QuartzCore.h>
 #import <UIKit/UIKit.h>
 
@@ -21,34 +23,34 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
-	[self.logInView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"MainBG.png"]]];
-	[self.logInView setLogo:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Logo.png"]]];
+	[self.logInView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:kMainBackgroundImage]]];
+	[self.logInView setLogo:[[UIImageView alloc] initWithImage:[UIImage imageNamed:kLogo]]];
 	
 	// Set buttons appearance
-	[self.logInView.dismissButton setImage:[UIImage imageNamed:@"Exit.png"] forState:UIControlStateNormal];
-	[self.logInView.dismissButton setImage:[UIImage imageNamed:@"ExitDown.png"] forState:UIControlStateHighlighted];
+	[self.logInView.dismissButton setImage:[UIImage imageNamed:kExit] forState:UIControlStateNormal];
+	[self.logInView.dismissButton setImage:[UIImage imageNamed:kExitDown] forState:UIControlStateHighlighted];
 	
 	[self.logInView.facebookButton setImage:nil forState:UIControlStateNormal];
 	[self.logInView.facebookButton setImage:nil forState:UIControlStateHighlighted];
-	[self.logInView.facebookButton setBackgroundImage:[UIImage imageNamed:@"FacebookDown.png"] forState:UIControlStateHighlighted];
-	[self.logInView.facebookButton setBackgroundImage:[UIImage imageNamed:@"Facebook.png"] forState:UIControlStateNormal];
+	[self.logInView.facebookButton setBackgroundImage:[UIImage imageNamed:kFacebookButtonDown] forState:UIControlStateHighlighted];
+	[self.logInView.facebookButton setBackgroundImage:[UIImage imageNamed:kFacebookButton] forState:UIControlStateNormal];
 	[self.logInView.facebookButton setTitle:@"" forState:UIControlStateNormal];
 	[self.logInView.facebookButton setTitle:@"" forState:UIControlStateHighlighted];
 	
 	[self.logInView.twitterButton setImage:nil forState:UIControlStateNormal];
 	[self.logInView.twitterButton setImage:nil forState:UIControlStateHighlighted];
-	[self.logInView.twitterButton setBackgroundImage:[UIImage imageNamed:@"Twitter.png"] forState:UIControlStateNormal];
-	[self.logInView.twitterButton setBackgroundImage:[UIImage imageNamed:@"TwitterDown.png"] forState:UIControlStateHighlighted];
+	[self.logInView.twitterButton setBackgroundImage:[UIImage imageNamed:kTwitterButton] forState:UIControlStateNormal];
+	[self.logInView.twitterButton setBackgroundImage:[UIImage imageNamed:kTwitterButtonDown] forState:UIControlStateHighlighted];
 	[self.logInView.twitterButton setTitle:@"" forState:UIControlStateNormal];
 	[self.logInView.twitterButton setTitle:@"" forState:UIControlStateHighlighted];
 	
-	[self.logInView.signUpButton setBackgroundImage:[UIImage imageNamed:@"Signup.png"] forState:UIControlStateNormal];
-	[self.logInView.signUpButton setBackgroundImage:[UIImage imageNamed:@"SignupDown.png"] forState:UIControlStateHighlighted];
+	[self.logInView.signUpButton setBackgroundImage:[UIImage imageNamed:kSignUpButton] forState:UIControlStateNormal];
+	[self.logInView.signUpButton setBackgroundImage:[UIImage imageNamed:kSignUpButtonDown] forState:UIControlStateHighlighted];
 	[self.logInView.signUpButton setTitle:@"" forState:UIControlStateNormal];
 	[self.logInView.signUpButton setTitle:@"" forState:UIControlStateHighlighted];
 	
 	// Add login field background
-	fieldsBackground = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LoginFieldBG.png"]];
+	fieldsBackground = [[UIImageView alloc] initWithImage:[UIImage imageNamed:kLogInBackgroundImage]];
 	[self.logInView addSubview:self.fieldsBackground];
 	[self.logInView sendSubviewToBack:self.fieldsBackground];
 	

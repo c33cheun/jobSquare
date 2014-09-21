@@ -7,6 +7,7 @@
 //
 
 #import "JSMySignUpViewController.h"
+#import "JSAssetsConstants.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface JSMySignUpViewController ()
@@ -20,20 +21,20 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
-	[self.signUpView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"MainBG.png"]]];
-	[self.signUpView setLogo:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo.png"]]];
+	[self.signUpView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:kMainBackgroundImage]]];
+	[self.signUpView setLogo:[[UIImageView alloc] initWithImage:[UIImage imageNamed:kLogo]]];
 	
 	// Change button apperance
-	[self.signUpView.dismissButton setImage:[UIImage imageNamed:@"Exit.png"] forState:UIControlStateNormal];
-	[self.signUpView.dismissButton setImage:[UIImage imageNamed:@"ExitDown.png"] forState:UIControlStateHighlighted];
+	[self.signUpView.dismissButton setImage:[UIImage imageNamed:kExit] forState:UIControlStateNormal];
+	[self.signUpView.dismissButton setImage:[UIImage imageNamed:kExitDown] forState:UIControlStateHighlighted];
 	
-	[self.signUpView.signUpButton setBackgroundImage:[UIImage imageNamed:@"SignUp.png"] forState:UIControlStateNormal];
-	[self.signUpView.signUpButton setBackgroundImage:[UIImage imageNamed:@"SignUpDown.png"] forState:UIControlStateHighlighted];
+	[self.signUpView.signUpButton setBackgroundImage:[UIImage imageNamed:kSignUpButton] forState:UIControlStateNormal];
+	[self.signUpView.signUpButton setBackgroundImage:[UIImage imageNamed:kSignUpButtonDown] forState:UIControlStateHighlighted];
 	[self.signUpView.signUpButton setTitle:@"" forState:UIControlStateNormal];
 	[self.signUpView.signUpButton setTitle:@"" forState:UIControlStateHighlighted];
 	
 	// Add background for fields
-	[self setFieldsBackground:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"SignUpFieldBG.png"]]];
+	[self setFieldsBackground:[[UIImageView alloc] initWithImage:[UIImage imageNamed:kSignUpBackgroundImage]]];
 	[self.signUpView insertSubview:fieldsBackground atIndex:1];
 	
 	// Remove text shadow
