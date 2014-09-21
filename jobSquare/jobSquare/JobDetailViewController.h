@@ -11,6 +11,8 @@
 
 @interface JobDetailViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
-@property (weak, nonatomic) IBOutlet JobDetailTableView *details;
+@property (weak, nonatomic) IBOutlet UITableView *details;
+
+@property (weak, nonatomic) NSString* jobId;
 
 @end

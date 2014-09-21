@@ -9,6 +9,7 @@
 #import "JSLoginViewController.h"
 #import "JSMyLogInViewController.h"
 #import "JSMySignUpViewController.h"
+#import "JobDetailViewController.h"
 #import <Parse/PFUser.h>
 
 @interface JSLoginViewController ()
@@ -89,18 +90,23 @@
 - (IBAction)loginUserClick {
 	JSMapViewController *map;
 	UIViewController *viewController1;
-	UINavigationController *navviewController1 , *navviewController2;
+    JobDetailViewController *viewController3;
+	UINavigationController *navviewController1 , *navviewController2, *navviewController3;
 	
 	viewController1 = [[UIViewController alloc] init];
 	[viewController1 setTitle:@"This is the second view controller"];
 	navviewController1=[[UINavigationController alloc]initWithRootViewController:viewController1];
 	
-	map = [[JSMapViewController alloc] init];
+    map = [[JSMapViewController alloc] init];
 	navviewController2=[[UINavigationController alloc]initWithRootViewController:map];
+    
+    viewController3 = [[JobDetailViewController alloc] init];
+    viewController3.jobId = @"ExhFAklqBl";
+    navviewController3=[[UINavigationController alloc]initWithRootViewController:viewController3];
 	
 	
 	UITabBarController *tab = [[UITabBarController alloc]init];
-	tab.viewControllers = [NSArray arrayWithObjects: navviewController2, navviewController1, nil];
+	tab.viewControllers = [NSArray arrayWithObjects: navviewController2, navviewController1, navviewController3, nil];
 	
 	UITabBarItem *mapItem = [[UITabBarItem alloc]init];
 	[mapItem setTitle:@"Map"];
@@ -109,9 +115,13 @@
 	UITabBarItem *accountItem = [[UITabBarItem alloc]init];
 	//[accountItem setImage:@""];
 	[accountItem setTitle:@"Account"];
+    
+    UITabBarItem *jobItem = [[UITabBarItem alloc] init];
+    [jobItem setTitle:@"Jobs"];
 	
-	[navviewController2 setTabBarItem:mapItem];
-	[navviewController1 setTabBarItem:accountItem];
+    [navviewController1 setTabBarItem:accountItem];
+    [navviewController2 setTabBarItem:mapItem];
+    [navviewController3 setTabBarItem:jobItem];
 	
 	//[self.navigationController pushViewController:tab animated:nil];
 	[self presentViewController:tab animated:YES completion:nil];

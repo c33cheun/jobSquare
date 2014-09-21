@@ -7,6 +7,7 @@
 //
 
 #import "JSBaseViewController.h"
+#import "JobDetailViewController.h"
 
 @interface JSBaseViewController ()
 
@@ -21,7 +22,8 @@
                                          initWithNibName:@"FirstViewController" bundle:nil];
     UIViewController *accountViewController = [[UIViewController alloc]
                                          initWithNibName:@"SecondViewController" bundle:nil];
-    self.viewControllers = @[map,accountViewController];
+    UIViewController *jobDetail = [[JobDetailViewController alloc] initWithNibName:@"ThirdViewController"bundle:nil];
+    self.viewControllers = @[map,accountViewController,jobDetail];
 }
 
 - (void)viewDidLoad {
