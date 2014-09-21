@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		2896E645BD5E4968A8E4BD17 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D0996596214AB3972854EB /* libPods.a */; };
 		360F3FC819CD9A1A006A8709 /* JobDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 360F3FC419CD9A1A006A8709 /* JobDetailViewController.m */; };
-		360F3FC919CD9A1A006A8709 /* JobDetailTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 360F3FC719CD9A1A006A8709 /* JobDetailTableView.m */; };
 		360F3FCC19CD9A77006A8709 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360F3FCA19CD9A77006A8709 /* Parse.framework */; };
 		360F3FCF19CD9A9B006A8709 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360F3FCE19CD9A9B006A8709 /* AudioToolbox.framework */; };
 		360F3FD119CD9AA0006A8709 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360F3FD019CD9AA0006A8709 /* CFNetwork.framework */; };
@@ -20,6 +19,8 @@
 		360F3FDB19CD9B48006A8709 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360F3FDA19CD9B48006A8709 /* Social.framework */; };
 		360F3FDD19CD9B50006A8709 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360F3FDC19CD9B50006A8709 /* Accounts.framework */; };
 		3669FE0919CEB46400C767F1 /* JobDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3669FE0819CEB46400C767F1 /* JobDetailViewController.xib */; };
+		3669FE0B19CECD4000C767F1 /* default hiring.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3669FE0A19CECD4000C767F1 /* default hiring.jpg */; };
+		3669FE1619CEF05100C767F1 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3669FE1519CEF01000C767F1 /* Lato-Regular.ttf */; };
 		DF5B1FE819CE9BCC00FFD94C /* JSProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5B1FE719CE9BCC00FFD94C /* JSProfileViewController.m */; };
 		DFD1057519CE473A00634995 /* JSMyLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD1057419CE473A00634995 /* JSMyLogInViewController.m */; };
 		DFD1057819CE4AE600634995 /* JSMySignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD1057719CE4AE600634995 /* JSMySignUpViewController.m */; };
@@ -77,8 +78,6 @@
 		07D0996596214AB3972854EB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		360F3FC419CD9A1A006A8709 /* JobDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobDetailViewController.m; sourceTree = "<group>"; };
 		360F3FC519CD9A1A006A8709 /* JobDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobDetailViewController.h; sourceTree = "<group>"; };
-		360F3FC619CD9A1A006A8709 /* JobDetailTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobDetailTableView.h; sourceTree = "<group>"; };
-		360F3FC719CD9A1A006A8709 /* JobDetailTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobDetailTableView.m; sourceTree = "<group>"; };
 		360F3FCA19CD9A77006A8709 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		360F3FCE19CD9A9B006A8709 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		360F3FD019CD9AA0006A8709 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -89,6 +88,17 @@
 		360F3FDA19CD9B48006A8709 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		360F3FDC19CD9B50006A8709 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		3669FE0819CEB46400C767F1 /* JobDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JobDetailViewController.xib; sourceTree = "<group>"; };
+		3669FE0A19CECD4000C767F1 /* default hiring.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "default hiring.jpg"; path = "jobSquare/Assets/default hiring.jpg"; sourceTree = "<group>"; };
+		3669FE0C19CEF01000C767F1 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
+		3669FE0D19CEF01000C767F1 /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
+		3669FE0E19CEF01000C767F1 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		3669FE0F19CEF01000C767F1 /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
+		3669FE1019CEF01000C767F1 /* Lato-Hairline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Hairline.ttf"; sourceTree = "<group>"; };
+		3669FE1119CEF01000C767F1 /* Lato-HairlineItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-HairlineItalic.ttf"; sourceTree = "<group>"; };
+		3669FE1219CEF01000C767F1 /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
+		3669FE1319CEF01000C767F1 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
+		3669FE1419CEF01000C767F1 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
+		3669FE1519CEF01000C767F1 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		A50C4034AC0848C383AC4B0D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		DF5B1FE619CE9BB800FFD94C /* JSProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSProfileViewController.h; sourceTree = "<group>"; };
 		DF5B1FE719CE9BCC00FFD94C /* JSProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSProfileViewController.m; sourceTree = "<group>"; };
@@ -192,6 +202,17 @@
 		DFD1057919CE4E6000634995 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				3669FE0C19CEF01000C767F1 /* Lato-Black.ttf */,
+				3669FE0D19CEF01000C767F1 /* Lato-BlackItalic.ttf */,
+				3669FE0E19CEF01000C767F1 /* Lato-Bold.ttf */,
+				3669FE0F19CEF01000C767F1 /* Lato-BoldItalic.ttf */,
+				3669FE1019CEF01000C767F1 /* Lato-Hairline.ttf */,
+				3669FE1119CEF01000C767F1 /* Lato-HairlineItalic.ttf */,
+				3669FE1219CEF01000C767F1 /* Lato-Italic.ttf */,
+				3669FE1319CEF01000C767F1 /* Lato-Light.ttf */,
+				3669FE1419CEF01000C767F1 /* Lato-LightItalic.ttf */,
+				3669FE1519CEF01000C767F1 /* Lato-Regular.ttf */,
+				3669FE0A19CECD4000C767F1 /* default hiring.jpg */,
 				DFD1057A19CE4F0E00634995 /* Default-568h@2x.png */,
 				DFD1057B19CE4F0E00634995 /* Default.png */,
 				DFD1057C19CE4F0E00634995 /* Default@2x.png */,
@@ -255,8 +276,6 @@
 				360F3FC519CD9A1A006A8709 /* JobDetailViewController.h */,
 				360F3FC419CD9A1A006A8709 /* JobDetailViewController.m */,
 				3669FE0819CEB46400C767F1 /* JobDetailViewController.xib */,
-				360F3FC619CD9A1A006A8709 /* JobDetailTableView.h */,
-				360F3FC719CD9A1A006A8709 /* JobDetailTableView.m */,
 			);
 			path = jobSquare;
 			sourceTree = "<group>";
@@ -441,12 +460,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3669FE1619CEF05100C767F1 /* Lato-Regular.ttf in Resources */,
 				DFD1058F19CE4F0E00634995 /* FacebookDown.png in Resources */,
 				DFD1059619CE4F0E00634995 /* Twitter.png in Resources */,
 				DFD1058D19CE4F0E00634995 /* ExitDown.png in Resources */,
 				DFD1058E19CE4F0E00634995 /* Facebook.png in Resources */,
 				F11C932219CD598600AAFA9D /* Images.xcassets in Resources */,
 				DFD1059119CE4F0E00634995 /* Logo.png in Resources */,
+				3669FE0B19CECD4000C767F1 /* default hiring.jpg in Resources */,
 				DFD1059419CE4F0E00634995 /* SignUpDown.png in Resources */,
 				F141AFCF19CD8F28007B6B92 /* GoogleMaps.bundle in Resources */,
 				DFD1059019CE4F0E00634995 /* LoginFieldBG.png in Resources */,
@@ -510,7 +531,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F141AF6319CD7006007B6B92 /* main.m in Sources */,
-				360F3FC919CD9A1A006A8709 /* JobDetailTableView.m in Sources */,
 				F11C931D19CD598600AAFA9D /* JSLoginViewController.m in Sources */,
 				DFD1057819CE4AE600634995 /* JSMySignUpViewController.m in Sources */,
 				F1F11AAA19CE8464009E3FF3 /* IMAsync.m in Sources */,
