@@ -63,6 +63,8 @@
 		F141AFCF19CD8F28007B6B92 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F141AF9F19CD8F28007B6B92 /* GoogleMaps.bundle */; };
 		F141AFD619CD8F4B007B6B92 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F141AFD519CD8F4B007B6B92 /* GoogleMaps.framework */; };
 		F17C2E2319CF2EC7002D8EDC /* JSMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F17C2E2219CF2EC7002D8EDC /* JSMainViewController.m */; };
+		F17C2E2619CF39AC002D8EDC /* JSJobTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F17C2E2519CF39AC002D8EDC /* JSJobTableViewController.m */; };
+		F17C2E2919CF3A40002D8EDC /* JSJobTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F17C2E2819CF3A40002D8EDC /* JSJobTableCell.m */; };
 		F1F11AAA19CE8464009E3FF3 /* IMAsync.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F11AA919CE8464009E3FF3 /* IMAsync.m */; };
 		F1F11AB019CE9B52009E3FF3 /* JSJobPosting.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F11AAF19CE9B52009E3FF3 /* JSJobPosting.m */; };
 /* End PBXBuildFile section */
@@ -159,6 +161,10 @@
 		F141AFD519CD8F4B007B6B92 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		F17C2E2119CF2EC7002D8EDC /* JSMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSMainViewController.h; sourceTree = "<group>"; };
 		F17C2E2219CF2EC7002D8EDC /* JSMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSMainViewController.m; sourceTree = "<group>"; };
+		F17C2E2419CF39AC002D8EDC /* JSJobTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSJobTableViewController.h; sourceTree = "<group>"; };
+		F17C2E2519CF39AC002D8EDC /* JSJobTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSJobTableViewController.m; sourceTree = "<group>"; };
+		F17C2E2719CF3A40002D8EDC /* JSJobTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSJobTableCell.h; sourceTree = "<group>"; };
+		F17C2E2819CF3A40002D8EDC /* JSJobTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSJobTableCell.m; sourceTree = "<group>"; };
 		F1F11AA819CE8464009E3FF3 /* IMAsync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAsync.h; sourceTree = "<group>"; };
 		F1F11AA919CE8464009E3FF3 /* IMAsync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMAsync.m; sourceTree = "<group>"; };
 		F1F11AAE19CE9B52009E3FF3 /* JSJobPosting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSJobPosting.h; sourceTree = "<group>"; };
@@ -272,23 +278,7 @@
 				F11C932119CD598600AAFA9D /* Images.xcassets */,
 				F11C931419CD598600AAFA9D /* Supporting Files */,
 				F1F11AA719CE83CD009E3FF3 /* Views */,
-				DF5B203519CEEAC300FFD94C /* JSProfileTableView.h */,
-				DF5B203619CEEAC300FFD94C /* JSProfileTableView.m */,
-				DF5B203719CEEAC300FFD94C /* JSProfileViewController.h */,
-				DF5B203819CEEAC300FFD94C /* JSProfileViewController.m */,
-				DF5B203919CEEAC300FFD94C /* JSProfileViewController.xib */,
-				F11C934119CD5F2300AAFA9D /* JSMapViewController.h */,
-				F11C934219CD5F2300AAFA9D /* JSMapViewController.m */,
-				DFD1057619CE4AA400634995 /* JSMySignUpViewController.h */,
-				DFD1057719CE4AE600634995 /* JSMySignUpViewController.m */,
-				DFD1057319CE473A00634995 /* JSMyLogInViewController.h */,
-				DFD1057419CE473A00634995 /* JSMyLogInViewController.m */,
 				DFF3F4A219CE931D0064D77C /* JSAssetsConstants.h */,
-				360F3FC519CD9A1A006A8709 /* JobDetailViewController.h */,
-				360F3FC419CD9A1A006A8709 /* JobDetailViewController.m */,
-				3669FE0819CEB46400C767F1 /* JobDetailViewController.xib */,
-				F17C2E2119CF2EC7002D8EDC /* JSMainViewController.h */,
-				F17C2E2219CF2EC7002D8EDC /* JSMainViewController.m */,
 			);
 			path = jobSquare;
 			sourceTree = "<group>";
@@ -352,6 +342,39 @@
 			path = Frameworks;
 			sourceTree = "<group>";
 		};
+		F17C2E2A19CF3E4D002D8EDC /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				DFD1057619CE4AA400634995 /* JSMySignUpViewController.h */,
+				DFD1057719CE4AE600634995 /* JSMySignUpViewController.m */,
+				DFD1057319CE473A00634995 /* JSMyLogInViewController.h */,
+				DFD1057419CE473A00634995 /* JSMyLogInViewController.m */,
+				F11C931B19CD598600AAFA9D /* JSLoginViewController.h */,
+				F11C931C19CD598600AAFA9D /* JSLoginViewController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		F17C2E2B19CF3FAE002D8EDC /* JobDetail */ = {
+			isa = PBXGroup;
+			children = (
+				360F3FC519CD9A1A006A8709 /* JobDetailViewController.h */,
+				360F3FC419CD9A1A006A8709 /* JobDetailViewController.m */,
+				3669FE0819CEB46400C767F1 /* JobDetailViewController.xib */,
+			);
+			name = JobDetail;
+			sourceTree = "<group>";
+		};
+		F17C2E2C19CF3FBC002D8EDC /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				DF5B203719CEEAC300FFD94C /* JSProfileViewController.h */,
+				DF5B203819CEEAC300FFD94C /* JSProfileViewController.m */,
+				DF5B203919CEEAC300FFD94C /* JSProfileViewController.xib */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
 		F1F11AA519CE83A9009E3FF3 /* WebServices */ = {
 			isa = PBXGroup;
 			children = (
@@ -364,8 +387,15 @@
 		F1F11AA619CE83B8009E3FF3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F11C931B19CD598600AAFA9D /* JSLoginViewController.h */,
-				F11C931C19CD598600AAFA9D /* JSLoginViewController.m */,
+				F17C2E2B19CF3FAE002D8EDC /* JobDetail */,
+				F17C2E2119CF2EC7002D8EDC /* JSMainViewController.h */,
+				F17C2E2219CF2EC7002D8EDC /* JSMainViewController.m */,
+				F17C2E2419CF39AC002D8EDC /* JSJobTableViewController.h */,
+				F17C2E2519CF39AC002D8EDC /* JSJobTableViewController.m */,
+				F17C2E2C19CF3FBC002D8EDC /* Profile */,
+				F11C934119CD5F2300AAFA9D /* JSMapViewController.h */,
+				F11C934219CD5F2300AAFA9D /* JSMapViewController.m */,
+				F17C2E2A19CF3E4D002D8EDC /* Login */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -373,6 +403,10 @@
 		F1F11AA719CE83CD009E3FF3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DF5B203519CEEAC300FFD94C /* JSProfileTableView.h */,
+				DF5B203619CEEAC300FFD94C /* JSProfileTableView.m */,
+				F17C2E2719CF3A40002D8EDC /* JSJobTableCell.h */,
+				F17C2E2819CF3A40002D8EDC /* JSJobTableCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -550,7 +584,9 @@
 				DFD1057819CE4AE600634995 /* JSMySignUpViewController.m in Sources */,
 				F1F11AAA19CE8464009E3FF3 /* IMAsync.m in Sources */,
 				360F3FC819CD9A1A006A8709 /* JobDetailViewController.m in Sources */,
+				F17C2E2919CF3A40002D8EDC /* JSJobTableCell.m in Sources */,
 				F1F11AB019CE9B52009E3FF3 /* JSJobPosting.m in Sources */,
+				F17C2E2619CF39AC002D8EDC /* JSJobTableViewController.m in Sources */,
 				F11C931A19CD598600AAFA9D /* AppDelegate.m in Sources */,
 				DF5B203A19CEEAC300FFD94C /* JSProfileTableView.m in Sources */,
 				DF5B203B19CEEAC300FFD94C /* JSProfileViewController.m in Sources */,

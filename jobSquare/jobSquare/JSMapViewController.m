@@ -31,6 +31,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    UIButton *menu = [[UIButton alloc]initWithFrame:CGRectMake(self.view.frame.size.width * 0.3, self.view.frame.size.height * 0.8, self.view.frame.size.width * 0.3, self.view.frame.size.height * 0.1)];
+    [menu setBackgroundColor:[UIColor blackColor]];
+    [menu addTarget:self action:@selector(openList) forControlEvents:UIControlEventTouchUpInside];
+    
+    
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithTarget:_locationManager.location.coordinate zoom:10];
     
     mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
@@ -47,8 +52,7 @@
 
     [[IMAsync findObjectsAsync:query] continueWithSuccessBlock:^id(BFTask *results) {
         
-        NSMutableArray *jobs = [NSMutableArray array];
-        
+        _data = [NSMutableArray array];
         NSUInteger counter = 0;
         
         for(PFObject *result in results.result){
@@ -56,11 +60,13 @@
             
             counter++;
             JSJobPosting *pass = [[JSJobPosting alloc]initWithParseObject:result];
-            [jobs addObject:pass];
+            [_data addObject:pass];
             GMSMarker *point = [GMSMarker markerWithPosition:pass.location.coordinate];
             point.map = mapView;
             point.title = [NSString stringWithFormat:@"%lu", (unsigned long)counter];
         }
+        [self setupPopoverList];
+        [self.view addSubview:menu];
         
         return nil;
     }];
@@ -72,6 +78,22 @@
     self.view = mapView;
 }
 
+- (void) setupPopoverList {
+    UITableViewController *test = [[UITableViewController alloc]init];
+    
+    JSJobTableViewController *jobs = [[JSJobTableViewController alloc]initWithData:_data];
+    //_panelController = [[MCPanelViewController alloc] initWithRootViewController:test];
+    _panelController = [jobs viewControllerInPanelViewController];
+    test.preferredContentSize = CGSizeMake(self.view.frame.size.width * 0.8, 0);
+    
+    
+}
+
+- (IBAction)openList {
+    //[_panelController presentInViewController:self.navigationController withDirection:MCPanelAnimationDirectionRight];
+    
+    [self.navigationController presentPanelViewController:_panelController withDirection:MCPanelAnimationDirectionRight];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];    
