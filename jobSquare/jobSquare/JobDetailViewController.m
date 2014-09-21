@@ -7,8 +7,7 @@
 //
 
 #import "JobDetailViewController.h"
-#import "JobDetailTableView.h"
-#import <Parse/Parse.h>
+
 
 @interface JobDetailViewController ()
 
@@ -27,24 +26,26 @@ static NSString *cellIdentifier;
     //default descriptions:
     self.data = [NSMutableArray arrayWithObjects: @"Title",@"Employer",@"Address",@"Salary",@"Hours", @"Description", nil];
     
-    PFQuery *dataQuery = [PFQuery queryWithClassName:@"Job"];
-    [dataQuery getObjectInBackgroundWithId: @"ExhFAklqBl" block:^(PFObject *job, NSError *error) {
-            // Do something with the returned PFObject in the gameScore variable.
-        
-        if (!error) {
-        self.data[0] = [NSString stringWithFormat:@"%@ : %@", self.data[0], [[job objectForKey:@"title"] stringValue]];
-        self.data[1] = [NSString stringWithFormat:@"%@ : %@", self.data[1], job[@"employer"]];
-        self.data[2] = [NSString stringWithFormat:@"%@ : %@", self.data[2], job[@"address"]];
-        self.data[3] = [NSString stringWithFormat:@"%@ : %@", self.data[3], job[@"salary"]];
-        self.data[4] = [NSString stringWithFormat:@"%@ : %@", self.data[4], job[@"hours"]];
-        self.data[5] = [NSString stringWithFormat:@"%@ : %@", self.data[5], job[@"descript"]];
-            
-        [self.details reloadSections:[NSIndexSet indexSetWithIndexesInRange: NSRangeFromString(@"0-5")] withRowAnimation:UITableViewRowAnimationAutomatic];
-        } else {
-            NSLog(@"fail query");
-        }
-    }];
+    PFQuery *query = [PFQuery queryWithClassName:@"Job"];
+    [query whereKey:@"objectId" equalTo: self.jobId];
     
+    [[IMAsync findObjectsAsync:query] continueWithSuccessBlock:^id(BFTask *results) {
+        
+        for(PFObject *result in results.result){
+            //[jobLocations addObject:result];
+            JSJobPosting *pass = [[JSJobPosting alloc]initWithParseObject:result];
+            self.data[0] = [NSString stringWithFormat:@"%@ : %@", self.data[0], pass.title];
+            self.data[1] = [NSString stringWithFormat:@"%@ : %@", self.data[1], pass.employer];
+            self.data[2] = [NSString stringWithFormat:@"%@ : %@", self.data[2], pass.address];
+            self.data[3] = [NSString stringWithFormat:@"%@ : %lu", self.data[3], (unsigned long)pass.wage];
+            self.data[4] = [NSString stringWithFormat:@"%@ : %lu", self.data[4], (unsigned long)pass.hours];
+            self.data[5] = [NSString stringWithFormat:@"%@ : %@", self.data[5], pass.jobDetail];
+            
+            [self.details reloadData];
+        }
+        
+        return nil;
+    }];
    
     // Do any additional setup after loading the view from its nib.
 

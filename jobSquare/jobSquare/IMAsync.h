@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <Parse/Parse.h>
 #import <AFNetworking/AFNetworking.h>
+#import <Bolts.h>
 
 @interface IMAsync : NSObject
 

@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "JobDetailTableView.h"
+#import <Parse/Parse.h>
+#import "IMAsync.h"
+#import "JSJobPosting.h"
 
 @interface JobDetailViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
