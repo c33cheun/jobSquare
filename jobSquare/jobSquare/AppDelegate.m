@@ -26,6 +26,7 @@
 	// Your Facebook application id is configured in Info.plist.
 	// ****************************************************************************
 	[PFFacebookUtils initializeFacebook];
+	[PFTwitterUtils initializeWithConsumerKey:@"gksD1aP7gbyvdL6u6jmu8xAvq" consumerSecret:@"EOyTD80rFuGKDA7xC3IxwXXs9pwn5Pp0VjgTQ3zgtU28obq8hT"];
 
 	[PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
 
