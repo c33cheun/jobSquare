@@ -36,6 +36,7 @@
     mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
     mapView.myLocationEnabled = YES;
     mapView.delegate = self;
+    [mapView setMinZoom:14 maxZoom:kGMSMaxZoomLevel];
     
     
     PFGeoPoint *myLocation = [PFGeoPoint geoPointWithLocation:_locationManager.location];
@@ -140,12 +141,10 @@
 
 #pragma mark - GMSMapViewDelegate
 
--(void)mapView:(GMSMapView *)respMapView willMove:(BOOL)gesture {
-    [respMapView clear];
-}
-
 - (void)mapView:(GMSMapView *)respMapView
 idleAtCameraPosition:(GMSCameraPosition *)cameraPosition {
+    
+    [respMapView clear];
     
     CLLocation *resultLocation = [[CLLocation alloc] initWithLatitude:cameraPosition.target.latitude longitude: cameraPosition.target.longitude];
     
