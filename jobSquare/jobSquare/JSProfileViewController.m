@@ -78,12 +78,12 @@ static NSString *cellIdentifier;
 	[super didReceiveMemoryWarning];
 }
 
-- (NSInteger)tableView:(JSProfileTableView *)tableView numberOfRowsInSection:(NSInteger)section{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
 	NSString *sectionName = [self.sectionList objectAtIndex:section];
 	return [[self.data objectForKey:sectionName] count];
 }
 
-- (UITableViewCell *)tableView:(JSProfileTableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
 	if (!cell) {
 		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];

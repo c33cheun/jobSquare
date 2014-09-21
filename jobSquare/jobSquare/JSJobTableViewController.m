@@ -33,7 +33,8 @@
     tableView.delegate = self;
     tableView.dataSource = self;
     
-    tableView.backgroundColor = [UIColor cyanColor];
+    //tableView.backgroundColor = [UIColor blackColor];
+    tableView.tintColor = [UIColor blackColor];
     
     // add to canvas
     [self.view addSubview:tableView];
@@ -55,8 +56,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    NSArray *temp = (NSArray*)_data;
-    return (sizeof(temp));
+    return [(NSArray*)_data count];
 }
 
 
@@ -73,15 +73,22 @@
         cell = [[JSJobTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     // Just want to test, so I hardcode the data
-    if (indexPath.row < (sizeof((NSArray*)_data))) {
+    if (indexPath.row < [_data count]) {
     
-        JSJobPosting *job = [_data objectAtIndex:indexPath.row];
+        JSJobPosting *job = [_data objectAtIndex:0];
         cell.descriptionLabel.text = job.title;
+        //[_data removeObjectAtIndex:0];
         
     }
     
-    
     return cell;
+}
+
+- (void) resetData: (NSMutableArray*)jobs {
+    [_data removeAllObjects];
+    [_data addObjectsFromArray:jobs];
+    [self reloadInputViews];
+    //[self.view setNeedsDisplay];
 }
 
 

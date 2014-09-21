@@ -22,5 +22,6 @@
 @property (strong, nonatomic) CLLocation* location;
 @property (strong,nonatomic) MCPanelViewController* panelController;
 @property (strong,nonatomic) NSMutableArray *data;
+@property (strong,nonatomic) JSJobTableViewController* jobs;
 
 @end

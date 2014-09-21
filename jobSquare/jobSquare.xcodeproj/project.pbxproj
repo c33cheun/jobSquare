@@ -21,7 +21,6 @@
 		3669FE0919CEB46400C767F1 /* JobDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3669FE0819CEB46400C767F1 /* JobDetailViewController.xib */; };
 		3669FE0B19CECD4000C767F1 /* default hiring.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3669FE0A19CECD4000C767F1 /* default hiring.jpg */; };
 		3669FE1619CEF05100C767F1 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3669FE1519CEF01000C767F1 /* Lato-Regular.ttf */; };
-		DF5B203A19CEEAC300FFD94C /* JSProfileTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5B203619CEEAC300FFD94C /* JSProfileTableView.m */; };
 		DF5B203B19CEEAC300FFD94C /* JSProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5B203819CEEAC300FFD94C /* JSProfileViewController.m */; };
 		DF5B203C19CEEAC300FFD94C /* JSProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5B203919CEEAC300FFD94C /* JSProfileViewController.xib */; };
 		DFD1057519CE473A00634995 /* JSMyLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD1057419CE473A00634995 /* JSMyLogInViewController.m */; };
@@ -105,8 +104,6 @@
 		3669FE1419CEF01000C767F1 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
 		3669FE1519CEF01000C767F1 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		A50C4034AC0848C383AC4B0D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
-		DF5B203519CEEAC300FFD94C /* JSProfileTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSProfileTableView.h; sourceTree = "<group>"; };
-		DF5B203619CEEAC300FFD94C /* JSProfileTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSProfileTableView.m; sourceTree = "<group>"; };
 		DF5B203719CEEAC300FFD94C /* JSProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSProfileViewController.h; sourceTree = "<group>"; };
 		DF5B203819CEEAC300FFD94C /* JSProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSProfileViewController.m; sourceTree = "<group>"; };
 		DF5B203919CEEAC300FFD94C /* JSProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSProfileViewController.xib; sourceTree = "<group>"; };
@@ -403,8 +400,6 @@
 		F1F11AA719CE83CD009E3FF3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DF5B203519CEEAC300FFD94C /* JSProfileTableView.h */,
-				DF5B203619CEEAC300FFD94C /* JSProfileTableView.m */,
 				F17C2E2719CF3A40002D8EDC /* JSJobTableCell.h */,
 				F17C2E2819CF3A40002D8EDC /* JSJobTableCell.m */,
 			);
@@ -588,7 +583,6 @@
 				F1F11AB019CE9B52009E3FF3 /* JSJobPosting.m in Sources */,
 				F17C2E2619CF39AC002D8EDC /* JSJobTableViewController.m in Sources */,
 				F11C931A19CD598600AAFA9D /* AppDelegate.m in Sources */,
-				DF5B203A19CEEAC300FFD94C /* JSProfileTableView.m in Sources */,
 				DF5B203B19CEEAC300FFD94C /* JSProfileViewController.m in Sources */,
 				F11C934319CD5F2300AAFA9D /* JSMapViewController.m in Sources */,
 				DFD1057519CE473A00634995 /* JSMyLogInViewController.m in Sources */,

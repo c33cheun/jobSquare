@@ -16,4 +16,6 @@
 
 - (id) initWithData: (NSMutableArray*)data;
 
+- (void) resetData: (NSMutableArray*)jobs;
+
 @end

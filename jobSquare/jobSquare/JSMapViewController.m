@@ -65,9 +65,9 @@
             point.map = mapView;
             point.title = [NSString stringWithFormat:@"%lu", (unsigned long)counter];
         }
-        [self setupPopoverList];
         [self.view addSubview:menu];
-        
+        //[_jobs.view reloadInputViews];
+        //[_jobs.view setNeedsDisplay];
         return nil;
     }];
     // Creates a marker in the center of the map.
@@ -78,20 +78,10 @@
     self.view = mapView;
 }
 
-- (void) setupPopoverList {
-    UITableViewController *test = [[UITableViewController alloc]init];
-    
-    JSJobTableViewController *jobs = [[JSJobTableViewController alloc]initWithData:_data];
-    //_panelController = [[MCPanelViewController alloc] initWithRootViewController:test];
-    _panelController = [jobs viewControllerInPanelViewController];
-    test.preferredContentSize = CGSizeMake(self.view.frame.size.width * 0.8, 0);
-    
-    
-}
-
 - (IBAction)openList {
-    //[_panelController presentInViewController:self.navigationController withDirection:MCPanelAnimationDirectionRight];
-    
+    _jobs = [[JSJobTableViewController alloc]initWithData:_data];
+    _panelController = [[MCPanelViewController alloc] initWithRootViewController:_jobs];
+    _jobs.preferredContentSize = CGSizeMake(self.view.frame.size.width * 0.8, 0);
     [self.navigationController presentPanelViewController:_panelController withDirection:MCPanelAnimationDirectionRight];
 }
 
@@ -166,11 +156,10 @@
 - (void)mapView:(GMSMapView *)respMapView
 idleAtCameraPosition:(GMSCameraPosition *)cameraPosition {
     
-    [respMapView clear];
-    
     CLLocation *resultLocation = [[CLLocation alloc] initWithLatitude:cameraPosition.target.latitude longitude: cameraPosition.target.longitude];
     
     PFGeoPoint *myNewLocation = [PFGeoPoint geoPointWithLocation:resultLocation];
+    [_data removeAllObjects];
     
     PFQuery *query = [PFQuery queryWithClassName:@"Job"];
     [query setLimit:10];
@@ -178,16 +167,15 @@ idleAtCameraPosition:(GMSCameraPosition *)cameraPosition {
     
     [[IMAsync findObjectsAsync:query] continueWithSuccessBlock:^id(BFTask *results) {
         
-        NSMutableArray *jobs = [NSMutableArray array];
-        
         NSUInteger counter = 0;
+        [respMapView clear];
         
         for(PFObject *result in results.result){
             //[jobLocations addObject:result];
             
             counter++;
             JSJobPosting *pass = [[JSJobPosting alloc]initWithParseObject:result];
-            [jobs addObject:pass];
+            [_data addObject:pass];
             GMSMarker *point = [GMSMarker markerWithPosition:pass.location.coordinate];
             point.map = mapView;
             point.title = [NSString stringWithFormat:@"%lu", (unsigned long)counter];
