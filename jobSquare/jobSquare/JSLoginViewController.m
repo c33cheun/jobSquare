@@ -96,7 +96,7 @@
     [navviewController2.navigationBar setTintColor: [UIColor blackColor]];
 	
 	profile = [[JSProfileViewController alloc] init];
-	[profile setTitle:@"This is the second view controller"];
+//	[profile setTitle:@"This is the second view controller"];
 	navviewController1=[[UINavigationController alloc]initWithRootViewController:profile];
 	
     map = [[JSMapViewController alloc] init];
