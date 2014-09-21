@@ -42,23 +42,23 @@
 	
 	// Check if user is logged in
 
-//	if (![PFUser currentUser]) {
-//		// Customize the Log In View Controller
-//		JSMyLogInViewController *logInViewController = [[JSMyLogInViewController alloc] init];
-//		logInViewController.delegate = self;
-//		logInViewController.facebookPermissions = @[@"friends_about_me"];
-//		
-//		logInViewController.fields = PFLogInFieldsUsernameAndPassword | PFLogInFieldsLogInButton | PFLogInFieldsSignUpButton | PFLogInFieldsDismissButton;
-//		
-//		// Customize the Sign Up View Controller
-//		JSMySignUpViewController *signUpViewController = [[JSMySignUpViewController alloc] init];
-//		signUpViewController.delegate = self;
-//		signUpViewController.fields = PFSignUpFieldsDefault | PFSignUpFieldsAdditional;
-//		logInViewController.signUpController = signUpViewController;
-//		
-//		// Present Log In View Controller
-//		[self presentViewController:logInViewController animated:YES completion:NULL];
-//	}
+	if (![PFUser currentUser]) {
+		// Customize the Log In View Controller
+		JSMyLogInViewController *logInViewController = [[JSMyLogInViewController alloc] init];
+		logInViewController.delegate = self;
+		logInViewController.facebookPermissions = @[@"friends_about_me"];
+		
+		logInViewController.fields = PFLogInFieldsUsernameAndPassword | PFLogInFieldsTwitter | PFLogInFieldsFacebook | PFLogInFieldsSignUpButton | PFLogInFieldsDismissButton;
+		
+		// Customize the Sign Up View Controller
+		JSMySignUpViewController *signUpViewController = [[JSMySignUpViewController alloc] init];
+		signUpViewController.delegate = self;
+		signUpViewController.fields = PFSignUpFieldsDefault | PFSignUpFieldsAdditional;
+		logInViewController.signUpController = signUpViewController;
+		
+		// Present Log In View Controller
+		[self presentViewController:logInViewController animated:YES completion:NULL];
+	}
 }
 
 // Sent to the delegate when a PFUser is signed up.
