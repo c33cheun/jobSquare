@@ -10,6 +10,7 @@
 #import "JSMyLogInViewController.h"
 #import "JSMySignUpViewController.h"
 #import "JobDetailViewController.h"
+#import "JSProfileViewController.h"
 #import <Parse/PFUser.h>
 
 @interface JSLoginViewController ()
@@ -84,13 +85,16 @@
 
 - (IBAction)loginUserClick {
 	JSMapViewController *map;
+    
 	UIViewController *viewController1;
+    JSProfileViewController *profile;
     JobDetailViewController *viewController3;
+    
 	UINavigationController *navviewController1 , *navviewController2, *navviewController3;
 	
-	viewController1 = [[UIViewController alloc] init];
-	[viewController1 setTitle:@"This is the second view controller"];
-	navviewController1=[[UINavigationController alloc]initWithRootViewController:viewController1];
+	profile = [[JSProfileViewController alloc] init];
+	[profile setTitle:@"This is the second view controller"];
+	navviewController1=[[UINavigationController alloc]initWithRootViewController:profile];
 	
     map = [[JSMapViewController alloc] init];
 	navviewController2=[[UINavigationController alloc]initWithRootViewController:map];

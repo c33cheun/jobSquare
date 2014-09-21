@@ -19,7 +19,8 @@
 		360F3FD919CD9AC9006A8709 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360F3FD819CD9AC9006A8709 /* StoreKit.framework */; };
 		360F3FDB19CD9B48006A8709 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360F3FDA19CD9B48006A8709 /* Social.framework */; };
 		360F3FDD19CD9B50006A8709 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360F3FDC19CD9B50006A8709 /* Accounts.framework */; };
-		36A7F68819CE5F5D0013D2D8 /* JobDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36A7F68719CE5F5D0013D2D8 /* JobDetailViewController.xib */; };
+		3669FE0919CEB46400C767F1 /* JobDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3669FE0819CEB46400C767F1 /* JobDetailViewController.xib */; };
+		DF5B1FE819CE9BCC00FFD94C /* JSProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5B1FE719CE9BCC00FFD94C /* JSProfileViewController.m */; };
 		DFD1057519CE473A00634995 /* JSMyLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD1057419CE473A00634995 /* JSMyLogInViewController.m */; };
 		DFD1057819CE4AE600634995 /* JSMySignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD1057719CE4AE600634995 /* JSMySignUpViewController.m */; };
 		DFD1058919CE4F0E00634995 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DFD1057A19CE4F0E00634995 /* Default-568h@2x.png */; };
@@ -87,8 +88,10 @@
 		360F3FD819CD9AC9006A8709 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		360F3FDA19CD9B48006A8709 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		360F3FDC19CD9B50006A8709 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
-		36A7F68719CE5F5D0013D2D8 /* JobDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JobDetailViewController.xib; sourceTree = "<group>"; };
+		3669FE0819CEB46400C767F1 /* JobDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JobDetailViewController.xib; sourceTree = "<group>"; };
 		A50C4034AC0848C383AC4B0D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		DF5B1FE619CE9BB800FFD94C /* JSProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSProfileViewController.h; sourceTree = "<group>"; };
+		DF5B1FE719CE9BCC00FFD94C /* JSProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSProfileViewController.m; sourceTree = "<group>"; };
 		DFD1057319CE473A00634995 /* JSMyLogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSMyLogInViewController.h; sourceTree = "<group>"; };
 		DFD1057419CE473A00634995 /* JSMyLogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSMyLogInViewController.m; sourceTree = "<group>"; };
 		DFD1057619CE4AA400634995 /* JSMySignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSMySignUpViewController.h; sourceTree = "<group>"; };
@@ -243,13 +246,15 @@
 				F11C934119CD5F2300AAFA9D /* JSMapViewController.h */,
 				F11C934219CD5F2300AAFA9D /* JSMapViewController.m */,
 				DFD1057619CE4AA400634995 /* JSMySignUpViewController.h */,
+				DF5B1FE619CE9BB800FFD94C /* JSProfileViewController.h */,
+				DF5B1FE719CE9BCC00FFD94C /* JSProfileViewController.m */,
 				DFD1057719CE4AE600634995 /* JSMySignUpViewController.m */,
 				DFD1057319CE473A00634995 /* JSMyLogInViewController.h */,
 				DFD1057419CE473A00634995 /* JSMyLogInViewController.m */,
 				DFF3F4A219CE931D0064D77C /* JSAssetsConstants.h */,
 				360F3FC519CD9A1A006A8709 /* JobDetailViewController.h */,
 				360F3FC419CD9A1A006A8709 /* JobDetailViewController.m */,
-				36A7F68719CE5F5D0013D2D8 /* JobDetailViewController.xib */,
+				3669FE0819CEB46400C767F1 /* JobDetailViewController.xib */,
 				360F3FC619CD9A1A006A8709 /* JobDetailTableView.h */,
 				360F3FC719CD9A1A006A8709 /* JobDetailTableView.m */,
 			);
@@ -329,14 +334,6 @@
 			children = (
 				F11C931B19CD598600AAFA9D /* JSLoginViewController.h */,
 				F11C931C19CD598600AAFA9D /* JSLoginViewController.m */,
-				F11C934119CD5F2300AAFA9D /* JSMapViewController.h */,
-				F11C934219CD5F2300AAFA9D /* JSMapViewController.m */,
-				DFD1057619CE4AA400634995 /* JSMySignUpViewController.h */,
-				DFD1057719CE4AE600634995 /* JSMySignUpViewController.m */,
-				360F3FC419CD9A1A006A8709 /* JobDetailViewController.m */,
-				DFD1057319CE473A00634995 /* JSMyLogInViewController.h */,
-				DFD1057419CE473A00634995 /* JSMyLogInViewController.m */,
-				360F3FC519CD9A1A006A8709 /* JobDetailViewController.h */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -344,8 +341,6 @@
 		F1F11AA719CE83CD009E3FF3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				360F3FC619CD9A1A006A8709 /* JobDetailTableView.h */,
-				360F3FC719CD9A1A006A8709 /* JobDetailTableView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -463,7 +458,7 @@
 				DFD1058919CE4F0E00634995 /* Default-568h@2x.png in Resources */,
 				DFD1058A19CE4F0E00634995 /* Default.png in Resources */,
 				DFD1059219CE4F0E00634995 /* MainBG.png in Resources */,
-				36A7F68819CE5F5D0013D2D8 /* JobDetailViewController.xib in Resources */,
+				3669FE0919CEB46400C767F1 /* JobDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,6 +517,7 @@
 				360F3FC819CD9A1A006A8709 /* JobDetailViewController.m in Sources */,
 				F1F11AB019CE9B52009E3FF3 /* JSJobPosting.m in Sources */,
 				F11C931A19CD598600AAFA9D /* AppDelegate.m in Sources */,
+				DF5B1FE819CE9BCC00FFD94C /* JSProfileViewController.m in Sources */,
 				F11C934319CD5F2300AAFA9D /* JSMapViewController.m in Sources */,
 				DFD1057519CE473A00634995 /* JSMyLogInViewController.m in Sources */,
 			);
