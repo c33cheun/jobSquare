@@ -18,14 +18,6 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="isV-Vl-6jP">
-                    <rect key="frame" x="0.0" y="251" width="600" height="349"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <connections>
-                        <outlet property="dataSource" destination="-1" id="hDQ-8j-D9t"/>
-                        <outlet property="delegate" destination="-1" id="nSb-g1-ik7"/>
-                    </connections>
-                </tableView>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Your Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tfL-GR-hdC" propertyAccessControl="none">
                     <rect key="frame" x="231" y="85" width="143" height="30"/>
                     <accessibility key="accessibilityConfiguration">
@@ -40,6 +32,14 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="isV-Vl-6jP">
+                    <rect key="frame" x="0.0" y="168" width="600" height="349"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="hDQ-8j-D9t"/>
+                        <outlet property="delegate" destination="-1" id="nSb-g1-ik7"/>
+                    </connections>
+                </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
         </view>

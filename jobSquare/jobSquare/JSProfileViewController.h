@@ -1,5 +1,5 @@
 //
-//  JobDetailViewController.h
+//  JSProfileViewController.h
 //  jobSquare
 //
 //  Created by Christopher Cheung on 2014-09-20.
