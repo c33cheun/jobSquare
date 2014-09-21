@@ -33,6 +33,27 @@
     mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
     mapView.myLocationEnabled = YES;
     
+    PFGeoPoint *myLocation = [PFGeoPoint geoPointWithLocation:_locationManager.location];
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Job"];
+    [query setLimit:10];
+    [query whereKey:@"location" nearGeoPoint:myLocation withinKilometers:2.0];
+
+    [[IMAsync findObjectsAsync:query] continueWithSuccessBlock:^id(BFTask *results) {
+        
+        NSMutableArray *jobs = [NSMutableArray array];
+        
+        for(PFObject *result in results.result){
+            //[jobLocations addObject:result];
+            JSJobPosting *pass = [[JSJobPosting alloc]initWithParseObject:result];
+            [jobs addObject:pass];
+            GMSMarker *point = [GMSMarker markerWithPosition:pass.location.coordinate];
+            point.map = mapView;
+            point.title = @"1";
+        }
+        
+        return nil;
+    }];
     // Creates a marker in the center of the map.
     //GMSMarker *marker = [[GMSMarker alloc] init];
     //marker.position = _locationManager.location.coordinate;

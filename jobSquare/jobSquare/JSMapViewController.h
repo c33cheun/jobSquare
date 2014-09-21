@@ -10,12 +10,13 @@
 #import <GoogleMaps/GoogleMaps.h>
 #import <CoreLocation/CoreLocation.h>//
 #import "BFTask.h"
+#import "IMAsync.h"
+#import "JSJobPosting.h"
 
 @interface JSMapViewController : UIViewController <GMSMapViewDelegate, CLLocationManagerDelegate> {
 }
 
 @property (strong, nonatomic) CLLocationManager* locationManager;
 @property (strong, nonatomic) CLLocation* location;
-
 
 @end

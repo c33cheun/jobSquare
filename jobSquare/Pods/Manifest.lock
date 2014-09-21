@@ -1,13 +1,20 @@
 PODS:
+  - AFNetworking (2.0.0-RC2):
+    - AFNetworking/Core
+    - AFNetworking/UIKit+AFNetworking
+  - AFNetworking/Core (2.0.0-RC2)
+  - AFNetworking/UIKit+AFNetworking (2.0.0-RC2)
   - Bolts (1.1.2)
   - Facebook-iOS-SDK (3.18.0):
     - Bolts
 
 DEPENDENCIES:
+  - AFNetworking (= 2.0.0-RC2)
   - Bolts
   - Facebook-iOS-SDK (~> 3.18)
 
 SPEC CHECKSUMS:
+  AFNetworking: 196030e4ce72f74d4101c82b37b47db80eadb327
   Bolts: 2635e8698a630774689441047f3465d78c48d485
   Facebook-iOS-SDK: fa12c51cc57bfb6f92e47793c9d4d2c65bc92741
 
