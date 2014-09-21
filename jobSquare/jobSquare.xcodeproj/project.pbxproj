@@ -11,7 +11,6 @@
 		360F3FC819CD9A1A006A8709 /* JobDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 360F3FC419CD9A1A006A8709 /* JobDetailViewController.m */; };
 		360F3FC919CD9A1A006A8709 /* JobDetailTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 360F3FC719CD9A1A006A8709 /* JobDetailTableView.m */; };
 		360F3FCC19CD9A77006A8709 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360F3FCA19CD9A77006A8709 /* Parse.framework */; };
-		360F3FCD19CD9A77006A8709 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360F3FCB19CD9A77006A8709 /* Bolts.framework */; };
 		360F3FCF19CD9A9B006A8709 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360F3FCE19CD9A9B006A8709 /* AudioToolbox.framework */; };
 		360F3FD119CD9AA0006A8709 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360F3FD019CD9AA0006A8709 /* CFNetwork.framework */; };
 		360F3FD319CD9AA7006A8709 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360F3FD219CD9AA7006A8709 /* CoreGraphics.framework */; };
@@ -54,7 +53,6 @@
 		F11C935D19CD612300AAFA9D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F11C935C19CD612300AAFA9D /* OpenGLES.framework */; };
 		F11C935F19CD612C00AAFA9D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F11C935E19CD612C00AAFA9D /* QuartzCore.framework */; };
 		F11C936119CD613600AAFA9D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F11C936019CD613600AAFA9D /* SystemConfiguration.framework */; };
-		F11C936819CD663A00AAFA9D /* JSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F11C936719CD663A00AAFA9D /* JSBaseViewController.m */; };
 		F141AF6319CD7006007B6B92 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F11C931619CD598600AAFA9D /* main.m */; };
 		F141AFCF19CD8F28007B6B92 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F141AF9F19CD8F28007B6B92 /* GoogleMaps.bundle */; };
 		F141AFD619CD8F4B007B6B92 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F141AFD519CD8F4B007B6B92 /* GoogleMaps.framework */; };
@@ -131,8 +129,6 @@
 		F11C935C19CD612300AAFA9D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		F11C935E19CD612C00AAFA9D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F11C936019CD613600AAFA9D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		F11C936619CD663A00AAFA9D /* JSBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBaseViewController.h; sourceTree = "<group>"; };
-		F11C936719CD663A00AAFA9D /* JSBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBaseViewController.m; sourceTree = "<group>"; };
 		F141AF9F19CD8F28007B6B92 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = "<group>"; };
 		F141AFD519CD8F4B007B6B92 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -165,7 +161,6 @@
 				F11C934D19CD60A600AAFA9D /* CoreData.framework in Frameworks */,
 				F11C934B19CD609700AAFA9D /* AVFoundation.framework in Frameworks */,
 				2896E645BD5E4968A8E4BD17 /* libPods.a in Frameworks */,
-				360F3FCD19CD9A77006A8709 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,8 +228,6 @@
 				F11C931419CD598600AAFA9D /* Supporting Files */,
 				F11C934119CD5F2300AAFA9D /* JSMapViewController.h */,
 				F11C934219CD5F2300AAFA9D /* JSMapViewController.m */,
-				F11C936619CD663A00AAFA9D /* JSBaseViewController.h */,
-				F11C936719CD663A00AAFA9D /* JSBaseViewController.m */,
 				DFD1057619CE4AA400634995 /* JSMySignUpViewController.h */,
 				DFD1057719CE4AE600634995 /* JSMySignUpViewController.m */,
 				360F3FC419CD9A1A006A8709 /* JobDetailViewController.m */,
@@ -462,7 +455,6 @@
 				F141AF6319CD7006007B6B92 /* main.m in Sources */,
 				360F3FC919CD9A1A006A8709 /* JobDetailTableView.m in Sources */,
 				F11C931D19CD598600AAFA9D /* JSLoginViewController.m in Sources */,
-				F11C936819CD663A00AAFA9D /* JSBaseViewController.m in Sources */,
 				DFD1057819CE4AE600634995 /* JSMySignUpViewController.m in Sources */,
 				360F3FC819CD9A1A006A8709 /* JobDetailViewController.m in Sources */,
 				F11C931A19CD598600AAFA9D /* AppDelegate.m in Sources */,
@@ -583,7 +575,7 @@
 					"$(PROJECT_DIR)/Frameworks/GoogleMaps.framework",
 					"$(PROJECT_DIR)/Frameworks/GoogleMaps.framework/Versions/A",
 				);
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -605,7 +597,7 @@
 					"$(PROJECT_DIR)/Frameworks/GoogleMaps.framework",
 					"$(PROJECT_DIR)/Frameworks/GoogleMaps.framework/Versions/A",
 				);
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
