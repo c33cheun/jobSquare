@@ -93,7 +93,7 @@
 	UINavigationController *navviewController1 , *navviewController2, *navviewController3;
 	
 	profile = [[JSProfileViewController alloc] init];
-	[profile setTitle:@"This is the second view controller"];
+//	[profile setTitle:@"This is the second view controller"];
 	navviewController1=[[UINavigationController alloc]initWithRootViewController:profile];
 	
     map = [[JSMapViewController alloc] init];
