@@ -84,50 +84,52 @@
 }
 
 - (IBAction)loginUserClick {
-	JSMapViewController *map;
-    
-    JSProfileViewController *profile;
-    JobDetailViewController *viewController3;
-    
-	UINavigationController *navviewController1 , *navviewController2, *navviewController3;
-    
+//	JSMapViewController *map;
+//    
+//    JSProfileViewController *profile;
+//    JobDetailViewController *viewController3;
+//    
+//	UINavigationController *navviewController1 , *navviewController2, *navviewController3;
+//    
+//    //set colors
+//    [navviewController2.navigationBar setBarTintColor: [UIColor blackColor]];
+//    [navviewController2.navigationBar setTintColor: [UIColor blackColor]];
+//	
+//	profile = [[JSProfileViewController alloc] init];
+////	[profile setTitle:@"This is the second view controller"];
+//	navviewController1=[[UINavigationController alloc]initWithRootViewController:profile];
+//	
+//    map = [[JSMapViewController alloc] init];
+//	navviewController2=[[UINavigationController alloc]initWithRootViewController:map];
+//    
+//    viewController3 = [[JobDetailViewController alloc] init];
+//    viewController3.jobId = @"ExhFAklqBl";
+//    navviewController3=[[UINavigationController alloc]initWithRootViewController:viewController3];
+	
+	
+//	UITabBarController *tab = [[UITabBarController alloc]init];
     //set colors
-    [navviewController2.navigationBar setBarTintColor: [UIColor blackColor]];
-    [navviewController2.navigationBar setTintColor: [UIColor blackColor]];
-	
-	profile = [[JSProfileViewController alloc] init];
-//	[profile setTitle:@"This is the second view controller"];
-	navviewController1=[[UINavigationController alloc]initWithRootViewController:profile];
-	
-    map = [[JSMapViewController alloc] init];
-	navviewController2=[[UINavigationController alloc]initWithRootViewController:map];
+//    [tab.tabBar setTintColor:[UIColor whiteColor]];
+//    [tab.tabBar setBarTintColor:[UIColor blackColor]];
     
-    viewController3 = [[JobDetailViewController alloc] init];
-    viewController3.jobId = @"ExhFAklqBl";
-    navviewController3=[[UINavigationController alloc]initWithRootViewController:viewController3];
-	
-	
-	UITabBarController *tab = [[UITabBarController alloc]init];
-    //set colors
-    [tab.tabBar setTintColor:[UIColor whiteColor]];
-    [tab.tabBar setBarTintColor:[UIColor blackColor]];
+    JSMainViewController *tab = [[JSMainViewController alloc]init];
     
-	tab.viewControllers = [NSArray arrayWithObjects: navviewController2, navviewController1, navviewController3, nil];
+//	tab.viewControllers = [NSArray arrayWithObjects: navviewController2, navviewController1, navviewController3, nil];
 	
-	UITabBarItem *mapItem = [[UITabBarItem alloc]init];
-	[mapItem setTitle:@"Map"];
-	//[mapItem setImage:@""];
-	
-	UITabBarItem *accountItem = [[UITabBarItem alloc]init];
-	//[accountItem setImage:@""];
-	[accountItem setTitle:@"Account"];
-    
-    UITabBarItem *jobItem = [[UITabBarItem alloc] init];
-    [jobItem setTitle:@"Jobs"];
-	
-    [navviewController1 setTabBarItem:accountItem];
-    [navviewController2 setTabBarItem:mapItem];
-    [navviewController3 setTabBarItem:jobItem];
+//	UITabBarItem *mapItem = [[UITabBarItem alloc]init];
+//	[mapItem setTitle:@"Map"];
+//	//[mapItem setImage:@""];
+//	
+//	UITabBarItem *accountItem = [[UITabBarItem alloc]init];
+//	//[accountItem setImage:@""];
+//	[accountItem setTitle:@"Account"];
+//    
+//    UITabBarItem *jobItem = [[UITabBarItem alloc] init];
+//    [jobItem setTitle:@"Jobs"];
+//	
+//    [navviewController1 setTabBarItem:accountItem];
+//    [navviewController2 setTabBarItem:mapItem];
+//    [navviewController3 setTabBarItem:jobItem];
 	
 	//[self.navigationController pushViewController:tab animated:nil];
 	[self presentViewController:tab animated:YES completion:nil];

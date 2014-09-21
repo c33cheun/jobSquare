@@ -36,3 +36,9 @@
 #define COCOAPODS_VERSION_MINOR_Facebook_iOS_SDK 18
 #define COCOAPODS_VERSION_PATCH_Facebook_iOS_SDK 0
 
+// MCPanelViewController
+#define COCOAPODS_POD_AVAILABLE_MCPanelViewController
+#define COCOAPODS_VERSION_MAJOR_MCPanelViewController 0
+#define COCOAPODS_VERSION_MINOR_MCPanelViewController 3
+#define COCOAPODS_VERSION_PATCH_MCPanelViewController 0
+

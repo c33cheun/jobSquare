@@ -7,15 +7,18 @@ PODS:
   - Bolts (1.1.2)
   - Facebook-iOS-SDK (3.18.0):
     - Bolts
+  - MCPanelViewController (0.3)
 
 DEPENDENCIES:
   - AFNetworking (= 2.0.0-RC2)
   - Bolts
   - Facebook-iOS-SDK (~> 3.18)
+  - MCPanelViewController (~> 0.3)
 
 SPEC CHECKSUMS:
   AFNetworking: 196030e4ce72f74d4101c82b37b47db80eadb327
   Bolts: 2635e8698a630774689441047f3465d78c48d485
   Facebook-iOS-SDK: fa12c51cc57bfb6f92e47793c9d4d2c65bc92741
+  MCPanelViewController: eca1ba7cf17d8605dd82d9f9bdbf8a0715c2d912
 
 COCOAPODS: 0.33.1
