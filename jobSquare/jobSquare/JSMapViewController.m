@@ -7,64 +7,94 @@
 //
 
 #import "JSMapViewController.h"
-#import <GoogleMaps/GoogleMaps.h>
-#import "BFTask.h"
 
-@interface JSMapViewController () <GMSMapViewDelegate, CLLocationManagerDelegate>
+@interface JSMapViewController () {
+}
 
 @end
 
 @implementation JSMapViewController {
     GMSMapView *mapView;
-    CLLocationManager *locationManager;
     CLGeocoder *geocoder;
     CLPlacemark *placemark;
 }
 
 - (void) loadView {
-    [super loadView];    
+    [super loadView];
     
-    locationManager = [[CLLocationManager alloc]init];
-    
-    locationManager.delegate = self;
-    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    
-    
-    [locationManager startUpdatingLocation];
+    [self startStandardUpdates];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    geocoder = [[CLGeocoder alloc] init];
-    // Do any additional setup after loading the view.
-    // Create a GMSCameraPosition that tells the map to display the
-    // coordinate -33.86,151.20 at zoom level 6.
     
-    CLLocation *presentlocation = [locationManager location];
-    
-//    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:-33.86
-//                                                            longitude:151.20
-//                                                                 zoom:6];
-    
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithTarget:[presentlocation coordinate] zoom:6];
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithTarget:_locationManager.location.coordinate zoom:10];
     
     mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
     mapView.myLocationEnabled = YES;
-    self.view = mapView;
     
+    PFGeoPoint *myLocation = [PFGeoPoint geoPointWithLocation:_locationManager.location];
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Job"];
+    [query setLimit:10];
+    [query whereKey:@"location" nearGeoPoint:myLocation withinKilometers:2.0];
+
+    [[IMAsync findObjectsAsync:query] continueWithSuccessBlock:^id(BFTask *results) {
+        
+        NSMutableArray *jobs = [NSMutableArray array];
+        
+        for(PFObject *result in results.result){
+            //[jobLocations addObject:result];
+            JSJobPosting *pass = [[JSJobPosting alloc]initWithParseObject:result];
+            [jobs addObject:pass];
+            GMSMarker *point = [GMSMarker markerWithPosition:pass.location.coordinate];
+            point.map = mapView;
+            point.title = @"1";
+        }
+        
+        return nil;
+    }];
     // Creates a marker in the center of the map.
-    GMSMarker *marker = [[GMSMarker alloc] init];
-    //marker.position = CLLocationCoordinate2DMake(-33.86, 151.20);
-    marker.position = [presentlocation coordinate];
-    marker.title = @"Sydney";
-    marker.snippet = @"Australia";
-    marker.map = mapView;
+    //GMSMarker *marker = [[GMSMarker alloc] init];
+    //marker.position = _locationManager.location.coordinate;
+    //marker.map = mapView;
+    
+    self.view = mapView;
 }
 
+
 - (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [super didReceiveMemoryWarning];    
+}
+
+- (void)startStandardUpdates
+{
+    // Create the location manager if this object does not
+    // already have one.
+    if (nil == _locationManager)
+        self.locationManager = [[CLLocationManager alloc] init];
+    
+    //_locationManager.delegate = self;
+    [_locationManager setDelegate:self];
+    
+    // Check for iOS 8. Without this guard the code will crash with "unknown selector" on iOS 7.
+    if ([_locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+        [_locationManager requestWhenInUseAuthorization];
+    }
+    _locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
+    
+    // Set a movement threshold for new events.
+    _locationManager.distanceFilter = 500; // meters
+    
+    [_locationManager startUpdatingLocation];
+}
+
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    _location = [[CLLocation alloc]init];
+    _location = locations.lastObject;
+    [_locationManager stopUpdatingLocation];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
@@ -72,7 +102,7 @@
     NSLog(@"didUpdateToLocation: %@", newLocation);
     CLLocation *currentLocation = newLocation;
     
-    [locationManager stopUpdatingLocation];
+    [_locationManager stopUpdatingLocation];
     
     // Reverse Geocoding
     NSLog(@"Resolving the Address");

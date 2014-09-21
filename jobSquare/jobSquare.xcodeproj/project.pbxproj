@@ -37,6 +37,7 @@
 		DFD1059519CE4F0E00634995 /* SignUpFieldBG.png in Resources */ = {isa = PBXBuildFile; fileRef = DFD1058619CE4F0E00634995 /* SignUpFieldBG.png */; };
 		DFD1059619CE4F0E00634995 /* Twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = DFD1058719CE4F0E00634995 /* Twitter.png */; };
 		DFD1059719CE4F0E00634995 /* TwitterDown.png in Resources */ = {isa = PBXBuildFile; fileRef = DFD1058819CE4F0E00634995 /* TwitterDown.png */; };
+		DFF3F4A119CE6A660064D77C /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF3F4A019CE6A660064D77C /* ParseFacebookUtils.framework */; };
 		F11C931A19CD598600AAFA9D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F11C931919CD598600AAFA9D /* AppDelegate.m */; };
 		F11C931D19CD598600AAFA9D /* JSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F11C931C19CD598600AAFA9D /* JSLoginViewController.m */; };
 		F11C932219CD598600AAFA9D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F11C932119CD598600AAFA9D /* Images.xcassets */; };
@@ -54,10 +55,11 @@
 		F11C935D19CD612300AAFA9D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F11C935C19CD612300AAFA9D /* OpenGLES.framework */; };
 		F11C935F19CD612C00AAFA9D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F11C935E19CD612C00AAFA9D /* QuartzCore.framework */; };
 		F11C936119CD613600AAFA9D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F11C936019CD613600AAFA9D /* SystemConfiguration.framework */; };
-		F11C936819CD663A00AAFA9D /* JSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F11C936719CD663A00AAFA9D /* JSBaseViewController.m */; };
 		F141AF6319CD7006007B6B92 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F11C931619CD598600AAFA9D /* main.m */; };
 		F141AFCF19CD8F28007B6B92 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F141AF9F19CD8F28007B6B92 /* GoogleMaps.bundle */; };
 		F141AFD619CD8F4B007B6B92 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F141AFD519CD8F4B007B6B92 /* GoogleMaps.framework */; };
+		F1F11AAA19CE8464009E3FF3 /* IMAsync.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F11AA919CE8464009E3FF3 /* IMAsync.m */; };
+		F1F11AB019CE9B52009E3FF3 /* JSJobPosting.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F11AAF19CE9B52009E3FF3 /* JSJobPosting.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,7 +79,6 @@
 		360F3FC619CD9A1A006A8709 /* JobDetailTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobDetailTableView.h; sourceTree = "<group>"; };
 		360F3FC719CD9A1A006A8709 /* JobDetailTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobDetailTableView.m; sourceTree = "<group>"; };
 		360F3FCA19CD9A77006A8709 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		360F3FCB19CD9A77006A8709 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		360F3FCE19CD9A9B006A8709 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		360F3FD019CD9AA0006A8709 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		360F3FD219CD9AA7006A8709 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -107,6 +108,9 @@
 		DFD1058619CE4F0E00634995 /* SignUpFieldBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SignUpFieldBG.png; path = jobSquare/Assets/SignUpFieldBG.png; sourceTree = "<group>"; };
 		DFD1058719CE4F0E00634995 /* Twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Twitter.png; path = jobSquare/Assets/Twitter.png; sourceTree = "<group>"; };
 		DFD1058819CE4F0E00634995 /* TwitterDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TwitterDown.png; path = jobSquare/Assets/TwitterDown.png; sourceTree = "<group>"; };
+		DFF3F49C19CE678B0064D77C /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		DFF3F4A019CE6A660064D77C /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		DFF3F4A219CE931D0064D77C /* JSAssetsConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSAssetsConstants.h; sourceTree = "<group>"; };
 		F11C931119CD598600AAFA9D /* jobSquare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jobSquare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F11C931519CD598600AAFA9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F11C931619CD598600AAFA9D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -132,10 +136,12 @@
 		F11C935C19CD612300AAFA9D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		F11C935E19CD612C00AAFA9D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F11C936019CD613600AAFA9D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		F11C936619CD663A00AAFA9D /* JSBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBaseViewController.h; sourceTree = "<group>"; };
-		F11C936719CD663A00AAFA9D /* JSBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBaseViewController.m; sourceTree = "<group>"; };
 		F141AF9F19CD8F28007B6B92 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = "<group>"; };
 		F141AFD519CD8F4B007B6B92 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
+		F1F11AA819CE8464009E3FF3 /* IMAsync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAsync.h; sourceTree = "<group>"; };
+		F1F11AA919CE8464009E3FF3 /* IMAsync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMAsync.m; sourceTree = "<group>"; };
+		F1F11AAE19CE9B52009E3FF3 /* JSJobPosting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSJobPosting.h; sourceTree = "<group>"; };
+		F1F11AAF19CE9B52009E3FF3 /* JSJobPosting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSJobPosting.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +161,7 @@
 				360F3FCF19CD9A9B006A8709 /* AudioToolbox.framework in Frameworks */,
 				F141AFD619CD8F4B007B6B92 /* GoogleMaps.framework in Frameworks */,
 				F11C935F19CD612C00AAFA9D /* QuartzCore.framework in Frameworks */,
+				DFF3F4A119CE6A660064D77C /* ParseFacebookUtils.framework in Frameworks */,
 				F11C935D19CD612300AAFA9D /* OpenGLES.framework in Frameworks */,
 				360F3FCC19CD9A77006A8709 /* Parse.framework in Frameworks */,
 				F11C935B19CD611B00AAFA9D /* libz.dylib in Frameworks */,
@@ -225,20 +232,21 @@
 		F11C931319CD598600AAFA9D /* jobSquare */ = {
 			isa = PBXGroup;
 			children = (
+				F1F11AAD19CE9B40009E3FF3 /* Models */,
+				F1F11AA619CE83B8009E3FF3 /* Controllers */,
+				F1F11AA519CE83A9009E3FF3 /* WebServices */,
 				F11C931819CD598600AAFA9D /* AppDelegate.h */,
 				F11C931919CD598600AAFA9D /* AppDelegate.m */,
-				F11C931B19CD598600AAFA9D /* JSLoginViewController.h */,
-				F11C931C19CD598600AAFA9D /* JSLoginViewController.m */,
 				F11C932119CD598600AAFA9D /* Images.xcassets */,
 				F11C931419CD598600AAFA9D /* Supporting Files */,
+				F1F11AA719CE83CD009E3FF3 /* Views */,
 				F11C934119CD5F2300AAFA9D /* JSMapViewController.h */,
 				F11C934219CD5F2300AAFA9D /* JSMapViewController.m */,
-				F11C936619CD663A00AAFA9D /* JSBaseViewController.h */,
-				F11C936719CD663A00AAFA9D /* JSBaseViewController.m */,
 				DFD1057619CE4AA400634995 /* JSMySignUpViewController.h */,
 				DFD1057719CE4AE600634995 /* JSMySignUpViewController.m */,
 				DFD1057319CE473A00634995 /* JSMyLogInViewController.h */,
 				DFD1057419CE473A00634995 /* JSMyLogInViewController.m */,
+				DFF3F4A219CE931D0064D77C /* JSAssetsConstants.h */,
 				360F3FC519CD9A1A006A8709 /* JobDetailViewController.h */,
 				360F3FC419CD9A1A006A8709 /* JobDetailViewController.m */,
 				36A7F68719CE5F5D0013D2D8 /* JobDetailViewController.xib */,
@@ -277,6 +285,8 @@
 		F11C936219CD616000AAFA9D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DFF3F4A019CE6A660064D77C /* ParseFacebookUtils.framework */,
+				DFF3F49C19CE678B0064D77C /* FacebookSDK.framework */,
 				360F3FDC19CD9B50006A8709 /* Accounts.framework */,
 				360F3FDA19CD9B48006A8709 /* Social.framework */,
 				360F3FD819CD9AC9006A8709 /* StoreKit.framework */,
@@ -286,7 +296,6 @@
 				360F3FD019CD9AA0006A8709 /* CFNetwork.framework */,
 				360F3FCE19CD9A9B006A8709 /* AudioToolbox.framework */,
 				360F3FCA19CD9A77006A8709 /* Parse.framework */,
-				360F3FCB19CD9A77006A8709 /* Bolts.framework */,
 				F141AFD519CD8F4B007B6B92 /* GoogleMaps.framework */,
 				F141AF9F19CD8F28007B6B92 /* GoogleMaps.bundle */,
 				F11C936019CD613600AAFA9D /* SystemConfiguration.framework */,
@@ -304,6 +313,50 @@
 				07D0996596214AB3972854EB /* libPods.a */,
 			);
 			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		F1F11AA519CE83A9009E3FF3 /* WebServices */ = {
+			isa = PBXGroup;
+			children = (
+				F1F11AA819CE8464009E3FF3 /* IMAsync.h */,
+				F1F11AA919CE8464009E3FF3 /* IMAsync.m */,
+			);
+			name = WebServices;
+			sourceTree = "<group>";
+		};
+		F1F11AA619CE83B8009E3FF3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F11C931B19CD598600AAFA9D /* JSLoginViewController.h */,
+				F11C931C19CD598600AAFA9D /* JSLoginViewController.m */,
+				F11C934119CD5F2300AAFA9D /* JSMapViewController.h */,
+				F11C934219CD5F2300AAFA9D /* JSMapViewController.m */,
+				DFD1057619CE4AA400634995 /* JSMySignUpViewController.h */,
+				DFD1057719CE4AE600634995 /* JSMySignUpViewController.m */,
+				360F3FC419CD9A1A006A8709 /* JobDetailViewController.m */,
+				DFD1057319CE473A00634995 /* JSMyLogInViewController.h */,
+				DFD1057419CE473A00634995 /* JSMyLogInViewController.m */,
+				360F3FC519CD9A1A006A8709 /* JobDetailViewController.h */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		F1F11AA719CE83CD009E3FF3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				360F3FC619CD9A1A006A8709 /* JobDetailTableView.h */,
+				360F3FC719CD9A1A006A8709 /* JobDetailTableView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		F1F11AAD19CE9B40009E3FF3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F1F11AAE19CE9B52009E3FF3 /* JSJobPosting.h */,
+				F1F11AAF19CE9B52009E3FF3 /* JSJobPosting.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -464,9 +517,10 @@
 				F141AF6319CD7006007B6B92 /* main.m in Sources */,
 				360F3FC919CD9A1A006A8709 /* JobDetailTableView.m in Sources */,
 				F11C931D19CD598600AAFA9D /* JSLoginViewController.m in Sources */,
-				F11C936819CD663A00AAFA9D /* JSBaseViewController.m in Sources */,
 				DFD1057819CE4AE600634995 /* JSMySignUpViewController.m in Sources */,
+				F1F11AAA19CE8464009E3FF3 /* IMAsync.m in Sources */,
 				360F3FC819CD9A1A006A8709 /* JobDetailViewController.m in Sources */,
+				F1F11AB019CE9B52009E3FF3 /* JSJobPosting.m in Sources */,
 				F11C931A19CD598600AAFA9D /* AppDelegate.m in Sources */,
 				F11C934319CD5F2300AAFA9D /* JSMapViewController.m in Sources */,
 				DFD1057519CE473A00634995 /* JSMyLogInViewController.m in Sources */,
@@ -576,6 +630,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks/",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = jobSquare/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -598,6 +653,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks/",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = jobSquare/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;

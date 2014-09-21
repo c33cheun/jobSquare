@@ -6,3 +6,5 @@ xcodeproj 'jobSquare.xcodeproj'
 link_with 'jobSquare'
 
 pod 'Bolts'
+pod 'Facebook-iOS-SDK', '~> 3.18'
+pod 'AFNetworking", "2.0.0-RC2'

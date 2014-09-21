@@ -24,22 +24,16 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	//	[PFUser logOut];
-	//	[self.navigationController popViewControllerAnimated:YES];
-	// Do any additional setup after loading the view, typically from a nib.
-	//    UIView *firstView = [[UIView alloc]initWithFrame:CGRectMake(50, 50, self.view.frame.size.width, self.view.frame.size.height)];
 	UIButton *login = [[UIButton alloc]initWithFrame:CGRectMake(100, 500, 100, 50)];
 	[self.view setBackgroundColor:[UIColor whiteColor]];
 	[login setBackgroundColor:[UIColor blueColor]];
 	[login addTarget:self action:@selector(loginUserClick) forControlEvents:UIControlEventAllTouchEvents];
-	//[self.view addSubview:firstView];
 	[self.view addSubview:login];
 	
 	UIButton *logout = [[UIButton alloc]initWithFrame:CGRectMake(100, 200, 100, 50)];
 	[self.view setBackgroundColor:[UIColor whiteColor]];
 	[logout setBackgroundColor:[UIColor redColor]];
 	[logout addTarget:self action:@selector(logoutUserClick) forControlEvents:UIControlEventAllTouchEvents];
-	//[self.view addSubview:firstView];
 	[self.view addSubview:logout];
 	
 }
@@ -48,13 +42,14 @@
 	[super viewDidAppear:animated];
 	
 	// Check if user is logged in
+
 	if (![PFUser currentUser]) {
 		// Customize the Log In View Controller
 		JSMyLogInViewController *logInViewController = [[JSMyLogInViewController alloc] init];
 		logInViewController.delegate = self;
 		logInViewController.facebookPermissions = @[@"friends_about_me"];
 		
-		logInViewController.fields = PFLogInFieldsUsernameAndPassword | PFLogInFieldsLogInButton | PFLogInFieldsSignUpButton | PFLogInFieldsDismissButton;
+		logInViewController.fields = PFLogInFieldsUsernameAndPassword | PFLogInFieldsTwitter | PFLogInFieldsFacebook | PFLogInFieldsSignUpButton | PFLogInFieldsDismissButton;
 		
 		// Customize the Sign Up View Controller
 		JSMySignUpViewController *signUpViewController = [[JSMySignUpViewController alloc] init];
