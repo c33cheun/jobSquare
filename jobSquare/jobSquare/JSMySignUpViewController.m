@@ -9,11 +9,11 @@
 #import "JSMySignUpViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
-@interface MySignUpViewController ()
+@interface JSMySignUpViewController ()
 @property (nonatomic, strong) UIImageView *fieldsBackground;
 @end
 
-@implementation MySignUpViewController
+@implementation JSMySignUpViewController
 
 @synthesize fieldsBackground;
 

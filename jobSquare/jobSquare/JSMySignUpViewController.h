@@ -8,6 +8,6 @@
 
 #import <Parse/PFSignUpViewController.h>
 
-@interface MySignUpViewController : PFSignUpViewController
+@interface JSMySignUpViewController : PFSignUpViewController
 
 @end

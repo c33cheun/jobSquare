@@ -10,11 +10,11 @@
 #import <QuartzCore/QuartzCore.h>
 #import <UIKit/UIKit.h>
 
-@interface MyLogInViewController ()
+@interface JSMyLogInViewController ()
 @property (nonatomic, strong) UIImageView *fieldsBackground;
 @end
 
-@implementation MyLogInViewController
+@implementation JSMyLogInViewController
 
 @synthesize fieldsBackground;
 
