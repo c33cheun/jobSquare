@@ -28,10 +28,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //geocoder = [[CLGeocoder alloc] init];
-    
-    [self startStandardUpdates];
-    
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithTarget:_locationManager.location.coordinate zoom:10];
     
     mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
