@@ -26,6 +26,7 @@
         //set colors
         [self.tabBar setBarTintColor: [UIColor blackColor]];
         [self.tabBar setTintColor: [UIColor blackColor]];
+        [self.tabBar setSelectedImageTintColor: [UIColor whiteColor]];
         
         profile = [[JSProfileViewController alloc] init];
         //	[profile setTitle:@"This is the second view controller"];
@@ -42,14 +43,30 @@
         
         UITabBarItem *mapItem = [[UITabBarItem alloc]init];
         [mapItem setTitle:@"Map"];
-        //[mapItem setImage:@""];
+        UIImage *mapIcon = [UIImage imageNamed:@"nav_icon_01.png"];
+        UIImage *mapIconOn = [UIImage imageNamed:@"nav_icon_01on.png"];
+        mapIcon = resizeImage(mapIcon);
+        mapIconOn = resizeImage(mapIconOn);
+        [mapItem setImage:mapIcon];
+        [mapItem setSelectedImage:mapIconOn];
         
         UITabBarItem *accountItem = [[UITabBarItem alloc]init];
-        //[accountItem setImage:@""];
+        UIImage *accountIcon = [UIImage imageNamed:@"nav_icon_03.png"];
+        UIImage *accountIconOn = [UIImage imageNamed:@"nav_icon_03_on.png"];
+        accountIcon = resizeImage(accountIcon);
+        accountIconOn = resizeImage(accountIconOn);
+        [accountItem setImage:accountIcon];
         [accountItem setTitle:@"Account"];
+        [accountItem setSelectedImage:accountIconOn];
         
         UITabBarItem *jobItem = [[UITabBarItem alloc] init];
+        UIImage *jobIcon = [UIImage imageNamed:@"nav_icon_04.png"];
+        UIImage *jobIconOn = [UIImage imageNamed:@"nav_icon_04on.png"];
+        jobIcon = resizeImage(jobIcon);
+        jobIconOn = resizeImage(jobIconOn);
+        [jobItem setImage:jobIcon];
         [jobItem setTitle:@"Jobs"];
+        [jobItem setSelectedImage:jobIconOn];
         
         [navviewController1 setTabBarItem:accountItem];
         [navviewController2 setTabBarItem:mapItem];
@@ -68,6 +85,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+UIImage* resizeImage (UIImage *input) {
+    UIImage *scaledImage = [UIImage imageWithCGImage:[input CGImage]
+                        scale:(input.scale * 2.0)
+                  orientation:(input.imageOrientation)];
+    return scaledImage;
+}
+
+- (UIStatusBarStyle) preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+         
 /*
 #pragma mark - Navigation
 
