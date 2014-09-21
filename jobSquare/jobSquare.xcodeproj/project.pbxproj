@@ -37,6 +37,8 @@
 		DFD1059519CE4F0E00634995 /* SignUpFieldBG.png in Resources */ = {isa = PBXBuildFile; fileRef = DFD1058619CE4F0E00634995 /* SignUpFieldBG.png */; };
 		DFD1059619CE4F0E00634995 /* Twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = DFD1058719CE4F0E00634995 /* Twitter.png */; };
 		DFD1059719CE4F0E00634995 /* TwitterDown.png in Resources */ = {isa = PBXBuildFile; fileRef = DFD1058819CE4F0E00634995 /* TwitterDown.png */; };
+		DFF3F49D19CE678B0064D77C /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF3F49C19CE678B0064D77C /* FacebookSDK.framework */; };
+		DFF3F4A119CE6A660064D77C /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF3F4A019CE6A660064D77C /* ParseFacebookUtils.framework */; };
 		F11C931A19CD598600AAFA9D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F11C931919CD598600AAFA9D /* AppDelegate.m */; };
 		F11C931D19CD598600AAFA9D /* JSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F11C931C19CD598600AAFA9D /* JSLoginViewController.m */; };
 		F11C932219CD598600AAFA9D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F11C932119CD598600AAFA9D /* Images.xcassets */; };
@@ -106,6 +108,8 @@
 		DFD1058619CE4F0E00634995 /* SignUpFieldBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SignUpFieldBG.png; path = jobSquare/Assets/SignUpFieldBG.png; sourceTree = "<group>"; };
 		DFD1058719CE4F0E00634995 /* Twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Twitter.png; path = jobSquare/Assets/Twitter.png; sourceTree = "<group>"; };
 		DFD1058819CE4F0E00634995 /* TwitterDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TwitterDown.png; path = jobSquare/Assets/TwitterDown.png; sourceTree = "<group>"; };
+		DFF3F49C19CE678B0064D77C /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		DFF3F4A019CE6A660064D77C /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		F11C931119CD598600AAFA9D /* jobSquare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jobSquare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F11C931519CD598600AAFA9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F11C931619CD598600AAFA9D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -154,6 +158,7 @@
 				360F3FCF19CD9A9B006A8709 /* AudioToolbox.framework in Frameworks */,
 				F141AFD619CD8F4B007B6B92 /* GoogleMaps.framework in Frameworks */,
 				F11C935F19CD612C00AAFA9D /* QuartzCore.framework in Frameworks */,
+				DFF3F4A119CE6A660064D77C /* ParseFacebookUtils.framework in Frameworks */,
 				F11C935D19CD612300AAFA9D /* OpenGLES.framework in Frameworks */,
 				360F3FCC19CD9A77006A8709 /* Parse.framework in Frameworks */,
 				F11C935B19CD611B00AAFA9D /* libz.dylib in Frameworks */,
@@ -163,6 +168,7 @@
 				F11C935319CD60EA00AAFA9D /* CoreText.framework in Frameworks */,
 				F11C934F19CD60C800AAFA9D /* ImageIO.framework in Frameworks */,
 				F11C934D19CD60A600AAFA9D /* CoreData.framework in Frameworks */,
+				DFF3F49D19CE678B0064D77C /* FacebookSDK.framework in Frameworks */,
 				F11C934B19CD609700AAFA9D /* AVFoundation.framework in Frameworks */,
 				2896E645BD5E4968A8E4BD17 /* libPods.a in Frameworks */,
 				360F3FCD19CD9A77006A8709 /* Bolts.framework in Frameworks */,
@@ -276,6 +282,8 @@
 		F11C936219CD616000AAFA9D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DFF3F4A019CE6A660064D77C /* ParseFacebookUtils.framework */,
+				DFF3F49C19CE678B0064D77C /* FacebookSDK.framework */,
 				360F3FDC19CD9B50006A8709 /* Accounts.framework */,
 				360F3FDA19CD9B48006A8709 /* Social.framework */,
 				360F3FD819CD9AC9006A8709 /* StoreKit.framework */,
@@ -574,6 +582,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks/",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = jobSquare/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -596,6 +605,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks/",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = jobSquare/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
