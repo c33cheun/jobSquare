@@ -86,11 +86,14 @@
 - (IBAction)loginUserClick {
 	JSMapViewController *map;
     
-	UIViewController *viewController1;
     JSProfileViewController *profile;
     JobDetailViewController *viewController3;
     
 	UINavigationController *navviewController1 , *navviewController2, *navviewController3;
+    
+    //set colors
+    [navviewController2.navigationBar setBarTintColor: [UIColor blackColor]];
+    [navviewController2.navigationBar setTintColor: [UIColor blackColor]];
 	
 	profile = [[JSProfileViewController alloc] init];
 	[profile setTitle:@"This is the second view controller"];
@@ -105,6 +108,10 @@
 	
 	
 	UITabBarController *tab = [[UITabBarController alloc]init];
+    //set colors
+    [tab.tabBar setTintColor:[UIColor whiteColor]];
+    [tab.tabBar setBarTintColor:[UIColor blackColor]];
+    
 	tab.viewControllers = [NSArray arrayWithObjects: navviewController2, navviewController1, navviewController3, nil];
 	
 	UITabBarItem *mapItem = [[UITabBarItem alloc]init];

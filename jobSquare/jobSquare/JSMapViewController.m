@@ -17,11 +17,14 @@
     GMSMapView *mapView;
     CLGeocoder *geocoder;
     CLPlacemark *placemark;
+    GMSGeocoder *gGeocoder;
 }
 
 - (void) loadView {
     [super loadView];
     
+    [self.navigationController.navigationBar setTintColor: [UIColor blackColor]];
+    [self.navigationController.navigationBar setBarTintColor: [UIColor blackColor]];
     [self startStandardUpdates];
 }
 
@@ -32,6 +35,8 @@
     
     mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
     mapView.myLocationEnabled = YES;
+    mapView.delegate = self;
+    
     
     PFGeoPoint *myLocation = [PFGeoPoint geoPointWithLocation:_locationManager.location];
     
@@ -43,13 +48,17 @@
         
         NSMutableArray *jobs = [NSMutableArray array];
         
+        NSUInteger counter = 0;
+        
         for(PFObject *result in results.result){
             //[jobLocations addObject:result];
+            
+            counter++;
             JSJobPosting *pass = [[JSJobPosting alloc]initWithParseObject:result];
             [jobs addObject:pass];
             GMSMarker *point = [GMSMarker markerWithPosition:pass.location.coordinate];
             point.map = mapView;
-            point.title = @"1";
+            point.title = [NSString stringWithFormat:@"%lu", (unsigned long)counter];
         }
         
         return nil;
@@ -129,4 +138,42 @@
     [errorAlert show];
 }
 
+#pragma mark - GMSMapViewDelegate
+
+-(void)mapView:(GMSMapView *)respMapView willMove:(BOOL)gesture {
+    [respMapView clear];
+}
+
+- (void)mapView:(GMSMapView *)respMapView
+idleAtCameraPosition:(GMSCameraPosition *)cameraPosition {
+    
+    CLLocation *resultLocation = [[CLLocation alloc] initWithLatitude:cameraPosition.target.latitude longitude: cameraPosition.target.longitude];
+    
+    PFGeoPoint *myNewLocation = [PFGeoPoint geoPointWithLocation:resultLocation];
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Job"];
+    [query setLimit:10];
+    [query whereKey:@"location" nearGeoPoint:myNewLocation withinKilometers:2.0];
+    
+    [[IMAsync findObjectsAsync:query] continueWithSuccessBlock:^id(BFTask *results) {
+        
+        NSMutableArray *jobs = [NSMutableArray array];
+        
+        NSUInteger counter = 0;
+        
+        for(PFObject *result in results.result){
+            //[jobLocations addObject:result];
+            
+            counter++;
+            JSJobPosting *pass = [[JSJobPosting alloc]initWithParseObject:result];
+            [jobs addObject:pass];
+            GMSMarker *point = [GMSMarker markerWithPosition:pass.location.coordinate];
+            point.map = mapView;
+            point.title = [NSString stringWithFormat:@"%lu", (unsigned long)counter];
+        }
+        
+        return nil;
+    }];
+
+}
 @end

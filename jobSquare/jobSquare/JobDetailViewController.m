@@ -7,6 +7,7 @@
 //
 
 #import "JobDetailViewController.h"
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 
 @interface JobDetailViewController ()
@@ -23,6 +24,7 @@ static NSString *cellIdentifier;
 - (void)viewDidLoad {
     
      [super viewDidLoad];
+    
     //default descriptions:
     self.data = [NSMutableArray arrayWithObjects: @"Title",@"Employer",@"Address",@"Salary",@"Hours", @"Description", nil];
     
@@ -34,24 +36,43 @@ static NSString *cellIdentifier;
         for(PFObject *result in results.result){
             //[jobLocations addObject:result];
             JSJobPosting *pass = [[JSJobPosting alloc]initWithParseObject:result];
-            self.data[0] = [NSString stringWithFormat:@"%@ : %@", self.data[0], pass.title];
-            self.data[1] = [NSString stringWithFormat:@"%@ : %@", self.data[1], pass.employer];
-            self.data[2] = [NSString stringWithFormat:@"%@ : %@", self.data[2], pass.address];
-            self.data[3] = [NSString stringWithFormat:@"%@ : %lu", self.data[3], (unsigned long)pass.wage];
-            self.data[4] = [NSString stringWithFormat:@"%@ : %lu", self.data[4], (unsigned long)pass.hours];
-            self.data[5] = [NSString stringWithFormat:@"%@ : %@", self.data[5], pass.jobDetail];
+            self.data[0] = [NSString stringWithFormat:@"%@", pass.title];
+            self.data[1] = [NSString stringWithFormat:@"%@",  pass.employer];
+            self.data[2] = [NSString stringWithFormat:@"%@", pass.address];
+            self.data[3] = [NSString stringWithFormat:@"%@%lu", @"¥", (unsigned long)pass.wage];
+            self.data[4] = [NSString stringWithFormat:@"%lu", (unsigned long)pass.hours];
+            self.data[5] = [NSString stringWithFormat:@"%@", pass.jobDetail];
             
             [self.details reloadData];
+            
+            self.titleLabel.text = self.data[0];
+            self.employerLabel.text = self.data[1];
+            self.wageLabel.text = self.data[3];
+            self.hoursLabel.text = self.data[4];
+            self.descriptText.text = self.data[5];
+            
+            [self.view setNeedsDisplay];
         }
         
         return nil;
     }];
    
-    // Do any additional setup after loading the view from its nib.
-
-    cellIdentifier = @"rowCell";
-    [self.details registerClass:[UITableViewCell class] forCellReuseIdentifier:cellIdentifier];
-    self.details.userInteractionEnabled = NO;
+    self.titleLabel.text = self.data[0];
+    self.employerLabel.text = self.data[1];
+    self.wageLabel.text = self.data[3];
+    self.hoursLabel.text = self.data[4];
+    self.descriptText.text = self.data[5];
+    
+    //color text and background
+    self.view.backgroundColor = UIColorFromRGB(0x2f3c44);
+    self.wageLabel.textColor = UIColorFromRGB(0xd4e05d);
+    self.wageLabel2.textColor = UIColorFromRGB(0xd4e05d);
+    self.hoursLabel.textColor = UIColorFromRGB(0xd4e05d);
+    self.hoursLabel2.textColor = UIColorFromRGB(0xd4e05d);
+    self.applyButton.backgroundColor = UIColorFromRGB(0xd4e05d);
+    
+    self.titleLabel.font = [UIFont fontWithName:@"Lato" size:16.0];
+    self.employerLabel.font = [UIFont fontWithName:@"Lato" size:16.0];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -59,19 +80,14 @@ static NSString *cellIdentifier;
     // Dispose of any resources that can be recreated.
 }
 
-- (NSInteger)tableView:(JobDetailTableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    
-    return [self.data count];
-
+- (void)viewWillAppear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
+    [super viewWillAppear:animated];
 }
 
-// Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
-// Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
-
-- (UITableViewCell *)tableView:(JobDetailTableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    cell.textLabel.text = [self.data objectAtIndex:indexPath.row];
-    return cell;
+- (void)viewWillDisappear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
+    [super viewWillDisappear:animated];
 }
 /*
 #pragma mark - Navigation

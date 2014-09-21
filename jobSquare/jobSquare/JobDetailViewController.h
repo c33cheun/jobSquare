@@ -7,15 +7,27 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JobDetailTableView.h"
 #import <Parse/Parse.h>
 #import "IMAsync.h"
 #import "JSJobPosting.h"
 
-@interface JobDetailViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface JobDetailViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITableView *details;
 
 @property (weak, nonatomic) NSString* jobId;
+
+//UI ELEMENTS
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *employerLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *hoursLabel;
+@property (weak, nonatomic) IBOutlet UILabel *hoursLabel2;
+@property (weak, nonatomic) IBOutlet UILabel *wageLabel;
+@property (weak, nonatomic) IBOutlet UILabel *wageLabel2;
+@property (weak, nonatomic) IBOutlet UIButton *applyButton;
+@property (weak, nonatomic) IBOutlet UITextView *descriptText
+;
 
 @end
