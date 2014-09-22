@@ -11,12 +11,18 @@
 #import <CoreLocation/CoreLocation.h>//
 #import "BFTask.h"
 #import "IMAsync.h"
+#import "UIImage+Utilities.h"
 #import "JSJobPosting.h"
+#import "MCPanelViewController.h"
+#import "JSJobTableViewController.h"
 
 @interface JSMapViewController : UIViewController <GMSMapViewDelegate, CLLocationManagerDelegate> {
 }
 
 @property (strong, nonatomic) CLLocationManager* locationManager;
 @property (strong, nonatomic) CLLocation* location;
+@property (strong,nonatomic) MCPanelViewController* panelController;
+@property (strong,nonatomic) NSMutableArray *data;
+@property (strong,nonatomic) JSJobTableViewController* jobs;
 
 @end

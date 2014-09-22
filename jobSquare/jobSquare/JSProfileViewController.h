@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JSProfileTableView.h"
 #import <Parse/Parse.h>
 #import "IMAsync.h"
 #import "JSJobPosting.h"
