@@ -27,3 +27,6 @@ static NSString * const kFacebookButtonDown = @"FacebookDown.png";
 /* For twitter. */
 static NSString * const kTwitterButton = @"Twitter.png";
 static NSString * const kTwitterButtonDown = @"TwitterDown.png";
+
+/* Colors - HexCode */
+static NSString * const kBackgroundColor = @"0x2f3c44";

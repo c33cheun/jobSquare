@@ -33,6 +33,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    UIButton *menu = [[UIButton alloc]initWithFrame:CGRectMake(self.view.frame.size.width * 0.3, self.view.frame.size.height * 0.8, self.view.frame.size.width * 0.3, self.view.frame.size.height * 0.1)];
+    [menu setBackgroundColor:[UIColor blackColor]];
+    [menu addTarget:self action:@selector(openList) forControlEvents:UIControlEventTouchUpInside];
+    
+    
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithTarget:_locationManager.location.coordinate zoom:10];
     
     mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
@@ -51,8 +56,7 @@
 
     [[IMAsync findObjectsAsync:query] continueWithSuccessBlock:^id(BFTask *results) {
         
-        NSMutableArray *jobs = [NSMutableArray array];
-        
+        _data = [NSMutableArray array];
         NSUInteger counter = 0;
         
         for(PFObject *result in results.result){
@@ -60,12 +64,14 @@
             
             counter++;
             JSJobPosting *pass = [[JSJobPosting alloc]initWithParseObject:result];
-            [jobs addObject:pass];
+            [_data addObject:pass];
             GMSMarker *point = [GMSMarker markerWithPosition:pass.location.coordinate];
             point.map = mapView;
             point.title = [NSString stringWithFormat:@"%lu", (unsigned long)counter];
         }
-        
+        [self.view addSubview:menu];
+        //[_jobs.view reloadInputViews];
+        //[_jobs.view setNeedsDisplay];
         return nil;
     }];
     // Creates a marker in the center of the map.
@@ -76,6 +82,12 @@
     self.view = mapView;
 }
 
+- (IBAction)openList {
+    _jobs = [[JSJobTableViewController alloc]initWithData:_data];
+    _panelController = [[MCPanelViewController alloc] initWithRootViewController:_jobs];
+    _jobs.preferredContentSize = CGSizeMake(self.view.frame.size.width * 0.8, 0);
+    [self.navigationController presentPanelViewController:_panelController withDirection:MCPanelAnimationDirectionRight];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];    
@@ -148,11 +160,10 @@
 - (void)mapView:(GMSMapView *)respMapView
 idleAtCameraPosition:(GMSCameraPosition *)cameraPosition {
     
-    [respMapView clear];
-    
     CLLocation *resultLocation = [[CLLocation alloc] initWithLatitude:cameraPosition.target.latitude longitude: cameraPosition.target.longitude];
     
     PFGeoPoint *myNewLocation = [PFGeoPoint geoPointWithLocation:resultLocation];
+    [_data removeAllObjects];
     
     PFQuery *query = [PFQuery queryWithClassName:@"Job"];
     [query setLimit:10];
@@ -160,18 +171,21 @@ idleAtCameraPosition:(GMSCameraPosition *)cameraPosition {
     
     [[IMAsync findObjectsAsync:query] continueWithSuccessBlock:^id(BFTask *results) {
         
-        NSMutableArray *jobs = [NSMutableArray array];
-        
         NSUInteger counter = 0;
+        [respMapView clear];
         
         for(PFObject *result in results.result){
-            //[jobLocations addObject:result];
             
             counter++;
             JSJobPosting *pass = [[JSJobPosting alloc]initWithParseObject:result];
-            [jobs addObject:pass];
+            [_data addObject:pass];
+            
+            UIImage *markerIcon = [UIImage imageNamed:@"marker_small_01.png"];
+            markerIcon = [markerIcon drawText:[NSString stringWithFormat:@"%i",counter] ofSize: 24 inImage:markerIcon atPoint:CGPointMake(14, 8)];
+            
             GMSMarker *point = [GMSMarker markerWithPosition:pass.location.coordinate];
             point.map = mapView;
+            point.icon = markerIcon;
             point.title = [NSString stringWithFormat:@"%lu", (unsigned long)counter];
         }
         
