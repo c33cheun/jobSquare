@@ -41,7 +41,7 @@
     [mapView setMinZoom:14 maxZoom:kGMSMaxZoomLevel];
     
     PFGeoPoint *myLocation = [PFGeoPoint geoPointWithLocation:_locationManager.location];
-    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:UIColorFromRGB(0xd4e05d), NSForegroundColorAttributeName, [UIFont fontWithName:@"Kato" size:17.0], NSFontAttributeName, nil]];
+    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:UIColorFromRGB(0xd4e05d), NSForegroundColorAttributeName, [UIFont fontWithName:@"Lato" size:17.0], NSFontAttributeName, nil]];
     
     self.navigationController.navigationBar.topItem.title = @"Current Location";
     

@@ -16,6 +16,7 @@
 @property (nonatomic, strong) NSArray *sectionList;
 @property (nonatomic, strong) IBOutlet UIButton *photoButton;
 @property (nonatomic, strong) IBOutlet UITextField *nameTextField;
+@property (weak, nonatomic) IBOutlet UILabel *ageLabel;
 
 @end
 
@@ -31,17 +32,19 @@ static NSString *cellIdentifier;
 	
     //set style and colours
     self.view.backgroundColor = UIColorFromRGB(0x2f3c44);
+    self.details.backgroundColor = UIColorFromRGB(0x2f3c44);
     
 	UIImage *portfolio = [UIImage imageNamed:@"Logo.png"];
 	[self.photoButton setImage:portfolio forState:UIControlStateNormal];
 //	self.photoButton.highlighted = true;
 	self.nameTextField.text = @"Your name";
 	self.nameTextField.enabled = false;
+    
 	//default descriptions:
 	
-	self.sectionList = [NSArray arrayWithObjects:@"Skill", @"Work Experience", nil];
+	self.sectionList = [NSArray arrayWithObjects:@"Skills", @"Profile" , @"Work Experience", nil];
 	NSArray *skills = [NSArray arrayWithObjects:@"Programming", @"Economics", nil];
-	NSArray *workExperience = [NSArray arrayWithObjects:@"Immagle", @"Givery", nil];
+	NSArray *workExperience = [NSArray arrayWithObjects:@"Google", @"Givery", nil];
 	NSArray *datas = [NSArray arrayWithObjects:skills, workExperience, nil];
 	self.data = [NSDictionary dictionaryWithObjects:datas forKeys:self.sectionList];
 	

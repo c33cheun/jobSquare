@@ -3,9 +3,17 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JSProfileViewController">
             <connections>
+                <outlet property="ageLabe" destination="Eie-90-OY3" id="GtG-GX-3Qm"/>
+                <outlet property="ageLabel" destination="Eie-90-OY3" id="eEF-3S-7Ux"/>
                 <outlet property="details" destination="isV-Vl-6jP" id="Hcu-XE-6qi"/>
                 <outlet property="nameTextField" destination="tfL-GR-hdC" id="swf-Fq-0Q7"/>
                 <outlet property="photoButton" destination="8JO-Y4-di9" id="7Vb-yU-SbG"/>
@@ -18,29 +26,36 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Your Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tfL-GR-hdC" propertyAccessControl="none">
-                    <rect key="frame" x="231" y="85" width="143" height="30"/>
+                    <rect key="frame" x="153" y="36" width="143" height="30"/>
                     <accessibility key="accessibilityConfiguration">
                         <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
                     </accessibility>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8JO-Y4-di9">
-                    <rect key="frame" x="73" y="63" width="88" height="74"/>
+                    <rect key="frame" x="28" y="27" width="60" height="48"/>
                     <state key="normal" title="Button">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="isV-Vl-6jP">
-                    <rect key="frame" x="0.0" y="168" width="600" height="349"/>
+                    <rect key="frame" x="-8" y="148" width="608" height="466"/>
                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="hDQ-8j-D9t"/>
                         <outlet property="delegate" destination="-1" id="nSb-g1-ik7"/>
                     </connections>
                 </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Age" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eie-90-OY3">
+                    <rect key="frame" x="153" y="63" width="42" height="21"/>
+                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.21328779349999999" green="0.2380473535" blue="0.29982591710000001" alpha="1" colorSpace="calibratedRGB"/>
         </view>
     </objects>
 </document>
