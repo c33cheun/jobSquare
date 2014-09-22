@@ -14,9 +14,7 @@
 
 @property (nonatomic, strong) NSDictionary *data;
 @property (nonatomic, strong) NSArray *sectionList;
-@property (nonatomic, strong) IBOutlet UIButton *photoButton;
 @property (nonatomic, strong) IBOutlet UITextField *nameTextField;
-@property (weak, nonatomic) IBOutlet UILabel *ageLabel;
 
 @end
 
@@ -34,18 +32,26 @@ static NSString *cellIdentifier;
     self.view.backgroundColor = UIColorFromRGB(0x2f3c44);
     self.details.backgroundColor = UIColorFromRGB(0x2f3c44);
     
-	UIImage *portfolio = [UIImage imageNamed:@"Logo.png"];
-	[self.photoButton setImage:portfolio forState:UIControlStateNormal];
-//	self.photoButton.highlighted = true;
-	self.nameTextField.text = @"Your name";
+    [self.pictureFrame setImage:[UIImage imageNamed:@"shenIcon.png"]];
+    // Get the Layer of any view
+    CALayer * l = [self.pictureFrame layer];
+    [l setMasksToBounds:YES];
+    [l setCornerRadius: 35.0];
+    self.pictureFrame.clipsToBounds = YES;
+    
+	self.nameTextField.text = @"Shen Lee";
 	self.nameTextField.enabled = false;
+    
+    self.ageLabel.text = @"30";
+    self.details.separatorStyle = UITableViewCellSeparatorStyleNone;
     
 	//default descriptions:
 	
 	self.sectionList = [NSArray arrayWithObjects:@"Skills", @"Profile" , @"Work Experience", nil];
-	NSArray *skills = [NSArray arrayWithObjects:@"Programming", @"Economics", nil];
-	NSArray *workExperience = [NSArray arrayWithObjects:@"Google", @"Givery", nil];
-	NSArray *datas = [NSArray arrayWithObjects:skills, workExperience, nil];
+	NSArray *skills = [NSArray arrayWithObjects:@"Programming", @"Graphic Design", nil];
+	NSArray *workExperience = [NSArray arrayWithObjects:@"GameHouse", @"Givery", nil];
+    NSArray *profile = [NSArray arrayWithObjects:@"This is my profile, I am awesome, number one team leader. I make cool UI experiences and buy lots of snacks. Hire me please.", nil];
+	NSArray *datas = [NSArray arrayWithObjects:skills, profile, workExperience, nil];
 	self.data = [NSDictionary dictionaryWithObjects:datas forKeys:self.sectionList];
 	
 //	PFQuery *query = [PFQuery queryWithClassName:@"User"];
@@ -102,6 +108,11 @@ static NSString *cellIdentifier;
 	NSArray *items = [self.data objectForKey:sectionName];
 	
 	cell.textLabel.text = [items objectAtIndex:indexPath.row];
+    cell.textLabel.font = [UIFont fontWithName:@"Lato" size:15.0];
+    cell.textLabel.textColor = [UIColor whiteColor];
+    cell.textLabel.numberOfLines = 0;
+    cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    cell.backgroundColor = UIColorFromRGB(0x2f3c44);
 
 	return cell;
 }

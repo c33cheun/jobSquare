@@ -16,5 +16,8 @@
 @property (weak, nonatomic) IBOutlet UITableView *details;
 
 @property (weak, nonatomic) NSString* userId;
+@property (weak, nonatomic) IBOutlet UILabel *ageLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *pictureFrame;
+
 
 @end

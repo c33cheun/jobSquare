@@ -48,6 +48,7 @@ static NSString *cellIdentifier;
             
             self.titleLabel.text = self.data[0];
             self.employerLabel.text = self.data[1];
+            self.addressLabel.text = self.data[2];
             self.wageLabel.text = self.data[3];
             self.hoursLabel.text = self.data[4];
             self.descriptText.text = self.data[5];
@@ -60,12 +61,14 @@ static NSString *cellIdentifier;
    
     self.titleLabel.text = self.data[0];
     self.employerLabel.text = self.data[1];
+    self.addressLabel.text = self.data[2];
     self.wageLabel.text = self.data[3];
     self.hoursLabel.text = self.data[4];
     self.descriptText.text = self.data[5];
     
     //color text and background
     self.view.backgroundColor = UIColorFromRGB(0x2f3c44);
+    self.addressLabel.textColor = UIColorFromRGB(0xd4e05d);
     self.wageLabel.textColor = UIColorFromRGB(0xd4e05d);
     self.wageLabel2.textColor = UIColorFromRGB(0xd4e05d);
     self.hoursLabel.textColor = UIColorFromRGB(0xd4e05d);

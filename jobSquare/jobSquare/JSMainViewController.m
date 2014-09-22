@@ -32,6 +32,7 @@
     [self.tabBar setBarTintColor: [UIColor blackColor]];
     [self.navigationController.navigationBar setBarStyle:UIBarStyleBlackTranslucent];
     [self.tabBar setTintColor: [UIColor blackColor]];
+    [self.tabBar setSelectedImageTintColor: [UIColor whiteColor]];
     
     profile = [[JSProfileViewController alloc] init];
     //	[profile setTitle:@"This is the second view controller"];

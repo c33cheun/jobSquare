@@ -29,5 +29,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *applyButton;
 @property (weak, nonatomic) IBOutlet UITextView *descriptText
 ;
+@property (weak, nonatomic) IBOutlet UILabel *addressLabel;
 
 @end
