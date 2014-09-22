@@ -25,11 +25,11 @@
 -(void) setup{
     JSMapViewController *map;
     JSProfileViewController *profile;
-    JobDetailViewController *viewController3;
+    //JobDetailViewController *viewController3;
     
-    UINavigationController *navviewController1 , *navviewController2, *navviewController3;
+    UINavigationController *navviewController1 , *navviewController2 /*,*navviewController3*/;
     
-    [self.tabBar setBarTintColor: [UIColor blackColor]];
+    [self.tabBar setBarTintColor:[UIColor blackColor]];
     [self.navigationController.navigationBar setBarStyle:UIBarStyleBlackTranslucent];
     [self.tabBar setTintColor: [UIColor blackColor]];
     [self.tabBar setSelectedImageTintColor: [UIColor whiteColor]];
@@ -41,18 +41,18 @@
     map = [[JSMapViewController alloc] init];
     navviewController2=[[UINavigationController alloc]initWithRootViewController:map];
     
-    viewController3 = [[JobDetailViewController alloc] init];
-    viewController3.jobId = @"ExhFAklqBl";
-    navviewController3=[[UINavigationController alloc]initWithRootViewController:viewController3];
+//    viewController3 = [[JobDetailViewController alloc] init];
+//    viewController3.jobId = @"ExhFAklqBl";
+//    navviewController3=[[UINavigationController alloc]initWithRootViewController:viewController3];
     
-    self.viewControllers = [NSArray arrayWithObjects: navviewController2, navviewController1, navviewController3, nil];
+    self.viewControllers = [NSArray arrayWithObjects: navviewController2, navviewController1, /*navviewController3,*/ nil];
     
     UITabBarItem *mapItem = [[UITabBarItem alloc]init];
     [mapItem setTitle:@""];
     UIImage *mapIcon = [UIImage imageNamed:@"nav_icon_01.png"];
     UIImage *mapIconOn = [UIImage imageNamed:@"nav_icon_01on.png"];
-    mapIcon = resizeImage(mapIcon);
-    mapIconOn = resizeImage(mapIconOn);
+    mapIcon = [mapIcon resizeImage:mapIcon withScale:2.0f];
+    mapIconOn = [mapIconOn resizeImage:mapIconOn withScale:2.0f];
     [mapItem setImage:mapIcon];
     [mapItem setSelectedImage:mapIconOn];
     mapItem.imageInsets = UIEdgeInsetsMake(7, 0, -5, 0);
@@ -60,26 +60,26 @@
     UITabBarItem *accountItem = [[UITabBarItem alloc]init];
     UIImage *accountIcon = [UIImage imageNamed:@"nav_icon_03.png"];
     UIImage *accountIconOn = [UIImage imageNamed:@"nav_icon_03_on.png"];
-    accountIcon = resizeImage(accountIcon);
-    accountIconOn = resizeImage(accountIconOn);
+    accountIcon = [accountIcon resizeImage:accountIcon withScale:2.0f];
+    accountIconOn = [accountIconOn resizeImage:accountIconOn withScale:2.0f];
     [accountItem setImage:accountIcon];
     [accountItem setTitle:@""];
     [accountItem setSelectedImage:accountIconOn];
     accountItem.imageInsets = UIEdgeInsetsMake(7, 0, -5, 0);
     
-    UITabBarItem *jobItem = [[UITabBarItem alloc] init];
-    UIImage *jobIcon = [UIImage imageNamed:@"nav_icon_04.png"];
-    UIImage *jobIconOn = [UIImage imageNamed:@"nav_icon_04on.png"];
-    jobIcon = resizeImage(jobIcon);
-    jobIconOn = resizeImage(jobIconOn);
-    [jobItem setImage:jobIcon];
-    [jobItem setTitle:@""];
-    [jobItem setSelectedImage:jobIconOn];
-    jobItem.imageInsets = UIEdgeInsetsMake(7, 0, -5, 0);
+//    UITabBarItem *jobItem = [[UITabBarItem alloc] init];
+//    UIImage *jobIcon = [UIImage imageNamed:@"nav_icon_04.png"];
+//    UIImage *jobIconOn = [UIImage imageNamed:@"nav_icon_04on.png"];
+//    jobIcon = resizeImage(jobIcon);
+//    jobIconOn = resizeImage(jobIconOn);
+//    [jobItem setImage:jobIcon];
+//    [jobItem setTitle:@""];
+//    [jobItem setSelectedImage:jobIconOn];
+//    jobItem.imageInsets = UIEdgeInsetsMake(7, 0, -5, 0);
     
     [navviewController1 setTabBarItem:accountItem];
     [navviewController2 setTabBarItem:mapItem];
-    [navviewController3 setTabBarItem:jobItem];
+    //[navviewController3 setTabBarItem:jobItem];
 }
 
 - (void)viewDidLoad {
@@ -90,13 +90,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-UIImage* resizeImage (UIImage *input) {
-    UIImage *scaledImage = [UIImage imageWithCGImage:[input CGImage]
-                        scale:(input.scale * 2.0)
-                  orientation:(input.imageOrientation)];
-    return scaledImage;
 }
 
 - (UIStatusBarStyle) preferredStatusBarStyle {

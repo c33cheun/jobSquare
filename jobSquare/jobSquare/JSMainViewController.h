@@ -12,6 +12,7 @@
 #import "JobDetailViewController.h"
 #import "UIColor+Utilities.h"
 #import "JSAssetsConstants.h"
+#import "UIImage+Utilities.h"
 
 @interface JSMainViewController : UITabBarController
 

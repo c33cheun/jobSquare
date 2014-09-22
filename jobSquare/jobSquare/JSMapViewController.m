@@ -59,56 +59,16 @@
     
     self.navigationController.navigationBar.topItem.title = @"Current Location";
     
-    //reverse geocoding not working
-    [geocoder reverseGeocodeLocation: _locationManager.location completionHandler:
-     ^(NSArray *placemarks, NSError *error) {
-         //Get nearby address
-         CLPlacemark *localPlacemark = [placemarks objectAtIndex:0];
-         
-         NSString *addressName = [[localPlacemark.addressDictionary valueForKey:@"FormattedAddressLines"] componentsJoinedByString:@", "];
-         
-         self.navigationController.navigationBar.topItem.title = addressName;
-         [self.view setNeedsDisplay];
-     }];
-    
-    PFQuery *query = [PFQuery queryWithClassName:@"Job"];
-    [query setLimit:10];
-    [query whereKey:@"location" nearGeoPoint:myLocation withinKilometers:2.0];
+    _data = [NSMutableArray array];
+        
 
-    [[IMAsync findObjectsAsync:query] continueWithSuccessBlock:^id(BFTask *results) {
-        
-        _data = [NSMutableArray array];
-        NSUInteger counter = 0;
-        
-        for(PFObject *result in results.result){
-            //[jobLocations addObject:result];
-            
-            counter++;
-            JSJobPosting *pass = [[JSJobPosting alloc]initWithParseObject:result];
-            [_data addObject:pass];
-            GMSMarker *point = [GMSMarker markerWithPosition:pass.location.coordinate];
-            point.map = mapView;
-            point.title = [NSString stringWithFormat:@"%lu", (unsigned long)counter];
-            
-            [self.menu setTitle:[NSString stringWithFormat:@"%lu jobs found", (unsigned long)counter] forState:UIControlStateNormal];
-        }
-        [self.view addSubview:self.menu];
-        //[_jobs.view reloadInputViews];
-        //[_jobs.view setNeedsDisplay];
-        return nil;
-    }];
-    // Creates a marker in the center of the map.
-    //GMSMarker *marker = [[GMSMarker alloc] init];
-    //marker.position = _locationManager.location.coordinate;
-    //marker.map = mapView;
-    
     self.view = mapView;
 }
 
 - (IBAction)openList {
     _jobs = [[JSJobTableViewController alloc]initWithData:_data];
     _panelController = [[MCPanelViewController alloc] initWithRootViewController:_jobs];
-    _jobs.preferredContentSize = CGSizeMake(self.view.frame.size.width * 0.8, 0);
+    _jobs.preferredContentSize = CGSizeMake(self.view.frame.size.width * 0.9, 0);
     [self.navigationController presentPanelViewController:_panelController withDirection:MCPanelAnimationDirectionRight];
 }
 
@@ -208,6 +168,7 @@ idleAtCameraPosition:(GMSCameraPosition *)cameraPosition {
         
         NSUInteger counter = 0;
         [respMapView clear];
+        [_data removeAllObjects];
         
         //draw new marker in the middle of map
         GMSMarker *marker = [[GMSMarker alloc] init];
@@ -219,24 +180,28 @@ idleAtCameraPosition:(GMSCameraPosition *)cameraPosition {
             counter++;
             JSJobPosting *pass = [[JSJobPosting alloc]initWithParseObject:result];
             [_data addObject:pass];
-            
-            UIImage *markerIcon = [UIImage imageNamed:@"marker_small_01.png"];
-            markerIcon = [markerIcon drawText:[NSString stringWithFormat:@"%i",counter] ofSize: 24 inImage:markerIcon atPoint:CGPointMake(14, 8)];
-            
-            GMSMarker *point = [GMSMarker markerWithPosition:pass.location.coordinate];
-            point.map = mapView;
-            point.icon = markerIcon;
-            point.title = [NSString stringWithFormat:@"%lu", (unsigned long)counter];
-            
-            [self.menu setTitle:[NSString stringWithFormat:@"%lu jobs found", (unsigned long)counter] forState:UIControlStateNormal];
+
+            [self setMapMarkersWithJob:pass andNumber:counter];
         }
-        
+        [self.view addSubview:_menu];
+            
+        [self.menu setTitle:[NSString stringWithFormat:@"%lu jobs found", (unsigned long)counter] forState:UIControlStateNormal];
         
         //placeholder text
         self.navigationController.navigationBar.topItem.title = @"Searching for Jobs";
         return nil;
     }];
 
+}
+
+-(void) setMapMarkersWithJob:(JSJobPosting*)job andNumber: (int)counter  {
+    UIImage *markerIcon = [UIImage imageNamed:@"marker_small_01.png"];
+    markerIcon = [markerIcon drawText:[NSString stringWithFormat:@"%i",counter] ofSize: 24 inImage:markerIcon atPoint:CGPointMake(14, 8)];
+    
+    GMSMarker *point = [GMSMarker markerWithPosition:job.location.coordinate];
+    point.map = mapView;
+    point.icon = markerIcon;
+    point.title = [NSString stringWithFormat:@"%lu", (unsigned long)counter];
 }
 
 @end

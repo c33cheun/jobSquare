@@ -14,12 +14,14 @@
 
 @implementation JSJobTableViewController {
     UITableView *tableView;
+    NSInteger rowCount;
 }
 
 - (id) initWithData: (NSMutableArray*)data {
     self = [super init];
     if (self){
         self.data = data;
+        rowCount = [self.data count];
     }
     return self;
 }
@@ -34,7 +36,6 @@
     tableView.dataSource = self;
     
     tableView.backgroundColor = [tableView.backgroundColor colorFromHexString:kBackgroundColor];
-    
     
     // add to canvas
     [self.view addSubview:tableView];
@@ -56,32 +57,66 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return [_data count];
+    return rowCount + 1;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if(indexPath.item == 0){
+        return 60.0f;
+    }
+    else {
+        return 70.0f;
+    }
+
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
     // Configure the cell...
     
-    static NSString *cellIdentifier = @"HistoryCell";
-    
-    // Similar to UITableViewCell, but
-    JSJobTableCell *cell = (JSJobTableCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    if (cell == nil) {
-        cell = [[JSJobTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-    }
-    // Just want to test, so I hardcode the data
-    if (indexPath.row < [_data count]) {
-    
-        JSJobPosting *job = [_data objectAtIndex:0];
-        cell.descriptionLabel.text = job.title;
-        //[_data removeObjectAtIndex:0];
+    if (indexPath.row == 0){
+        UITableViewCell *cell = [[UITableViewCell alloc]init];
         
+        UILabel *number = [[UILabel alloc]initWithFrame:CGRectMake(25, 10, 60, 60)];
+        number.text = [NSString stringWithFormat:@"%d",[_data count]];
+        number.textColor =[UIColor whiteColor];
+        number.font = [UIFont fontWithName:@"Lato-Bold" size:32.0f];
+        
+        UILabel *words = [[UILabel alloc]initWithFrame:CGRectMake(50, 31, 300, 30)];
+        words.text = @"Jobs found near you";
+        words.textColor = [UIColor whiteColor];
+        words.font = [UIFont fontWithName:@"Lato-Regular" size:14.0f];
+        
+        cell.backgroundColor = [cell.backgroundColor colorFromHexString:kBackgroundColor];
+        [cell addSubview:words];
+        [cell addSubview:number];
+        return cell;
     }
+    else {
+        static NSString *cellIdentifier = @"HistoryCell";
     
-    return cell;
+        // Similar to UITableViewCell, but
+        JSJobTableCell *cell = (JSJobTableCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+        JSJobPosting *job = [_data objectAtIndex:indexPath.row - 1];
+    
+        if (cell == nil) {
+            cell = [[JSJobTableCell alloc] initWithData:job Style:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        }
+        cell.backgroundColor = [cell.backgroundColor colorFromHexString:kBackgroundColor];
+        return cell;
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    JobDetailViewController *selectedJob = [[JobDetailViewController alloc]initWithData:[_data objectAtIndex:indexPath.row - 1]];
+    
+    _panelController = [[MCPanelViewController alloc]initWithRootViewController:selectedJob];
+    selectedJob.preferredContentSize = CGSizeMake(self.view.frame.size.width * 0.9, 0);
+    [self.navigationController presentPanelViewController:_panelController withDirection:MCPanelAnimationDirectionRight];
+    
+    //[self presentViewController:selectedJob animated:YES completion:nil];
+    
 }
 
 - (void) resetData: (NSMutableArray*)jobs {
@@ -92,48 +127,6 @@
 }
 
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

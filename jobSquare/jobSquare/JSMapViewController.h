@@ -26,4 +26,5 @@
 @property (strong,nonatomic) JSJobTableViewController* jobs;
 @property (strong, nonatomic) UIButton* menu;
 
+
 @end
