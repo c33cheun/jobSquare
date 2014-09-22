@@ -24,5 +24,6 @@
 @property (strong,nonatomic) MCPanelViewController* panelController;
 @property (strong,nonatomic) NSMutableArray *data;
 @property (strong,nonatomic) JSJobTableViewController* jobs;
+@property (strong, nonatomic) UIButton* menu;
 
 @end

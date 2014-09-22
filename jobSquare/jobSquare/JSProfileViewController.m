@@ -47,11 +47,11 @@ static NSString *cellIdentifier;
     
 	//default descriptions:
 	
-	self.sectionList = [NSArray arrayWithObjects:@"Skills", @"Profile" , @"Work Experience", nil];
+	self.sectionList = [NSArray arrayWithObjects:@"Skills", @"Work Experience", @"Profile", nil];
 	NSArray *skills = [NSArray arrayWithObjects:@"Programming", @"Graphic Design", nil];
 	NSArray *workExperience = [NSArray arrayWithObjects:@"GameHouse", @"Givery", nil];
-    NSArray *profile = [NSArray arrayWithObjects:@"This is my profile, I am awesome, number one team leader. I make cool UI experiences and buy lots of snacks. Hire me please.", nil];
-	NSArray *datas = [NSArray arrayWithObjects:skills, profile, workExperience, nil];
+    NSArray *profile = [NSArray arrayWithObjects:@"This is my profile, I am awesome, number one team leader. I make cool UI experiences and buy lots of snacks. Hire me please. The lysine contingency - it's intended to prevent the spread of the animals is case they ever got off the island. Dr. Wu inserted a gene that makes a single faulty enzyme in protein metabolism. The animals can't manufacture the amino acid lysine. Unless they're continually supplied with lysine by us, they'll slip into a coma and die.", nil];
+	NSArray *datas = [NSArray arrayWithObjects:skills, workExperience, profile, nil];
 	self.data = [NSDictionary dictionaryWithObjects:datas forKeys:self.sectionList];
 	
 //	PFQuery *query = [PFQuery queryWithClassName:@"User"];
