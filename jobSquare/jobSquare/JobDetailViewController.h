@@ -28,7 +28,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *wageLabel2;
 @property (weak, nonatomic) IBOutlet UIButton *applyButton;
 @property (weak, nonatomic) IBOutlet UITextView *descriptText;
-
+@property (weak, nonatomic) IBOutlet UILabel *addressLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *logo;
 
 - (id) initWithData: (JSJobPosting*)job;

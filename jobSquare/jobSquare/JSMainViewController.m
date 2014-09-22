@@ -25,13 +25,14 @@
 -(void) setup{
     JSMapViewController *map;
     JSProfileViewController *profile;
-    JobDetailViewController *viewController3;
+    //JobDetailViewController *viewController3;
     
-    UINavigationController *navviewController1 , *navviewController2, *navviewController3;
+    UINavigationController *navviewController1 , *navviewController2 /*,*navviewController3*/;
     
     [self.tabBar setBarTintColor:[UIColor blackColor]];
     [self.navigationController.navigationBar setBarStyle:UIBarStyleBlackTranslucent];
-    //[self.tabBar setTintColor: [UIColor blackColor]];
+    [self.tabBar setTintColor: [UIColor blackColor]];
+    [self.tabBar setSelectedImageTintColor: [UIColor whiteColor]];
     
     profile = [[JSProfileViewController alloc] init];
     //	[profile setTitle:@"This is the second view controller"];
@@ -40,11 +41,11 @@
     map = [[JSMapViewController alloc] init];
     navviewController2=[[UINavigationController alloc]initWithRootViewController:map];
     
-    viewController3 = [[JobDetailViewController alloc] init];
-    viewController3.jobId = @"ExhFAklqBl";
-    navviewController3=[[UINavigationController alloc]initWithRootViewController:viewController3];
+//    viewController3 = [[JobDetailViewController alloc] init];
+//    viewController3.jobId = @"ExhFAklqBl";
+//    navviewController3=[[UINavigationController alloc]initWithRootViewController:viewController3];
     
-    self.viewControllers = [NSArray arrayWithObjects: navviewController2, navviewController1, navviewController3, nil];
+    self.viewControllers = [NSArray arrayWithObjects: navviewController2, navviewController1, /*navviewController3,*/ nil];
     
     UITabBarItem *mapItem = [[UITabBarItem alloc]init];
     [mapItem setTitle:@"Map"];
@@ -64,18 +65,18 @@
     [accountItem setTitle:@"Account"];
     [accountItem setSelectedImage:accountIconOn];
     
-    UITabBarItem *jobItem = [[UITabBarItem alloc] init];
-    UIImage *jobIcon = [UIImage imageNamed:@"nav_icon_04.png"];
-    UIImage *jobIconOn = [UIImage imageNamed:@"nav_icon_04on.png"];
-    jobIcon = [jobIcon resizeImage:jobIcon withScale:2.0f];
-    jobIconOn = [jobIconOn resizeImage: jobIconOn withScale:2.0f];
-    [jobItem setImage:jobIcon];
-    [jobItem setTitle:@"Jobs"];
-    [jobItem setSelectedImage:jobIconOn];
+//    UITabBarItem *jobItem = [[UITabBarItem alloc] init];
+//    UIImage *jobIcon = [UIImage imageNamed:@"nav_icon_04.png"];
+//    UIImage *jobIconOn = [UIImage imageNamed:@"nav_icon_04on.png"];
+//    jobIcon = [jobIcon resizeImage:jobIcon withScale:2.0f];
+//    jobIconOn = [jobIconOn resizeImage: jobIconOn withScale:2.0f];
+//    [jobItem setImage:jobIcon];
+//    [jobItem setTitle:@"Jobs"];
+//    [jobItem setSelectedImage:jobIconOn];
     
     [navviewController1 setTabBarItem:accountItem];
     [navviewController2 setTabBarItem:mapItem];
-    [navviewController3 setTabBarItem:jobItem];
+    //[navviewController3 setTabBarItem:jobItem];
 }
 
 - (void)viewDidLoad {

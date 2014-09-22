@@ -21,6 +21,7 @@
         self.hours = [[jobPosting objectForKey:@"hours"] intValue];
         self.image = [jobPosting objectForKey:@"logo"];
         
+        
         PFGeoPoint *temp = [jobPosting objectForKey:@"location"];
         self.location = [[CLLocation alloc]initWithLatitude:[temp latitude] longitude:[temp longitude]];
     }

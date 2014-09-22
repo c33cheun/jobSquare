@@ -110,7 +110,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     JobDetailViewController *selectedJob = [[JobDetailViewController alloc]initWithData:[_data objectAtIndex:indexPath.row - 1]];
-    [self presentViewController:selectedJob animated:YES completion:nil];
+    
+    _panelController = [[MCPanelViewController alloc]initWithRootViewController:selectedJob];
+    selectedJob.preferredContentSize = CGSizeMake(self.view.frame.size.width * 0.9, 0);
+    [self.navigationController presentPanelViewController:_panelController withDirection:MCPanelAnimationDirectionRight];
+    
+    //[self presentViewController:selectedJob animated:YES completion:nil];
     
 }
 

@@ -12,10 +12,12 @@
 #import "UIColor+Utilities.h"
 #import "JSAssetsConstants.h"
 #import "JobDetailViewController.h"
+#import "MCPanelViewController.h"
 
 @interface JSJobTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (strong,nonatomic)NSMutableArray *data;
+@property (strong,nonatomic)MCPanelViewController *panelController;
 
 - (id) initWithData: (NSMutableArray*)data;
 

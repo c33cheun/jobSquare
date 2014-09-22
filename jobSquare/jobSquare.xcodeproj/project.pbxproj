@@ -32,6 +32,8 @@
 		3669FE2C19CF33A800C767F1 /* nav_icon_04on.png in Resources */ = {isa = PBXBuildFile; fileRef = 3669FE2019CF33A800C767F1 /* nav_icon_04on.png */; };
 		3669FE2D19CF33A800C767F1 /* nav_icon_05.png in Resources */ = {isa = PBXBuildFile; fileRef = 3669FE2119CF33A800C767F1 /* nav_icon_05.png */; };
 		3669FE2E19CF33A800C767F1 /* nav_icon_05on.png in Resources */ = {isa = PBXBuildFile; fileRef = 3669FE2219CF33A800C767F1 /* nav_icon_05on.png */; };
+		3669FE3019CFD60B00C767F1 /* icon_edit_profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 3669FE2F19CFD60B00C767F1 /* icon_edit_profile.png */; };
+		3669FE3219CFDDDB00C767F1 /* shenIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3669FE3119CFDDDB00C767F1 /* shenIcon.png */; };
 		DF5B203B19CEEAC300FFD94C /* JSProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5B203819CEEAC300FFD94C /* JSProfileViewController.m */; };
 		DF5B203C19CEEAC300FFD94C /* JSProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5B203919CEEAC300FFD94C /* JSProfileViewController.xib */; };
 		DFD1057519CE473A00634995 /* JSMyLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD1057419CE473A00634995 /* JSMyLogInViewController.m */; };
@@ -144,6 +146,8 @@
 		3669FE2019CF33A800C767F1 /* nav_icon_04on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_icon_04on.png; sourceTree = "<group>"; };
 		3669FE2119CF33A800C767F1 /* nav_icon_05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_icon_05.png; sourceTree = "<group>"; };
 		3669FE2219CF33A800C767F1 /* nav_icon_05on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_icon_05on.png; sourceTree = "<group>"; };
+		3669FE2F19CFD60B00C767F1 /* icon_edit_profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_edit_profile.png; path = jobSquare/Assets/icon_edit_profile.png; sourceTree = "<group>"; };
+		3669FE3119CFDDDB00C767F1 /* shenIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shenIcon.png; sourceTree = "<group>"; };
 		A50C4034AC0848C383AC4B0D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		DF5B203719CEEAC300FFD94C /* JSProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSProfileViewController.h; sourceTree = "<group>"; };
 		DF5B203819CEEAC300FFD94C /* JSProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSProfileViewController.m; sourceTree = "<group>"; };
@@ -274,6 +278,9 @@
 			isa = PBXGroup;
 			children = (
 				F10334BB19CFE4370071E05F /* Logos */,
+				3669FE3119CFDDDB00C767F1 /* shenIcon.png */,
+				3669FE2F19CFD60B00C767F1 /* icon_edit_profile.png */,
+				F17C2E2E19CF544E002D8EDC /* marker_small_01.png */,
 				3669FE1719CF33A800C767F1 /* icons_nav_01_on.png */,
 				F10334BC19CFE4A70071E05F /* marker_small_01.png */,
 				3669FE1919CF33A800C767F1 /* nav_icon_01.png */,
@@ -650,10 +657,12 @@
 				F10334AD19CFE31B0071E05F /* NTT-Docomo-Logo-Wallpaper.png in Resources */,
 				3669FE2D19CF33A800C767F1 /* nav_icon_05.png in Resources */,
 				F10334A919CFE31B0071E05F /* Kojima_Productions_Logo.png in Resources */,
+				3669FE3019CFD60B00C767F1 /* icon_edit_profile.png in Resources */,
 				3669FE2B19CF33A800C767F1 /* nav_icon_04.png in Resources */,
 				DFD1058B19CE4F0E00634995 /* Default@2x.png in Resources */,
 				F10334B619CFE3FA0071E05F /* BANDAI_logo.png in Resources */,
 				DFD1059519CE4F0E00634995 /* SignUpFieldBG.png in Resources */,
+				3669FE3219CFDDDB00C767F1 /* shenIcon.png in Resources */,
 				3669FE2519CF33A800C767F1 /* nav_icon_01.png in Resources */,
 				DFD1059319CE4F0E00634995 /* SignUp.png in Resources */,
 				DFD1059719CE4F0E00634995 /* TwitterDown.png in Resources */,

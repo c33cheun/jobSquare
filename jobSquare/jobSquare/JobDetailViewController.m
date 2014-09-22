@@ -61,9 +61,11 @@ static NSString *cellIdentifier;
     self.hoursLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)_pass.hours];
     self.descriptText.text = self.pass.jobDetail;
     self.logo.image = [UIImage imageNamed:[self.pass.image stringByAppendingString:@".png"]];
+    self.addressLabel.text = self.pass.address;
     
     //color text and background
     self.view.backgroundColor = UIColorFromRGB(0x2f3c44);
+    self.addressLabel.textColor = UIColorFromRGB(0xd4e05d);
     self.wageLabel.textColor = UIColorFromRGB(0xd4e05d);
     self.wageLabel2.textColor = UIColorFromRGB(0xd4e05d);
     self.hoursLabel.textColor = UIColorFromRGB(0xd4e05d);
