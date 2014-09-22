@@ -171,13 +171,17 @@ idleAtCameraPosition:(GMSCameraPosition *)cameraPosition {
         [respMapView clear];
         
         for(PFObject *result in results.result){
-            //[jobLocations addObject:result];
             
             counter++;
             JSJobPosting *pass = [[JSJobPosting alloc]initWithParseObject:result];
             [_data addObject:pass];
+            
+            UIImage *markerIcon = [UIImage imageNamed:@"marker_small_01.png"];
+            markerIcon = [markerIcon drawText:[NSString stringWithFormat:@"%i",counter] ofSize: 24 inImage:markerIcon atPoint:CGPointMake(14, 8)];
+            
             GMSMarker *point = [GMSMarker markerWithPosition:pass.location.coordinate];
             point.map = mapView;
+            point.icon = markerIcon;
             point.title = [NSString stringWithFormat:@"%lu", (unsigned long)counter];
         }
         

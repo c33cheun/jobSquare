@@ -33,8 +33,8 @@
     tableView.delegate = self;
     tableView.dataSource = self;
     
-    //tableView.backgroundColor = [UIColor blackColor];
-    tableView.tintColor = [UIColor blackColor];
+    tableView.backgroundColor = [tableView.backgroundColor colorFromHexString:kBackgroundColor];
+    
     
     // add to canvas
     [self.view addSubview:tableView];
@@ -56,7 +56,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return [(NSArray*)_data count];
+    return [_data count];
 }
 
 

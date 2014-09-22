@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "JSJobPosting.h"
 #import "JSJobTableCell.h"
+#import "UIColor+Utilities.h"
+#import "JSAssetsConstants.h"
 
 @interface JSJobTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 

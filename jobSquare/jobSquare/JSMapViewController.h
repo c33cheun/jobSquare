@@ -11,6 +11,7 @@
 #import <CoreLocation/CoreLocation.h>//
 #import "BFTask.h"
 #import "IMAsync.h"
+#import "UIImage+Utilities.h"
 #import "JSJobPosting.h"
 #import "MCPanelViewController.h"
 #import "JSJobTableViewController.h"

@@ -10,6 +10,8 @@
 #import "JSMapViewController.h"
 #import "JSProfileViewController.h"
 #import "JobDetailViewController.h"
+#import "UIColor+Utilities.h"
+#import "JSAssetsConstants.h"
 
 @interface JSMainViewController : UITabBarController
 

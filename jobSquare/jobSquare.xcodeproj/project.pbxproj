@@ -64,6 +64,9 @@
 		F17C2E2319CF2EC7002D8EDC /* JSMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F17C2E2219CF2EC7002D8EDC /* JSMainViewController.m */; };
 		F17C2E2619CF39AC002D8EDC /* JSJobTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F17C2E2519CF39AC002D8EDC /* JSJobTableViewController.m */; };
 		F17C2E2919CF3A40002D8EDC /* JSJobTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F17C2E2819CF3A40002D8EDC /* JSJobTableCell.m */; };
+		F17C2E2F19CF544E002D8EDC /* marker_small_01.png in Resources */ = {isa = PBXBuildFile; fileRef = F17C2E2E19CF544E002D8EDC /* marker_small_01.png */; };
+		F17C2E3819CF5879002D8EDC /* UIImage+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = F17C2E3719CF5879002D8EDC /* UIImage+Utilities.m */; };
+		F17C2E3C19CF5AA5002D8EDC /* UIColor+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = F17C2E3B19CF5AA5002D8EDC /* UIColor+Utilities.m */; };
 		F1F11AAA19CE8464009E3FF3 /* IMAsync.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F11AA919CE8464009E3FF3 /* IMAsync.m */; };
 		F1F11AB019CE9B52009E3FF3 /* JSJobPosting.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F11AAF19CE9B52009E3FF3 /* JSJobPosting.m */; };
 /* End PBXBuildFile section */
@@ -162,6 +165,11 @@
 		F17C2E2519CF39AC002D8EDC /* JSJobTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSJobTableViewController.m; sourceTree = "<group>"; };
 		F17C2E2719CF3A40002D8EDC /* JSJobTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSJobTableCell.h; sourceTree = "<group>"; };
 		F17C2E2819CF3A40002D8EDC /* JSJobTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSJobTableCell.m; sourceTree = "<group>"; };
+		F17C2E2E19CF544E002D8EDC /* marker_small_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marker_small_01.png; sourceTree = "<group>"; };
+		F17C2E3619CF5879002D8EDC /* UIImage+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Utilities.h"; sourceTree = "<group>"; };
+		F17C2E3719CF5879002D8EDC /* UIImage+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Utilities.m"; sourceTree = "<group>"; };
+		F17C2E3A19CF5AA5002D8EDC /* UIColor+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Utilities.h"; sourceTree = "<group>"; };
+		F17C2E3B19CF5AA5002D8EDC /* UIColor+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Utilities.m"; sourceTree = "<group>"; };
 		F1F11AA819CE8464009E3FF3 /* IMAsync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAsync.h; sourceTree = "<group>"; };
 		F1F11AA919CE8464009E3FF3 /* IMAsync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMAsync.m; sourceTree = "<group>"; };
 		F1F11AAE19CE9B52009E3FF3 /* JSJobPosting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSJobPosting.h; sourceTree = "<group>"; };
@@ -213,6 +221,7 @@
 		DFD1057919CE4E6000634995 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				F17C2E2E19CF544E002D8EDC /* marker_small_01.png */,
 				3669FE0C19CEF01000C767F1 /* Lato-Black.ttf */,
 				3669FE0D19CEF01000C767F1 /* Lato-BlackItalic.ttf */,
 				3669FE0E19CEF01000C767F1 /* Lato-Bold.ttf */,
@@ -267,14 +276,15 @@
 		F11C931319CD598600AAFA9D /* jobSquare */ = {
 			isa = PBXGroup;
 			children = (
-				F1F11AAD19CE9B40009E3FF3 /* Models */,
-				F1F11AA619CE83B8009E3FF3 /* Controllers */,
-				F1F11AA519CE83A9009E3FF3 /* WebServices */,
 				F11C931819CD598600AAFA9D /* AppDelegate.h */,
 				F11C931919CD598600AAFA9D /* AppDelegate.m */,
+				F1F11AA619CE83B8009E3FF3 /* Controllers */,
+				F1F11AA719CE83CD009E3FF3 /* Views */,
+				F1F11AAD19CE9B40009E3FF3 /* Models */,
+				F17C2E3919CF5965002D8EDC /* Utilities */,
+				F1F11AA519CE83A9009E3FF3 /* WebServices */,
 				F11C932119CD598600AAFA9D /* Images.xcassets */,
 				F11C931419CD598600AAFA9D /* Supporting Files */,
-				F1F11AA719CE83CD009E3FF3 /* Views */,
 				DFF3F4A219CE931D0064D77C /* JSAssetsConstants.h */,
 			);
 			path = jobSquare;
@@ -372,6 +382,28 @@
 			name = Profile;
 			sourceTree = "<group>";
 		};
+		F17C2E2D19CF5231002D8EDC /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				F17C2E2419CF39AC002D8EDC /* JSJobTableViewController.h */,
+				F17C2E2519CF39AC002D8EDC /* JSJobTableViewController.m */,
+				F11C934119CD5F2300AAFA9D /* JSMapViewController.h */,
+				F11C934219CD5F2300AAFA9D /* JSMapViewController.m */,
+			);
+			name = MapView;
+			sourceTree = "<group>";
+		};
+		F17C2E3919CF5965002D8EDC /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F17C2E3A19CF5AA5002D8EDC /* UIColor+Utilities.h */,
+				F17C2E3B19CF5AA5002D8EDC /* UIColor+Utilities.m */,
+				F17C2E3619CF5879002D8EDC /* UIImage+Utilities.h */,
+				F17C2E3719CF5879002D8EDC /* UIImage+Utilities.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
 		F1F11AA519CE83A9009E3FF3 /* WebServices */ = {
 			isa = PBXGroup;
 			children = (
@@ -384,14 +416,11 @@
 		F1F11AA619CE83B8009E3FF3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F17C2E2B19CF3FAE002D8EDC /* JobDetail */,
 				F17C2E2119CF2EC7002D8EDC /* JSMainViewController.h */,
 				F17C2E2219CF2EC7002D8EDC /* JSMainViewController.m */,
-				F17C2E2419CF39AC002D8EDC /* JSJobTableViewController.h */,
-				F17C2E2519CF39AC002D8EDC /* JSJobTableViewController.m */,
+				F17C2E2B19CF3FAE002D8EDC /* JobDetail */,
+				F17C2E2D19CF5231002D8EDC /* MapView */,
 				F17C2E2C19CF3FBC002D8EDC /* Profile */,
-				F11C934119CD5F2300AAFA9D /* JSMapViewController.h */,
-				F11C934219CD5F2300AAFA9D /* JSMapViewController.m */,
 				F17C2E2A19CF3E4D002D8EDC /* Login */,
 			);
 			name = Controllers;
@@ -506,6 +535,7 @@
 				DFD1058F19CE4F0E00634995 /* FacebookDown.png in Resources */,
 				DFD1059619CE4F0E00634995 /* Twitter.png in Resources */,
 				DFD1058D19CE4F0E00634995 /* ExitDown.png in Resources */,
+				F17C2E2F19CF544E002D8EDC /* marker_small_01.png in Resources */,
 				DFD1058E19CE4F0E00634995 /* Facebook.png in Resources */,
 				F11C932219CD598600AAFA9D /* Images.xcassets in Resources */,
 				DFD1059119CE4F0E00634995 /* Logo.png in Resources */,
@@ -574,12 +604,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F141AF6319CD7006007B6B92 /* main.m in Sources */,
+				F17C2E3819CF5879002D8EDC /* UIImage+Utilities.m in Sources */,
 				F11C931D19CD598600AAFA9D /* JSLoginViewController.m in Sources */,
 				F17C2E2319CF2EC7002D8EDC /* JSMainViewController.m in Sources */,
 				DFD1057819CE4AE600634995 /* JSMySignUpViewController.m in Sources */,
 				F1F11AAA19CE8464009E3FF3 /* IMAsync.m in Sources */,
 				360F3FC819CD9A1A006A8709 /* JobDetailViewController.m in Sources */,
 				F17C2E2919CF3A40002D8EDC /* JSJobTableCell.m in Sources */,
+				F17C2E3C19CF5AA5002D8EDC /* UIColor+Utilities.m in Sources */,
 				F1F11AB019CE9B52009E3FF3 /* JSJobPosting.m in Sources */,
 				F17C2E2619CF39AC002D8EDC /* JSJobTableViewController.m in Sources */,
 				F11C931A19CD598600AAFA9D /* AppDelegate.m in Sources */,
