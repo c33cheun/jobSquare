@@ -7,6 +7,8 @@
 //
 
 #import "JSProfileViewController.h"
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
 
 @interface JSProfileViewController ()
 
@@ -24,7 +26,12 @@ static NSString *cellIdentifier;
 - (void)viewDidLoad {
 	
 	[super viewDidLoad];
+    
+    [self setNeedsStatusBarAppearanceUpdate];
 	
+    //set style and colours
+    self.view.backgroundColor = UIColorFromRGB(0x2f3c44);
+    
 	UIImage *portfolio = [UIImage imageNamed:@"Logo.png"];
 	[self.photoButton setImage:portfolio forState:UIControlStateNormal];
 //	self.photoButton.highlighted = true;
@@ -94,6 +101,20 @@ static NSString *cellIdentifier;
 	cell.textLabel.text = [items objectAtIndex:indexPath.row];
 
 	return cell;
+}
+
+- (UIStatusBarStyle) preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
+    [super viewWillAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
+    [super viewWillDisappear:animated];
 }
 
 @end

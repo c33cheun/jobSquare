@@ -20,10 +20,11 @@
 
 static NSString *cellIdentifier;
 
-
 - (void)viewDidLoad {
     
-     [super viewDidLoad];
+    [super viewDidLoad];
+    
+    [self setNeedsStatusBarAppearanceUpdate];
     
     //default descriptions:
     self.data = [NSMutableArray arrayWithObjects: @"Title",@"Employer",@"Address",@"Salary",@"Hours", @"Description", nil];
@@ -70,9 +71,6 @@ static NSString *cellIdentifier;
     self.hoursLabel.textColor = UIColorFromRGB(0xd4e05d);
     self.hoursLabel2.textColor = UIColorFromRGB(0xd4e05d);
     self.applyButton.backgroundColor = UIColorFromRGB(0xd4e05d);
-    
-    self.titleLabel.font = [UIFont fontWithName:@"Lato" size:16.0];
-    self.employerLabel.font = [UIFont fontWithName:@"Lato" size:16.0];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -88,6 +86,10 @@ static NSString *cellIdentifier;
 - (void)viewWillDisappear:(BOOL)animated {
     [self.navigationController setNavigationBarHidden:NO animated:animated];
     [super viewWillDisappear:animated];
+}
+
+- (UIStatusBarStyle) preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 /*
 #pragma mark - Navigation

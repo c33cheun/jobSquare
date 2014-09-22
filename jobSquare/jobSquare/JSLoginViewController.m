@@ -44,33 +44,41 @@
 	
 	// Check if user is logged in
 
-	if (![PFUser currentUser]) {
-		// Customize the Log In View Controller
-		JSMyLogInViewController *logInViewController = [[JSMyLogInViewController alloc] init];
-		logInViewController.delegate = self;
-		logInViewController.facebookPermissions = @[@"friends_about_me"];
-		
-		logInViewController.fields = PFLogInFieldsUsernameAndPassword | PFLogInFieldsTwitter | PFLogInFieldsFacebook | PFLogInFieldsSignUpButton | PFLogInFieldsDismissButton;
-		
-		// Customize the Sign Up View Controller
-		JSMySignUpViewController *signUpViewController = [[JSMySignUpViewController alloc] init];
-		signUpViewController.delegate = self;
-		signUpViewController.fields = PFSignUpFieldsDefault | PFSignUpFieldsAdditional;
-		logInViewController.signUpController = signUpViewController;
-		
-		// Present Log In View Controller
-		[self presentViewController:logInViewController animated:YES completion:NULL];
-	}
+//	if (![PFUser currentUser]) {
+//		// Customize the Log In View Controller
+//		JSMyLogInViewController *logInViewController = [[JSMyLogInViewController alloc] init];
+//		logInViewController.delegate = self;
+//		logInViewController.facebookPermissions = @[@"friends_about_me"];
+//		
+//		logInViewController.fields = PFLogInFieldsUsernameAndPassword | PFLogInFieldsTwitter | PFLogInFieldsFacebook | PFLogInFieldsSignUpButton | PFLogInFieldsDismissButton;
+//		
+//		// Customize the Sign Up View Controller
+//		JSMySignUpViewController *signUpViewController = [[JSMySignUpViewController alloc] init];
+//		signUpViewController.delegate = self;
+//		signUpViewController.fields = PFSignUpFieldsDefault | PFSignUpFieldsAdditional;
+//		logInViewController.signUpController = signUpViewController;
+//		
+//		// Present Log In View Controller
+//		[self presentViewController:logInViewController animated:YES completion:NULL];
+//	}
 }
 
 // Sent to the delegate when a PFUser is signed up.
 - (void)signUpViewController:(PFSignUpViewController *)signUpController didSignUpUser:(PFUser *)user {
 	[self dismissViewControllerAnimated:YES completion:NULL];
+    
+    JSMainViewController *tab = [[JSMainViewController alloc]init];
+    
+    [self presentViewController:tab animated:YES completion:nil];
+    
 }
 
 // Sent to the delegate when a PFUser is logged in.
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
 	[self dismissViewControllerAnimated:YES completion:NULL];
+    JSMainViewController *tab = [[JSMainViewController alloc]init];
+    
+    [self presentViewController:tab animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

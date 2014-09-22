@@ -7,6 +7,7 @@
 //
 
 #import "JSMapViewController.h"
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 @interface JSMapViewController () {
 }
@@ -23,8 +24,9 @@
 - (void) loadView {
     [super loadView];
     
-    [self.navigationController.navigationBar setTintColor: [UIColor blackColor]];
-    [self.navigationController.navigationBar setBarTintColor: [UIColor blackColor]];
+    self.navigationController.navigationBar.translucent = YES;
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
+    
     [self startStandardUpdates];
 }
 
@@ -43,8 +45,10 @@
     mapView.delegate = self;
     [mapView setMinZoom:14 maxZoom:kGMSMaxZoomLevel];
     
-    
     PFGeoPoint *myLocation = [PFGeoPoint geoPointWithLocation:_locationManager.location];
+    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:UIColorFromRGB(0xd4e05d), NSForegroundColorAttributeName, [UIFont fontWithName:@"Kato" size:17.0], NSFontAttributeName, nil]];
+    
+    self.navigationController.navigationBar.topItem.title = @"Current Location";
     
     PFQuery *query = [PFQuery queryWithClassName:@"Job"];
     [query setLimit:10];
@@ -189,4 +193,5 @@ idleAtCameraPosition:(GMSCameraPosition *)cameraPosition {
     }];
 
 }
+
 @end
