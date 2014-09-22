@@ -95,8 +95,8 @@
     
     JSMainViewController *tab = [[JSMainViewController alloc]init];
     
-	[self presentViewController:tab animated:YES completion:nil];
-	
+    [[UIApplication sharedApplication].keyWindow setRootViewController:tab];
+    
 }
 
 @end

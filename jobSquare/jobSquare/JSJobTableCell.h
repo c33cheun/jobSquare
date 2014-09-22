@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JSJobPosting.h"
+#import "UIImage+Utilities.h"
 
 @interface JSJobTableCell : UITableViewCell
 
-@property (nonatomic, strong) UILabel *descriptionLabel;
+@property (strong,nonatomic) UILabel *company;
+
+- (id)initWithData:(JSJobPosting*)job Style:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier;
 
 @end

@@ -18,6 +18,7 @@
 @property NSUInteger hours;
 @property (strong,nonatomic) NSString *jobDetail;
 @property (strong,nonatomic) CLLocation *location;
+@property (strong,nonatomic) NSString *image;
 
 - (id) initWithParseObject:(PFObject*)jobPosting;
 

@@ -22,7 +22,6 @@
 		3669FE0B19CECD4000C767F1 /* default hiring.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3669FE0A19CECD4000C767F1 /* default hiring.jpg */; };
 		3669FE1619CEF05100C767F1 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3669FE1519CEF01000C767F1 /* Lato-Regular.ttf */; };
 		3669FE2319CF33A800C767F1 /* icons_nav_01_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 3669FE1719CF33A800C767F1 /* icons_nav_01_on.png */; };
-		3669FE2419CF33A800C767F1 /* marker_small_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 3669FE1819CF33A800C767F1 /* marker_small_01.png */; };
 		3669FE2519CF33A800C767F1 /* nav_icon_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 3669FE1919CF33A800C767F1 /* nav_icon_01.png */; };
 		3669FE2619CF33A800C767F1 /* nav_icon_01on.png in Resources */ = {isa = PBXBuildFile; fileRef = 3669FE1A19CF33A800C767F1 /* nav_icon_01on.png */; };
 		3669FE2719CF33A800C767F1 /* nav_icon_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 3669FE1B19CF33A800C767F1 /* nav_icon_02.png */; };
@@ -33,7 +32,6 @@
 		3669FE2C19CF33A800C767F1 /* nav_icon_04on.png in Resources */ = {isa = PBXBuildFile; fileRef = 3669FE2019CF33A800C767F1 /* nav_icon_04on.png */; };
 		3669FE2D19CF33A800C767F1 /* nav_icon_05.png in Resources */ = {isa = PBXBuildFile; fileRef = 3669FE2119CF33A800C767F1 /* nav_icon_05.png */; };
 		3669FE2E19CF33A800C767F1 /* nav_icon_05on.png in Resources */ = {isa = PBXBuildFile; fileRef = 3669FE2219CF33A800C767F1 /* nav_icon_05on.png */; };
-		DF5B203A19CEEAC300FFD94C /* JSProfileTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5B203619CEEAC300FFD94C /* JSProfileTableView.m */; };
 		DF5B203B19CEEAC300FFD94C /* JSProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5B203819CEEAC300FFD94C /* JSProfileViewController.m */; };
 		DF5B203C19CEEAC300FFD94C /* JSProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5B203919CEEAC300FFD94C /* JSProfileViewController.xib */; };
 		DFD1057519CE473A00634995 /* JSMyLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD1057419CE473A00634995 /* JSMyLogInViewController.m */; };
@@ -54,6 +52,23 @@
 		DFD1059619CE4F0E00634995 /* Twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = DFD1058719CE4F0E00634995 /* Twitter.png */; };
 		DFD1059719CE4F0E00634995 /* TwitterDown.png in Resources */ = {isa = PBXBuildFile; fileRef = DFD1058819CE4F0E00634995 /* TwitterDown.png */; };
 		DFF3F4A119CE6A660064D77C /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF3F4A019CE6A660064D77C /* ParseFacebookUtils.framework */; };
+		F10334A819CFE31B0071E05F /* 640px-GREE_Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F10334A119CFE31B0071E05F /* 640px-GREE_Logo.png */; };
+		F10334A919CFE31B0071E05F /* Kojima_Productions_Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F10334A219CFE31B0071E05F /* Kojima_Productions_Logo.png */; };
+		F10334AA19CFE31B0071E05F /* Konami_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F10334A319CFE31B0071E05F /* Konami_logo.png */; };
+		F10334AB19CFE31B0071E05F /* Mister_Donut.png in Resources */ = {isa = PBXBuildFile; fileRef = F10334A419CFE31B0071E05F /* Mister_Donut.png */; };
+		F10334AC19CFE31B0071E05F /* mzl.kfxtkcnx.png in Resources */ = {isa = PBXBuildFile; fileRef = F10334A519CFE31B0071E05F /* mzl.kfxtkcnx.png */; };
+		F10334AD19CFE31B0071E05F /* NTT-Docomo-Logo-Wallpaper.png in Resources */ = {isa = PBXBuildFile; fileRef = F10334A619CFE31B0071E05F /* NTT-Docomo-Logo-Wallpaper.png */; };
+		F10334AE19CFE31B0071E05F /* sony-logo-png.png in Resources */ = {isa = PBXBuildFile; fileRef = F10334A719CFE31B0071E05F /* sony-logo-png.png */; };
+		F10334B519CFE3FA0071E05F /* a-bathing-ape-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F10334AF19CFE3FA0071E05F /* a-bathing-ape-logo.png */; };
+		F10334B619CFE3FA0071E05F /* BANDAI_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F10334B019CFE3FA0071E05F /* BANDAI_logo.png */; };
+		F10334B719CFE3FA0071E05F /* Fujitsu_Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F10334B119CFE3FA0071E05F /* Fujitsu_Logo.png */; };
+		F10334B819CFE3FA0071E05F /* jr-east-logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F10334B219CFE3FA0071E05F /* jr-east-logo.jpg */; };
+		F10334B919CFE3FA0071E05F /* lexus.png in Resources */ = {isa = PBXBuildFile; fileRef = F10334B319CFE3FA0071E05F /* lexus.png */; };
+		F10334BA19CFE3FA0071E05F /* mitsubishi-logo-300x258.png in Resources */ = {isa = PBXBuildFile; fileRef = F10334B419CFE3FA0071E05F /* mitsubishi-logo-300x258.png */; };
+		F10334BD19CFE4A70071E05F /* marker_small_01.png in Resources */ = {isa = PBXBuildFile; fileRef = F10334BC19CFE4A70071E05F /* marker_small_01.png */; };
+		F10334BF19CFEA2C0071E05F /* Lawson_Station.png in Resources */ = {isa = PBXBuildFile; fileRef = F10334BE19CFEA2C0071E05F /* Lawson_Station.png */; };
+		F10334C019CFF6080071E05F /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3669FE0E19CEF01000C767F1 /* Lato-Bold.ttf */; };
+		F10334C119CFF6080071E05F /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3669FE1319CEF01000C767F1 /* Lato-Light.ttf */; };
 		F11C931A19CD598600AAFA9D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F11C931919CD598600AAFA9D /* AppDelegate.m */; };
 		F11C931D19CD598600AAFA9D /* JSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F11C931C19CD598600AAFA9D /* JSLoginViewController.m */; };
 		F11C932219CD598600AAFA9D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F11C932119CD598600AAFA9D /* Images.xcassets */; };
@@ -77,7 +92,6 @@
 		F17C2E2319CF2EC7002D8EDC /* JSMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F17C2E2219CF2EC7002D8EDC /* JSMainViewController.m */; };
 		F17C2E2619CF39AC002D8EDC /* JSJobTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F17C2E2519CF39AC002D8EDC /* JSJobTableViewController.m */; };
 		F17C2E2919CF3A40002D8EDC /* JSJobTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F17C2E2819CF3A40002D8EDC /* JSJobTableCell.m */; };
-		F17C2E2F19CF544E002D8EDC /* marker_small_01.png in Resources */ = {isa = PBXBuildFile; fileRef = F17C2E2E19CF544E002D8EDC /* marker_small_01.png */; };
 		F17C2E3819CF5879002D8EDC /* UIImage+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = F17C2E3719CF5879002D8EDC /* UIImage+Utilities.m */; };
 		F17C2E3C19CF5AA5002D8EDC /* UIColor+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = F17C2E3B19CF5AA5002D8EDC /* UIColor+Utilities.m */; };
 		F1F11AAA19CE8464009E3FF3 /* IMAsync.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F11AA919CE8464009E3FF3 /* IMAsync.m */; };
@@ -120,7 +134,6 @@
 		3669FE1419CEF01000C767F1 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
 		3669FE1519CEF01000C767F1 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		3669FE1719CF33A800C767F1 /* icons_nav_01_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icons_nav_01_on.png; sourceTree = "<group>"; };
-		3669FE1819CF33A800C767F1 /* marker_small_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marker_small_01.png; sourceTree = "<group>"; };
 		3669FE1919CF33A800C767F1 /* nav_icon_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_icon_01.png; sourceTree = "<group>"; };
 		3669FE1A19CF33A800C767F1 /* nav_icon_01on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_icon_01on.png; sourceTree = "<group>"; };
 		3669FE1B19CF33A800C767F1 /* nav_icon_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_icon_02.png; sourceTree = "<group>"; };
@@ -157,6 +170,21 @@
 		DFF3F49C19CE678B0064D77C /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		DFF3F4A019CE6A660064D77C /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		DFF3F4A219CE931D0064D77C /* JSAssetsConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSAssetsConstants.h; sourceTree = "<group>"; };
+		F10334A119CFE31B0071E05F /* 640px-GREE_Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "640px-GREE_Logo.png"; sourceTree = "<group>"; };
+		F10334A219CFE31B0071E05F /* Kojima_Productions_Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Kojima_Productions_Logo.png; sourceTree = "<group>"; };
+		F10334A319CFE31B0071E05F /* Konami_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Konami_logo.png; sourceTree = "<group>"; };
+		F10334A419CFE31B0071E05F /* Mister_Donut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mister_Donut.png; sourceTree = "<group>"; };
+		F10334A519CFE31B0071E05F /* mzl.kfxtkcnx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mzl.kfxtkcnx.png; sourceTree = "<group>"; };
+		F10334A619CFE31B0071E05F /* NTT-Docomo-Logo-Wallpaper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NTT-Docomo-Logo-Wallpaper.png"; sourceTree = "<group>"; };
+		F10334A719CFE31B0071E05F /* sony-logo-png.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sony-logo-png.png"; sourceTree = "<group>"; };
+		F10334AF19CFE3FA0071E05F /* a-bathing-ape-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "a-bathing-ape-logo.png"; sourceTree = "<group>"; };
+		F10334B019CFE3FA0071E05F /* BANDAI_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BANDAI_logo.png; sourceTree = "<group>"; };
+		F10334B119CFE3FA0071E05F /* Fujitsu_Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fujitsu_Logo.png; sourceTree = "<group>"; };
+		F10334B219CFE3FA0071E05F /* jr-east-logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "jr-east-logo.jpg"; sourceTree = "<group>"; };
+		F10334B319CFE3FA0071E05F /* lexus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lexus.png; sourceTree = "<group>"; };
+		F10334B419CFE3FA0071E05F /* mitsubishi-logo-300x258.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mitsubishi-logo-300x258.png"; sourceTree = "<group>"; };
+		F10334BC19CFE4A70071E05F /* marker_small_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marker_small_01.png; sourceTree = "<group>"; };
+		F10334BE19CFEA2C0071E05F /* Lawson_Station.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Lawson_Station.png; sourceTree = "<group>"; };
 		F11C931119CD598600AAFA9D /* jobSquare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jobSquare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F11C931519CD598600AAFA9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F11C931619CD598600AAFA9D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -190,7 +218,6 @@
 		F17C2E2519CF39AC002D8EDC /* JSJobTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSJobTableViewController.m; sourceTree = "<group>"; };
 		F17C2E2719CF3A40002D8EDC /* JSJobTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSJobTableCell.h; sourceTree = "<group>"; };
 		F17C2E2819CF3A40002D8EDC /* JSJobTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSJobTableCell.m; sourceTree = "<group>"; };
-		F17C2E2E19CF544E002D8EDC /* marker_small_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marker_small_01.png; sourceTree = "<group>"; };
 		F17C2E3619CF5879002D8EDC /* UIImage+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Utilities.h"; sourceTree = "<group>"; };
 		F17C2E3719CF5879002D8EDC /* UIImage+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Utilities.m"; sourceTree = "<group>"; };
 		F17C2E3A19CF5AA5002D8EDC /* UIColor+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Utilities.h"; sourceTree = "<group>"; };
@@ -246,9 +273,9 @@
 		DFD1057919CE4E6000634995 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				F17C2E2E19CF544E002D8EDC /* marker_small_01.png */,
+				F10334BB19CFE4370071E05F /* Logos */,
 				3669FE1719CF33A800C767F1 /* icons_nav_01_on.png */,
-				3669FE1819CF33A800C767F1 /* marker_small_01.png */,
+				F10334BC19CFE4A70071E05F /* marker_small_01.png */,
 				3669FE1919CF33A800C767F1 /* nav_icon_01.png */,
 				3669FE1A19CF33A800C767F1 /* nav_icon_01on.png */,
 				3669FE1B19CF33A800C767F1 /* nav_icon_02.png */,
@@ -287,6 +314,27 @@
 				DFD1058819CE4F0E00634995 /* TwitterDown.png */,
 			);
 			name = Assets;
+			sourceTree = "<group>";
+		};
+		F10334BB19CFE4370071E05F /* Logos */ = {
+			isa = PBXGroup;
+			children = (
+				F10334BE19CFEA2C0071E05F /* Lawson_Station.png */,
+				F10334AF19CFE3FA0071E05F /* a-bathing-ape-logo.png */,
+				F10334B019CFE3FA0071E05F /* BANDAI_logo.png */,
+				F10334B119CFE3FA0071E05F /* Fujitsu_Logo.png */,
+				F10334B219CFE3FA0071E05F /* jr-east-logo.jpg */,
+				F10334B319CFE3FA0071E05F /* lexus.png */,
+				F10334B419CFE3FA0071E05F /* mitsubishi-logo-300x258.png */,
+				F10334A119CFE31B0071E05F /* 640px-GREE_Logo.png */,
+				F10334A219CFE31B0071E05F /* Kojima_Productions_Logo.png */,
+				F10334A319CFE31B0071E05F /* Konami_logo.png */,
+				F10334A419CFE31B0071E05F /* Mister_Donut.png */,
+				F10334A519CFE31B0071E05F /* mzl.kfxtkcnx.png */,
+				F10334A619CFE31B0071E05F /* NTT-Docomo-Logo-Wallpaper.png */,
+				F10334A719CFE31B0071E05F /* sony-logo-png.png */,
+			);
+			name = Logos;
 			sourceTree = "<group>";
 		};
 		F11C930819CD598600AAFA9D = {
@@ -568,37 +616,52 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F10334C019CFF6080071E05F /* Lato-Bold.ttf in Resources */,
+				F10334C119CFF6080071E05F /* Lato-Light.ttf in Resources */,
 				3669FE2719CF33A800C767F1 /* nav_icon_02.png in Resources */,
+				F10334B919CFE3FA0071E05F /* lexus.png in Resources */,
+				F10334BF19CFEA2C0071E05F /* Lawson_Station.png in Resources */,
+				F10334AA19CFE31B0071E05F /* Konami_logo.png in Resources */,
 				3669FE1619CEF05100C767F1 /* Lato-Regular.ttf in Resources */,
 				DFD1058F19CE4F0E00634995 /* FacebookDown.png in Resources */,
 				DFD1059619CE4F0E00634995 /* Twitter.png in Resources */,
 				DFD1058D19CE4F0E00634995 /* ExitDown.png in Resources */,
-				F17C2E2F19CF544E002D8EDC /* marker_small_01.png in Resources */,
+				F10334AE19CFE31B0071E05F /* sony-logo-png.png in Resources */,
+				F10334BA19CFE3FA0071E05F /* mitsubishi-logo-300x258.png in Resources */,
+				F10334B519CFE3FA0071E05F /* a-bathing-ape-logo.png in Resources */,
 				3669FE2C19CF33A800C767F1 /* nav_icon_04on.png in Resources */,
 				DFD1058E19CE4F0E00634995 /* Facebook.png in Resources */,
 				3669FE2819CF33A800C767F1 /* nav_icon_02on.png in Resources */,
 				F11C932219CD598600AAFA9D /* Images.xcassets in Resources */,
+				F10334B719CFE3FA0071E05F /* Fujitsu_Logo.png in Resources */,
 				DFD1059119CE4F0E00634995 /* Logo.png in Resources */,
 				3669FE0B19CECD4000C767F1 /* default hiring.jpg in Resources */,
 				3669FE2619CF33A800C767F1 /* nav_icon_01on.png in Resources */,
 				DFD1059419CE4F0E00634995 /* SignUpDown.png in Resources */,
+				F10334B819CFE3FA0071E05F /* jr-east-logo.jpg in Resources */,
 				3669FE2A19CF33A800C767F1 /* nav_icon_03.png in Resources */,
 				3669FE2919CF33A800C767F1 /* nav_icon_03_on.png in Resources */,
 				3669FE2E19CF33A800C767F1 /* nav_icon_05on.png in Resources */,
+				F10334BD19CFE4A70071E05F /* marker_small_01.png in Resources */,
 				F141AFCF19CD8F28007B6B92 /* GoogleMaps.bundle in Resources */,
-				3669FE2419CF33A800C767F1 /* marker_small_01.png in Resources */,
 				DF5B203C19CEEAC300FFD94C /* JSProfileViewController.xib in Resources */,
 				DFD1059019CE4F0E00634995 /* LoginFieldBG.png in Resources */,
+				F10334AC19CFE31B0071E05F /* mzl.kfxtkcnx.png in Resources */,
+				F10334AD19CFE31B0071E05F /* NTT-Docomo-Logo-Wallpaper.png in Resources */,
 				3669FE2D19CF33A800C767F1 /* nav_icon_05.png in Resources */,
+				F10334A919CFE31B0071E05F /* Kojima_Productions_Logo.png in Resources */,
 				3669FE2B19CF33A800C767F1 /* nav_icon_04.png in Resources */,
 				DFD1058B19CE4F0E00634995 /* Default@2x.png in Resources */,
+				F10334B619CFE3FA0071E05F /* BANDAI_logo.png in Resources */,
 				DFD1059519CE4F0E00634995 /* SignUpFieldBG.png in Resources */,
 				3669FE2519CF33A800C767F1 /* nav_icon_01.png in Resources */,
 				DFD1059319CE4F0E00634995 /* SignUp.png in Resources */,
 				DFD1059719CE4F0E00634995 /* TwitterDown.png in Resources */,
+				F10334AB19CFE31B0071E05F /* Mister_Donut.png in Resources */,
 				3669FE2319CF33A800C767F1 /* icons_nav_01_on.png in Resources */,
 				DFD1058C19CE4F0E00634995 /* Exit.png in Resources */,
 				DFD1058919CE4F0E00634995 /* Default-568h@2x.png in Resources */,
+				F10334A819CFE31B0071E05F /* 640px-GREE_Logo.png in Resources */,
 				DFD1058A19CE4F0E00634995 /* Default.png in Resources */,
 				DFD1059219CE4F0E00634995 /* MainBG.png in Resources */,
 				3669FE0919CEB46400C767F1 /* JobDetailViewController.xib in Resources */,

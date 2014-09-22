@@ -11,6 +11,7 @@
 #import "JSJobTableCell.h"
 #import "UIColor+Utilities.h"
 #import "JSAssetsConstants.h"
+#import "JobDetailViewController.h"
 
 @interface JSJobTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 

@@ -12,4 +12,6 @@
 
 -(UIImage*) drawText:(NSString*)text ofSize:(int)size inImage:(UIImage*)image atPoint:(CGPoint)point;
 
+-(UIImage*) resizeImage:(UIImage*) input withScale:(float)scale;
+
 @end

@@ -20,12 +20,18 @@
     UIGraphicsBeginImageContext(image.size);
     [image drawInRect:CGRectMake(0,0,image.size.width,image.size.height)];
     CGRect rect = CGRectMake(point.x, point.y, image.size.width, image.size.height);
-    [[UIColor whiteColor] set];
-    [text drawInRect:CGRectIntegral(rect) withAttributes:[NSDictionary dictionaryWithObject:font forKey:NSFontAttributeName]];
+    [text drawInRect:CGRectIntegral(rect) withAttributes:[NSDictionary dictionaryWithObjectsAndKeys:font, NSFontAttributeName, [UIColor whiteColor], NSForegroundColorAttributeName, nil]];                                                        
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
     return newImage;
+}
+
+- (UIImage*) resizeImage:(UIImage*) input withScale:(float)scale {
+    UIImage *scaledImage = [UIImage imageWithCGImage:[input CGImage]
+                                               scale:(input.scale * scale)
+                                         orientation:(input.imageOrientation)];
+    return scaledImage;
 }
 
 
