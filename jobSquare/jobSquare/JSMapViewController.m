@@ -27,7 +27,6 @@
     self.navigationController.navigationBar.translucent = YES;
     self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
     
-    [self.navigationController.navigationBar setBarStyle:UIBarStyleBlack];
     [self startStandardUpdates];
 }
 
@@ -43,7 +42,9 @@
     
     PFGeoPoint *myLocation = [PFGeoPoint geoPointWithLocation:_locationManager.location];
     [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:UIColorFromRGB(0xd4e05d), NSForegroundColorAttributeName, [UIFont fontWithName:@"Kato" size:17.0], NSFontAttributeName, nil]];
+    
     self.navigationController.navigationBar.topItem.title = @"Current Location";
+    
     PFQuery *query = [PFQuery queryWithClassName:@"Job"];
     [query setLimit:10];
     [query whereKey:@"location" nearGeoPoint:myLocation withinKilometers:2.0];
