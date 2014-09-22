@@ -26,6 +26,7 @@
                 <outlet property="descriptText" destination="5dA-Bv-jnV" id="SZd-ET-uJO"/>
                 <outlet property="details" destination="isV-Vl-6jP" id="Nvd-Ag-Ge8"/>
                 <outlet property="employerLabel" destination="bdY-CJ-LyZ" id="HR1-AX-96x"/>
+                <outlet property="hoursLabel" destination="SY8-ji-NWS" id="kWt-cw-Ohc"/>
                 <outlet property="hoursLabel2" destination="cFC-Eq-BMd" id="Lnj-xA-4O4"/>
                 <outlet property="logo" destination="mOH-Iv-VCb" id="L3V-Ml-mnQ"/>
                 <outlet property="titleLabel" destination="Umw-Mq-Iu9" id="ePW-86-EJF"/>
@@ -52,18 +53,6 @@
                         <rect key="frame" x="86" y="31" width="284" height="30"/>
                     </variation>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hrs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFC-Eq-BMd">
-                    <rect key="frame" x="153" y="95" width="42" height="21"/>
-                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="9"/>
-                    <color key="textColor" red="1" green="0.99667377349999997" blue="0.74916073569999997" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="212" y="109" width="42" height="21"/>
-                    </variation>
-                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="69" y="166" width="42" height="21"/>
-                    </variation>
-                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#Mon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ukm-Nr-ypf">
                     <rect key="frame" x="232" y="95" width="56" height="21"/>
                     <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
@@ -76,6 +65,30 @@
                         <rect key="frame" x="139" y="166" width="67" height="21"/>
                     </variation>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#HR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SY8-ji-NWS">
+                    <rect key="frame" x="232" y="95" width="56" height="21"/>
+                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                    <color key="textColor" red="1" green="0.99667377349999997" blue="0.74916073569999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="262" y="112" width="68" height="21"/>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="18" y="167" width="67" height="21"/>
+                    </variation>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hrs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFC-Eq-BMd">
+                    <rect key="frame" x="153" y="95" width="42" height="21"/>
+                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="9"/>
+                    <color key="textColor" red="1" green="0.99667377349999997" blue="0.74916073569999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="212" y="109" width="42" height="21"/>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="48" y="166" width="42" height="21"/>
+                    </variation>
+                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="/hr" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxD-zY-VJT">
                     <rect key="frame" x="286" y="94" width="42" height="21"/>
                     <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="9"/>
@@ -85,7 +98,7 @@
                         <rect key="frame" x="328" y="109" width="42" height="21"/>
                     </variation>
                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="193" y="166" width="42" height="21"/>
+                        <rect key="frame" x="190" y="166" width="42" height="21"/>
                     </variation>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Employer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdY-CJ-LyZ">
@@ -121,7 +134,7 @@
                     <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="8" y="273" width="400" height="588"/>
+                        <rect key="frame" x="16" y="254" width="240" height="588"/>
                     </variation>
                 </textView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mOH-Iv-VCb">
@@ -130,13 +143,13 @@
                         <rect key="frame" x="8" y="30" width="70" height="70"/>
                     </variation>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAR-fb-fWO">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAR-fb-fWO">
                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="10"/>
+                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
                     <color key="textColor" red="1" green="0.99667377349999997" blue="0.74916073569999997" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="8" y="112" width="121" height="37"/>
+                        <rect key="frame" x="18" y="112" width="146" height="46"/>
                     </variation>
                 </label>
             </subviews>
@@ -144,11 +157,13 @@
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
             <variation key="default">
                 <mask key="subviews">
+                    <exclude reference="SY8-ji-NWS"/>
                     <exclude reference="xAR-fb-fWO"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
                 <mask key="subviews">
+                    <include reference="SY8-ji-NWS"/>
                     <include reference="xAR-fb-fWO"/>
                 </mask>
             </variation>

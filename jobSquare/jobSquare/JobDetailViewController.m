@@ -57,8 +57,8 @@ static NSString *cellIdentifier;
     
     self.titleLabel.text = self.pass.title;
     self.employerLabel.text = self.pass.employer;
-    self.wageLabel.text = [NSString stringWithFormat:@"%@%lu", @"¥", (unsigned long)_pass.wage];
-    self.hoursLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)_pass.hours];
+    self.wageLabel.text = [NSString stringWithFormat:@"%@%lu", @"¥", (unsigned long)self.pass.wage];
+    self.hoursLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)self.pass.hours];
     self.descriptText.text = self.pass.jobDetail;
     self.logo.image = [UIImage imageNamed:[self.pass.image stringByAppendingString:@".png"]];
     self.addressLabel.text = self.pass.address;
