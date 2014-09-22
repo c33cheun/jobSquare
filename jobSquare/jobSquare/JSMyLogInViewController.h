@@ -7,6 +7,7 @@
 //
 
 #import <Parse/PFLogInViewController.h>
+#import "UIColor+Utilities.h"
 
 @interface JSMyLogInViewController : PFLogInViewController
 

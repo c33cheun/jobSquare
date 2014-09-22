@@ -22,16 +22,10 @@
 	[super viewDidLoad];
 	
 	[self.signUpView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:kMainBackgroundImage]]];
-	[self.signUpView setLogo:[[UIImageView alloc] initWithImage:[UIImage imageNamed:kLogo]]];
+	[self.signUpView setLogo:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo_01.png"]]];
 	
 	// Change button apperance
-	[self.signUpView.dismissButton setImage:[UIImage imageNamed:kExit] forState:UIControlStateNormal];
-	[self.signUpView.dismissButton setImage:[UIImage imageNamed:kExitDown] forState:UIControlStateHighlighted];
-	
-	[self.signUpView.signUpButton setBackgroundImage:[UIImage imageNamed:kSignUpButton] forState:UIControlStateNormal];
-	[self.signUpView.signUpButton setBackgroundImage:[UIImage imageNamed:kSignUpButtonDown] forState:UIControlStateHighlighted];
-	[self.signUpView.signUpButton setTitle:@"" forState:UIControlStateNormal];
-	[self.signUpView.signUpButton setTitle:@"" forState:UIControlStateHighlighted];
+	[self.signUpView.signUpButton setTitle:@"Sign Up" forState:UIControlStateNormal];
 	
 	// Add background for fields
 	[self setFieldsBackground:[[UIImageView alloc] initWithImage:[UIImage imageNamed:kSignUpBackgroundImage]]];
@@ -67,30 +61,30 @@
 	CGRect fieldFrame = self.signUpView.usernameField.frame;
 	
 	[self.signUpView.dismissButton setFrame:CGRectMake(10.0f, 10.0f, 87.5f, 45.5f)];
-	[self.signUpView.logo setFrame:CGRectMake(66.5f, 70.0f, 187.0f, 58.5f)];
-	[self.signUpView.signUpButton setFrame:CGRectMake(35.0f, 385.0f, 250.0f, 40.0f)];
-	[self.fieldsBackground setFrame:CGRectMake(35.0f, fieldFrame.origin.y + yOffset, 250.0f, 174.0f)];
+	[self.signUpView.logo setFrame:CGRectMake(66.5f, 40.0f, 187.0f, 187.0f)];
+	[self.signUpView.signUpButton setFrame:CGRectMake(35.0f, 435.0f, 250.0f, 40.0f)];
+	[self.fieldsBackground setFrame:CGRectMake(35.0f, fieldFrame.origin.y + yOffset + 50, 250.0f, 174.0f)];
 	
 	[self.signUpView.usernameField setFrame:CGRectMake(fieldFrame.origin.x + 5.0f,
-																										 fieldFrame.origin.y + yOffset,
+																										 fieldFrame.origin.y + yOffset + 50,
 																										 fieldFrame.size.width - 10.0f,
 																										 fieldFrame.size.height)];
 	yOffset += fieldFrame.size.height;
 	
 	[self.signUpView.passwordField setFrame:CGRectMake(fieldFrame.origin.x + 5.0f,
-																										 fieldFrame.origin.y + yOffset,
+																										 fieldFrame.origin.y + yOffset + 50,
 																										 fieldFrame.size.width - 10.0f,
 																										 fieldFrame.size.height)];
 	yOffset += fieldFrame.size.height;
 	
 	[self.signUpView.emailField setFrame:CGRectMake(fieldFrame.origin.x + 5.0f,
-																									fieldFrame.origin.y + yOffset,
+																									fieldFrame.origin.y + yOffset + 50,
 																									fieldFrame.size.width - 10.0f,
 																									fieldFrame.size.height)];
 	yOffset += fieldFrame.size.height;
 	
 	[self.signUpView.additionalField setFrame:CGRectMake(fieldFrame.origin.x + 5.0f,
-																											 fieldFrame.origin.y + yOffset,
+																											 fieldFrame.origin.y + yOffset + 50,
 																											 fieldFrame.size.width - 10.0f,
 																											 fieldFrame.size.height)];
 }

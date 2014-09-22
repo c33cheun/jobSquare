@@ -47,21 +47,24 @@
     [self.menu addSubview:searchImg];
     
     
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithTarget:_locationManager.location.coordinate zoom:10];
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithTarget:_locationManager.location.coordinate zoom:14];
     
     mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
     mapView.myLocationEnabled = YES;
     mapView.delegate = self;
-    [mapView setMinZoom:13.9 maxZoom:kGMSMaxZoomLevel];
+    [mapView setMinZoom:kGMSMinZoomLevel maxZoom:kGMSMaxZoomLevel];
     
-    PFGeoPoint *myLocation = [PFGeoPoint geoPointWithLocation:_locationManager.location];
+    UIEdgeInsets mapInsets = UIEdgeInsetsMake(100, 0, 50, 0);
+    mapView.padding = mapInsets;
+    
+    mapView.settings.myLocationButton = YES;
+    
     [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:UIColorFromRGB(0xd4e05d), NSForegroundColorAttributeName, [UIFont fontWithName:@"Lato" size:17.0], NSFontAttributeName, nil]];
     
     self.navigationController.navigationBar.topItem.title = @"Current Location";
     
     _data = [NSMutableArray array];
-        
-
+    
     self.view = mapView;
 }
 
@@ -196,7 +199,7 @@ idleAtCameraPosition:(GMSCameraPosition *)cameraPosition {
 
 -(void) setMapMarkersWithJob:(JSJobPosting*)job andNumber: (int)counter  {
     UIImage *markerIcon = [UIImage imageNamed:@"marker_small_01.png"];
-    markerIcon = [markerIcon drawText:[NSString stringWithFormat:@"%i",counter] ofSize: 24 inImage:markerIcon atPoint:CGPointMake(14, 8)];
+    markerIcon = [markerIcon drawText:[NSString stringWithFormat:@"%i",counter] ofSize: 24 inImage:markerIcon atPoint:CGPointMake(17, 9)];
     
     GMSMarker *point = [GMSMarker markerWithPosition:job.location.coordinate];
     point.map = mapView;
