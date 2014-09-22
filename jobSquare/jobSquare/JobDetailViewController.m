@@ -91,6 +91,18 @@ static NSString *cellIdentifier;
 - (UIStatusBarStyle) preferredStatusBarStyle {
     return UIStatusBarStyleLightContent;
 }
+
+-(IBAction) toggleUIButton:(id)sender{
+    if ([sender isSelected]) {
+        [sender setBackgroundColor: UIColorFromRGB(0xd4e05d)];
+        [sender setTitle:@"APPLY" forState:UIControlStateNormal];
+        [sender setSelected:NO];
+    } else {
+        [sender setBackgroundColor:[UIColor grayColor]];
+        [sender setTitle:@"APPLIED" forState:UIControlStateSelected];
+        [sender setSelected:YES];
+    }
+}
 /*
 #pragma mark - Navigation
 
