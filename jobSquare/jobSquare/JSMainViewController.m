@@ -48,13 +48,14 @@
     self.viewControllers = [NSArray arrayWithObjects: navviewController2, navviewController1, /*navviewController3,*/ nil];
     
     UITabBarItem *mapItem = [[UITabBarItem alloc]init];
-    [mapItem setTitle:@"Map"];
+    [mapItem setTitle:@""];
     UIImage *mapIcon = [UIImage imageNamed:@"nav_icon_01.png"];
     UIImage *mapIconOn = [UIImage imageNamed:@"nav_icon_01on.png"];
     mapIcon = [mapIcon resizeImage:mapIcon withScale:2.0f];
     mapIconOn = [mapIconOn resizeImage:mapIconOn withScale:2.0f];
     [mapItem setImage:mapIcon];
     [mapItem setSelectedImage:mapIconOn];
+    mapItem.imageInsets = UIEdgeInsetsMake(7, 0, -5, 0);
     
     UITabBarItem *accountItem = [[UITabBarItem alloc]init];
     UIImage *accountIcon = [UIImage imageNamed:@"nav_icon_03.png"];
@@ -62,17 +63,19 @@
     accountIcon = [accountIcon resizeImage:accountIcon withScale:2.0f];
     accountIconOn = [accountIconOn resizeImage:accountIconOn withScale:2.0f];
     [accountItem setImage:accountIcon];
-    [accountItem setTitle:@"Account"];
+    [accountItem setTitle:@""];
     [accountItem setSelectedImage:accountIconOn];
+    accountItem.imageInsets = UIEdgeInsetsMake(7, 0, -5, 0);
     
 //    UITabBarItem *jobItem = [[UITabBarItem alloc] init];
 //    UIImage *jobIcon = [UIImage imageNamed:@"nav_icon_04.png"];
 //    UIImage *jobIconOn = [UIImage imageNamed:@"nav_icon_04on.png"];
-//    jobIcon = [jobIcon resizeImage:jobIcon withScale:2.0f];
-//    jobIconOn = [jobIconOn resizeImage: jobIconOn withScale:2.0f];
+//    jobIcon = resizeImage(jobIcon);
+//    jobIconOn = resizeImage(jobIconOn);
 //    [jobItem setImage:jobIcon];
-//    [jobItem setTitle:@"Jobs"];
+//    [jobItem setTitle:@""];
 //    [jobItem setSelectedImage:jobIconOn];
+//    jobItem.imageInsets = UIEdgeInsetsMake(7, 0, -5, 0);
     
     [navviewController1 setTabBarItem:accountItem];
     [navviewController2 setTabBarItem:mapItem];

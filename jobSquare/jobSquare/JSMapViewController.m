@@ -33,9 +33,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _menu = [[UIButton alloc]initWithFrame:CGRectMake(self.view.frame.size.width * 0.3, self.view.frame.size.height * 0.8, self.view.frame.size.width * 0.3, self.view.frame.size.height * 0.1)];
-    [_menu setBackgroundColor:[UIColor blackColor]];
-    [_menu addTarget:self action:@selector(openList) forControlEvents:UIControlEventTouchUpInside];
+    self.menu = [[UIButton alloc]initWithFrame:CGRectMake(self.view.frame.size.width * 0.34, self.view.frame.size.height * 0.83, self.view.frame.size.width * 0.3, self.view.frame.size.height * 0.06)];
+    [self.menu setBackgroundColor:[UIColor colorWithRed: 0 green: 0 blue: 0 alpha:0.7]];
+    [self.menu addTarget:self action:@selector(openList) forControlEvents:UIControlEventTouchUpInside];
+    [self.menu setTitle:@"# jobs found" forState:UIControlStateNormal];
+    [self.menu setFont:[UIFont fontWithName:@"Lato" size:12.0]];
+    [self.menu setTitleEdgeInsets:UIEdgeInsetsMake(3, 0, 3, 16)];
+    [self.menu.layer setBorderWidth: 2.5];
+    [self.menu.layer setBorderColor:[[UIColor whiteColor] CGColor]];
+    [self.menu.layer setCornerRadius: 5.0];
+    UIImageView *searchImg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon_all_jobs.png"]];
+    searchImg.frame = CGRectMake(77, 9, 13, 13);
+    [self.menu addSubview:searchImg];
     
     
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithTarget:_locationManager.location.coordinate zoom:10];
@@ -43,7 +52,7 @@
     mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
     mapView.myLocationEnabled = YES;
     mapView.delegate = self;
-    [mapView setMinZoom:14 maxZoom:kGMSMaxZoomLevel];
+    [mapView setMinZoom:13.9 maxZoom:kGMSMaxZoomLevel];
     
     PFGeoPoint *myLocation = [PFGeoPoint geoPointWithLocation:_locationManager.location];
     [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:UIColorFromRGB(0xd4e05d), NSForegroundColorAttributeName, [UIFont fontWithName:@"Lato" size:17.0], NSFontAttributeName, nil]];
@@ -52,6 +61,7 @@
     
     _data = [NSMutableArray array];
         
+
     self.view = mapView;
 }
 
@@ -135,7 +145,20 @@ idleAtCameraPosition:(GMSCameraPosition *)cameraPosition {
     
     CLLocation *resultLocation = [[CLLocation alloc] initWithLatitude:cameraPosition.target.latitude longitude: cameraPosition.target.longitude];
     
-    PFGeoPoint *myNewLocation = [PFGeoPoint geoPointWithLocation:resultLocation];    
+    //reverse geocode not working
+    [geocoder reverseGeocodeLocation: resultLocation completionHandler:
+     ^(NSArray *placemarks, NSError *error) {
+         //Get nearby address
+         CLPlacemark *localPlacemark = [placemarks objectAtIndex:0];
+         
+         NSString *addressName = [[localPlacemark.addressDictionary valueForKey:@"FormattedAddressLines"] componentsJoinedByString:@", "];
+         
+         self.navigationController.navigationBar.topItem.title = addressName;
+         [self.view setNeedsDisplay];
+     }];
+    
+    PFGeoPoint *myNewLocation = [PFGeoPoint geoPointWithLocation:resultLocation];
+    [_data removeAllObjects];
     
     PFQuery *query = [PFQuery queryWithClassName:@"Job"];
     [query setLimit:10];
@@ -147,14 +170,25 @@ idleAtCameraPosition:(GMSCameraPosition *)cameraPosition {
         [respMapView clear];
         [_data removeAllObjects];
         
+        //draw new marker in the middle of map
+        GMSMarker *marker = [[GMSMarker alloc] init];
+        marker.position = resultLocation.coordinate;
+        marker.map = mapView;
+        
         for(PFObject *result in results.result){
             
             counter++;
             JSJobPosting *pass = [[JSJobPosting alloc]initWithParseObject:result];
             [_data addObject:pass];
+
             [self setMapMarkersWithJob:pass andNumber:counter];
         }
         [self.view addSubview:_menu];
+            
+        [self.menu setTitle:[NSString stringWithFormat:@"%lu jobs found", (unsigned long)counter] forState:UIControlStateNormal];
+        
+        //placeholder text
+        self.navigationController.navigationBar.topItem.title = @"Searching for Jobs";
         return nil;
     }];
 
